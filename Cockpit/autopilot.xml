@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier CRJ700 series -->
+<!-- Mode control panel -->
+
+<PropertyList>
+
+	<path>autopilot.ac</path>
+
+	<panel-marking-emit>
+		<red>1</red>
+		<green>0.871</green>
+		<blue>0.427</blue>
+	</panel-marking-emit>
+
+	<!-- Visible only within 1/2 km -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>500</max-m>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>NeedsPower</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>NotImplemented</object-name>
+		<condition>
+			<property></property>
+		</condition>
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>Markings</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/panel-lights</property>
+				<value>15</value>
+			</greater-than-equals>
+		</condition>
+		<emission>
+			<red alias="../../../panel-marking-emit/red" />
+			<green alias="../../../panel-marking-emit/green" />
+			<blue alias="../../../panel-marking-emit/blue" />
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CRS1Knb</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/nav[0]/radials/selected-deg</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/nav[0]/radials/selected-deg</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">-1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>CRS1Knb</object-name>
+		<object-name>CRS1KnbFace</object-name>
+		<property>instrumentation/nav[0]/radials/selected-deg</property>
+		<factor>2</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.18</y-m>
+			<z-m>0.007</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>CRS2Knb</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/nav[1]/radials/selected-deg</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/nav[1]/radials/selected-deg</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">-1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>CRS2Knb</object-name>
+		<object-name>CRS2KnbFace</object-name>
+		<property>instrumentation/nav[0]/radials/selected-deg</property>
+		<factor>2</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.189</y-m>
+			<z-m>0.007</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>FD</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/autoflight/flight-director/engage</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>FDOn</object-name>
+		<condition>
+			<property>controls/autoflight/flight-director/engage</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>APENG</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/autoflight/autopilot/engage</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>APENGOn</object-name>
+		<condition>
+			<property>controls/autoflight/autopilot/engage</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>APDISC</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/autoflight/disengage-pos-norm</property>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/disengage-pos-norm</property>
+						<value>1</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/autopilot/engage</property>
+				<value type="bool">false</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>APDISC</object-name>
+		<property>controls/autoflight/disengage-pos-norm</property>
+		<factor>0.0095</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>SPEED</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/autoflight/autothrottle-engage</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>SPEEDOn</object-name>
+		<condition>
+			<property>controls/autoflight/autothrottle-engage</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>SPEEDKnb</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/speed-mode</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/speed-select</property>
+				<step>1</step>
+				<max>350</max>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/speed-mode</property>
+						<value>1</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/mach-select</property>
+				<step>0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/speed-mode</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/speed-select</property>
+				<step>-1</step>
+				<min>0</min>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/speed-mode</property>
+						<value>1</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/mach-select</property>
+				<step>-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>SPEEDKnb</object-name>
+		<object-name>SPEEDKnbFace</object-name>
+		<property>controls/autoflight/speed-select</property>
+		<factor>2</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.064</y-m>
+			<z-m>-0.013</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>SPEEDKnb</object-name>
+		<object-name>SPEEDKnbFace</object-name>
+		<property>controls/autoflight/mach-select</property>
+		<factor>200</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.064</y-m>
+			<z-m>-0.013</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>SPEEDKnbFace</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/speed-mode</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>APPR</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>3</value>
+				<value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>APPROn</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>3</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>HDG</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>1</value>
+				<value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HDGOn</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>hdg.knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/heading-select</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/heading-select</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">-1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>hdg.knob</object-name>
+		<property>controls/autoflight/heading-select</property>
+		<factor>2</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.03157</y-m>
+			<z-m>0.00052</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>NAV</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>2</value>
+				<value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>NAVOn</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>1/2BANK</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/bank-angle-select</property>
+				<value>15</value>
+				<value>30</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>1/2BANKOn</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/bank-angle-select</property>
+				<value>15</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ALT</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>1</value>
+				<value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>ALTOn</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>alt.knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<step>100</step>
+				<max>50000</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<step>-100</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>alt.knob</object-name>
+		<property>autopilot/settings/target-altitude-ft</property>
+		<factor>0.045</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.05787</y-m>
+			<z-m>0.00052</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>VS</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>2</value>
+				<value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>VSOn</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>vs.knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/vertical-mode</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/pitch-select</property>
+				<step>0.5</step>
+				<max>20</max>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/vertical-mode</property>
+						<value>2</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/vertical-speed-select</property>
+				<step>100</step>
+				<max>9000</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/vertical-mode</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/pitch-select</property>
+				<step>-0.5</step>
+				<min>-20</min>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<condition>
+					<equals>
+						<property>controls/autoflight/vertical-mode</property>
+						<value>2</value>
+					</equals>
+				</condition>
+				<property>controls/autoflight/vertical-speed-select</property>
+				<step>-100</step>
+				<min>-9000</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>vs.knob</object-name>
+		<property>controls/autoflight/vertical-speed-select</property>
+		<factor>0.1</factor>
+		<condition>
+			<equals>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>2</value>
+			</equals>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.00651</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.00923</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>vs.knob</object-name>
+		<property>autopilot/internal/target-pitch-deg</property>
+		<factor>3.6</factor>
+		<condition>
+			<equals>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>0</value>
+			</equals>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.00651</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.00923</z-m>
+		</center>
+	</animation>
+	
+	<!-- Rembrandt !! -->
+	<effect>
+		<name>REMBRANDT transparency</name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Markings</object-name>
+	</effect>
+        <!--Displays-->
+        <!--HDG display-->
+<animation>
+<type>textranslate</type>
+<object-name>hdg.100</object-name>
+				<property>controls/autoflight/heading-select</property>
+<factor>0.0025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>hdg.10</object-name>
+				<property>controls/autoflight/heading-select</property>
+<factor>0.025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>hdg.1</object-name>
+				<property>controls/autoflight/heading-select</property>
+<factor>0.25</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+        <!--ALT display-->
+<animation>
+<type>textranslate</type>
+<object-name>alt.10000</object-name>
+				<property>controls/autoflight/altitude-select</property>
+<factor>0.000025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.1000</object-name>
+				<property>controls/autoflight/altitude-select</property>
+<factor>0.00025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.100</object-name>
+				<property>controls/autoflight/altitude-select</property>
+<factor>0.0025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.10</object-name>
+				<property>controls/autoflight/altitude-select</property>
+<factor>0.025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.1</object-name>
+				<property>controls/autoflight/altitude-select</property>
+<factor>0.25</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+        
+</PropertyList>
