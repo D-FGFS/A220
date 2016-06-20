@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier C-series -->
+<!--CS100-->
+<PropertyList>
+    <sim>
+        <description>Bombardier CS100</description>
+        <author>ACJZA, Joshua Davidson, Jonathan Redpath, D-ECHO</author>
+        <status>dev</status>
+        <aircraft-version>0.0</aircraft-version>
+		
+        <flight-model>yasim</flight-model>
+        <aero>CS100</aero>
+
+        <model>
+            <path>Aircraft/CSeries/Models/CS100.xml</path>
+            <variant type="int">0</variant>
+            <limits><!--according to https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications-->
+				<mtow-lb>134000</mtow-lb>
+				<mlw-lb>15550</mlw-lb>
+			</limits>
+		</model>
+        
+		<sound>
+			<path>Aircraft/CSeries/Sounds/CSeries-sounds.xml</path>
+		</sound>
+
+        <dimensions>
+            <radius-m type="float">35.1</radius-m>
+        </dimensions>
+
+        <weight n="0"><!--Crew weight-->
+            <weight-lb>360</weight-lb>
+            <max-lb>500</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+
+        <weight n="1"><!--Passengers front weight-->
+            <weight-lb>9000</weight-lb>
+            <max-lb>10000</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="2"><!--Passengers rear weight-->
+            <weight-lb>9000</weight-lb>
+            <max-lb>10000</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="3"><!--Passengers rear weight-->
+            <weight-lb>4000</weight-lb>
+            <max-lb>8000</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+
+        <menubar>
+            <default>
+                <menu n="100">
+                    <label>Bombardier CSeries</label>
+                </menu>
+            </default>
+        </menubar>
+    </sim>
+</PropertyList>
