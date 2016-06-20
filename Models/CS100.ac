@@ -106809,7 +106809,7 @@ kids 0
 OBJECT poly
 name "strangebox"
 loc 0.887089 0 18.5104
-texture "/Users/chrisleung/Desktop/Github/CSeries/diagrams/CS100_line_drawing (1).jpg"
+texture "../Sources/diagrams/CS100_line_drawing-1.jpg"
 crease 45.000000
 numvert 4
 -17.5 -5.75 1.33514e-05
