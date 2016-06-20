@@ -4,16 +4,16 @@
 <!--CS100-->
 <PropertyList>
     <sim>
-        <description>Bombardier CS100</description>
+        <description>Bombardier CS300</description>
         <author>ACJZA, Joshua Davidson, Jonathan Redpath, D-ECHO</author>
         <status>dev</status>
         <aircraft-version>0.1</aircraft-version>
 		
         <flight-model>yasim</flight-model>
-        <aero>CS100</aero>
+        <aero>CS300</aero>
 
         <model>
-            <path>Aircraft/CSeries/Models/CS100.xml</path>
+            <path>Aircraft/CSeries/Models/CS300.xml</path>
             <variant type="int">0</variant>
             <limits><!--according to https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications-->
 				<mtow-lb>134000</mtow-lb>
@@ -54,7 +54,7 @@
         <menubar>
             <default>
                 <menu n="100">
-                    <label>Bombardier CSeries 100</label>
+                    <label>Bombardier CSeries 300</label>
                 </menu>
             </default>
         </menubar>

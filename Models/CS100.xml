@@ -1,0 +1,24 @@
+<PropertyList>
+
+
+    <model>
+      <path>Aircraft/CSeries/Models/CS100.ac</path>
+       <offsets>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+       </offsets>
+                <!--<livery>
+                    <file type="string"></file>
+                </livery>-->
+    </model>
+	
+	<model>
+		<path>Aircraft/CSeries/Models/Cockpit/flightdeck.xml</path>
+	</model>
+	
+	
+
+	
+
+</PropertyList>
