@@ -3,8 +3,8 @@
 <!--Data, source:   https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications
                     http://commercialaircraft.bombardier.com/content/dam/Websites/bca/literature/cseries/Bombardier-Commercial-Aircraft-CSeries-Brochure-en.pdf.pdf
                     
-    Dimensions: lenght:35 m    heigth:  11.5   wingspan:35.1m   Fuselage diameter: 3.7m
-    mass: empty: 131000lbs?; MTOW: 134000lbs max payloud= 33 350lbs
+    Dimensions: lenght: 35 m    heigth:  11.5   wingspan:35.1m   Fuselage diameter: 3.7m
+    mass: empty: 131000lbs?; MTOW: 134000lbs max payload= 33 350lbs
     ceiling: 41000ft
     range: 5741km
     engine:
@@ -24,7 +24,7 @@
     <airplane mass="131000">
 
     <!-- Approach configuration -->
-        <approach speed="115" aoa="4.0" fuel="0.6"><!--no data avail?-->
+        <approach speed="120" aoa="4.0" fuel="0.6"> <!--no data avail?-->
 		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.7" />
           <control-setting axis="/controls/flight/flaps" value="1.0"/>

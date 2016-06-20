@@ -1,0 +1,174 @@
+<!--Bombardier C-series-->
+<!--CS100-->
+<!--Data, source:   https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications
+                    http://commercialaircraft.bombardier.com/content/dam/Websites/bca/literature/cseries/Bombardier-Commercial-Aircraft-CSeries-Brochure-en.pdf.pdf
+                    
+    Dimensions: lenght: 35 m    heigth:  11.5   wingspan:35.1m   Fuselage diameter: 3.7m
+    mass: empty: 131000lbs?; MTOW: 134000lbs max payload= 33 350lbs
+    ceiling: 41000ft
+    range: 5741km
+    engine:
+        type=Pratt&Whitney PW1500G
+            diameter=1.85m
+            thrust= 18900lbs/84.1kN
+            flat rating
+            ISA+15°C
+    speed: 
+        stall:
+        cruise:447kts
+        max cruise:470kts
+        -->
+            
+            <!--THE COORDINATES NEED TO BE ADJUSTED!!-->
+
+    <airplane mass="131000">
+
+    <!-- Approach configuration -->
+        <approach speed="120" aoa="4.0" fuel="0.6"> <!--no data avail?-->
+		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.7" />
+		<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.7" />
+          <control-setting axis="/controls/flight/flaps" value="1.0"/>
+          <control-setting axis="/controls/gear/gear-down" value="1"/>
+          <solve-weight idx="0" weight="360"/>
+          <solve-weight idx="1" weight="7000"/>
+          <solve-weight idx="2" weight="2500"/>
+       </approach>
+
+    <!-- Cruise configuration-->
+       <cruise speed="447" alt="35000" fuel=".78">
+          <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.8"/>
+          <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.8"/>
+          <control-setting axis="/controls/flight/flaps" value="0.0"/>
+          <control-setting axis="/controls/gear/gear-down" value="0"/>
+       </cruise>
+
+
+       <cockpit x="9.4" y="0.5" z="1.4"/>
+
+
+    <!--The fuselage pieces. A front cone, a main fuselage piece, and then a
+    rear cone. Plus some pieces to make up the engine nacelles.-->
+       <!--Fuselage diameter: 3.7m-->
+       <!--front cone-->
+       <fuselage ax="17.4265" ay="0" az="-2.9434" bx="12.0084" by="0.00" bz="-2.1126" width="3.7" taper="0.0" midpoint="1.0"/>
+       
+       <!--main fuselage-->
+       <fuselage ax="12.0084" ay="0" az="-2.1126" bx="-7.11" by="0.00" bz="-2.3568" width="3.7" taper=".95" midpoint="1"/>
+
+       <!--rear cone-->
+       <fuselage ax="-7.11" ay="0" az="-2.3568" bx="-17.4032" by="0.00" bz="-1.0617" width="3.7" taper="0.15" midpoint="0"/>
+
+       <!--left engine-->
+       <fuselage ax="7.4235" ay="5.5324" az="-4.1365" bx="3.1349" by="5.5324" bz="-4.1365" width="1.8" taper=".9" midpoint=".5"/>
+       <!--right engine-->
+       <fuselage ax="7.4235" ay="-5.5324" az="-4.1365" bx="3.1349" by="-5.5324" bz="-4.1365" width=".8" taper=".9" midpoint=".5"/>
+
+
+
+
+       <wing x="2.7662" y="1" z="-3.2325" length="15.5" chord="4.9" sweep="18" taper=".615" dihedral="9" camber=".1" incidence="3" twist="-2.0">
+          <stall aoa="17" width="4.2" peak="1.5"/>
+          <!--flap0 start="0" end="1" lift="1.72" drag="0.9"/-->
+          <flap0 start="0" end="1" lift="1.55" drag="1.1"/>
+          <spoiler start="0.22" end="1" lift="0.2" drag="2.0"/>
+          <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+          <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+          <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+          <control-input axis="/controls/flight/ib-speedbrake" control="SPOILER"/>
+          <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+          <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+          <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+          <control-output control="SPOILER" prop="/surface-positions/ib-speedbrake-pos-norm"/>
+          <control-output control="SPOILER" prop="sim/multiplay/generic/float[3]"/>
+          <control-speed control="FLAP0" transition-time="64"/>
+          <control-speed control="SPOILER" transition-time="0.7"/>
+       </wing>
+
+       <!--Winglets-->
+       <mstab x="-3.2446" y="16.4425" z="-0.6214" chord="1" length="1.53" taper=".45" sweep="30" dihedral="50" idrag="-.5"/>
+
+       <hstab x="-13.1011" y="0.15" z="-1.5419" chord="2.3" length="7" taper=".44" sweep="23" dihedral="-1" effectiveness="1">
+          <stall aoa="16" width="10" peak="1.5"/>
+          <flap0 start="0" end=".93" lift="1.5" drag="1.2"/>
+          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+          <control-output control="FLAP0"  prop="/surface-positions/elevator-pos-norm"/>
+          <control-speed control="FLAP0" transition-time="0.3"/>
+       </hstab>
+
+       <vstab x="-11.6926" y="0.00" z="-0.7834" chord="5" length="7.2" taper="0.4" sweep="35" effectiveness="1.5">
+          <stall aoa="15" width="2" peak="1.5"/>
+          <flap0 start="0" end="1" lift="1.3" drag="1.3"/>
+          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+          <control-speed control="FLAP0" transition-time="0.3"/>
+       </vstab>
+
+    <!--2 PW1500G
+       Source: https://en.wikipedia.org/wiki/Pratt_%26_Whitney_PW1000G#Specifications
+            Dry weight: 6300 lb
+            Thrust: 18900lbf-->
+
+       <jet x="4.5" y="5.5324"  z="-4.1365" mass="6300" thrust="18900.0" afterburner="0" rotate="-2.5" n1-idle="21.0" n1-max="99.5" n2-idle="60.0" n2-max="99.4" tsfc="0.394" egt="1050.0" epr="3.0" exhaust-speed="1555.0" spool-time="3.0">
+		<control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE" />
+		<control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST" />
+		<control-output control="REVERSE_THRUST" prop="/engines/engine[0]/reverser-pos-norm" />
+		<control-speed control="REVERSE_THRUST" transition-time="1.0" />
+          <actionpt x="6" y="5.5324"  z="-4.1365"/>
+       </jet>
+
+       <jet x="4.5" y="-5.5324"  z="-4.1365" mass="6300" thrust="18900.0" afterburner="0" rotate="-2.5" n1-idle="21.0" n1-max="99.5" n2-idle="60.0" n2-max="99.4" tsfc="0.394" egt="1050.0" epr="3.0" exhaust-speed="1555.0" spool-time="3.0">
+		<control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE" />
+		<control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST" />
+		<control-output control="REVERSE_THRUST" prop="/engines/engine[0]/reverser-pos-norm" />
+		<control-speed control="REVERSE_THRUST" transition-time="1.0" />
+          <actionpt x="6" y="-5.5324"  z="-4.1365"/>
+       </jet>
+
+    <!--user controlled pushback-->
+       <thruster x="10.1"  y="0.00" z="-1.75" vx="1" vy="0" vz="0" thrust="1500">
+          <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       </thruster>
+
+
+       <gear x="14.5219"  y="0.00" z="-5.7501" compression="0.3" spring="0.2" damp="2">
+          <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
+          <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+          <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+          <control-speed control="EXTEND" transition-time="7"/>
+          <control-output control="STEER" prop="gear/gear[0]/steering-norm"/>
+       </gear>
+
+       <gear x="0.924" y="2.3337" z="-5.7541" spring=".3" compression="0.3" >
+          <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+          <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+          <control-input axis="/controls/gear/autobrake" control="BRAKE"/>
+          <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+          <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+          <control-speed control="EXTEND" transition-time="7"/>
+       </gear>
+
+       <gear x="0.924" y="-2.3337" z="-5.7541" spring=".3" compression="0.3" >
+          <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+          <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+          <control-input axis="/controls/gear/autobrake" control="BRAKE"/>
+          <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+          <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+          <control-speed control="EXTEND" transition-time="7"/>
+       </gear>
+
+       <!--No tank data available-->
+       <tank x="2.2437" y="3" z="-4.5705" jet="true" capacity="5000"/>
+       <tank x="2.2437" y="-3" z="-4.5705" jet="true" capacity="5000"/>
+       <tank x="0.0" y="0" z="-0.5" jet="true"  capacity="4305"/>
+
+       <weight x="10" y="0" z="0.4" mass-prop="/sim/weight[0]/weight-lb"/><!--Crew mass-->
+       <weight x=".331" y="0" z="0.869" mass-prop="/sim/weight[1]/weight-lb"/><!--Passengers front mass-->
+       <weight x=".331" y="0" z="-0.4" mass-prop="/sim/weight[2]/weight-lb"/><!--Passengers rear mass-->
+       <weight x="-3.5" y="0" z="0.4" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass-->
+
+       <ballast x="16"  y="0.0" z="0" mass="24000"/>
+       <!--ballast x="-10" y="0" z="0" mass="-3500"/-->
+
+    </airplane>
