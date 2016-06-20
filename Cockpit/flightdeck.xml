@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier C-series -->
+<!-- Flightdeck -->
+
+<PropertyList>
+
+	<path>flightdeck.ac</path>
+
+	<panel-marking-emit>
+		<red>1</red>
+		<green>0.871</green>
+		<blue>0.427</blue>
+	</panel-marking-emit>
+
+	<!-- Visible only within 1/2 km -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>500</max-m>
+	</animation>
+        <!--Throttle-->
+	<animation>
+		<type>rotate</type>
+		<object-name>throttleL</object-name>
+		<property>/controls/engines/engine/throttle</property>
+                <condition><not>
+                        <property>/controls/engines/engine/reverser</property></not>
+                    </condition>
+		<factor>-31</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.03501</x-m>
+			<z-m>-0.25927</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>throttleL</object-name>
+		<property>/controls/engines/engine/throttle</property>
+                <condition>
+                        <property>/controls/engines/engine/reverser</property>
+                    </condition>
+		<factor>5.78</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.03501</x-m>
+			<z-m>-0.25927</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>throttleL</object-name>
+		<property>/controls/engines/engine/reverser</property>
+		<factor>3.9</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.03501</x-m>
+			<z-m>-0.25927</z-m>
+		</center>
+	</animation>
+
+<!--	<animation>
+		<type>rotate</type>
+		<object-name>throttleL</object-name>
+		<property>/controls/engines/engine/throttle-rvs</property>
+		<factor>5.78</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.03501</x-m>
+			<z-m>-0.25927</z-m>
+		</center>
+	</animation>-->
+	<animation>
+		<type>rotate</type>
+		<object-name>throttleR</object-name>
+		<property>/controls/engines/engine[1]/throttle</property>
+                <condition><not>
+                        <property>/controls/engines/engine[1]/reverser</property></not>
+                    </condition>
+		<factor>-31</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.03501</x-m>
+			<z-m>-0.25927</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>throttleR</object-name>
+		<property>/controls/engines/engine[1]/throttle</property>
+                <condition>
+                        <property>/controls/engines/engine[1]/reverser</property>
+                    </condition>
+		<factor>5.78</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.03501</x-m>
+			<z-m>-0.25927</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>throttleR</object-name>
+		<property>/controls/engines/engine[1]/reverser</property>
+		<factor>3.9</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.03501</x-m>
+			<z-m>-0.25927</z-m>
+		</center>
+	</animation>
+        <!--Spoiler-->
+
+	<animation>
+		<type>translate</type>
+		<object-name>spoiler</object-name>
+		<property>/controls/flight/speedbrake</property>
+  <interpolation>
+    <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+    <entry><ind>  0.25 </ind><dep>   0.0128 </dep></entry>
+    <entry><ind>  0.5 </ind><dep>   0.0347 </dep></entry>
+    <entry><ind>  0.75 </ind><dep>   0.0566 </dep></entry>
+    <entry><ind>  0.825 </ind><dep>   0.0724 </dep></entry>
+    <entry><ind> 1 </ind><dep>   0.0859 </dep></entry>
+  </interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        <!--Flaps-->
+	<animation>
+		<type>rotate</type>
+		<object-name>flaps</object-name>
+		<property>/controls/flight/flaps</property>
+		<factor>29.33</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+                    <x-m>0.36144</x-m>
+			<z-m>-0.19271</z-m>
+		</center>
+	</animation>
+        
+        <!--Gear lever-->
+	<animation>
+		<type>pick</type>
+		<object-name>gearhandle</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+		<property>/controls/gear/gear-down</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>gearhandle</object-name>
+		<property>/controls/gear/gear-down</property>
+		<factor>80</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+                    <x-m>-0.47199</x-m>
+			<z-m>0.11003</z-m>
+		</center>
+	</animation>
+        
+        <!--Cutoff-->
+	<animation>
+		<type>pick</type>
+		<object-name>engLcutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>engLcutoff</object-name>
+		<property>controls/engines/engine[0]/cutoff</property>
+		<factor>60</factor>
+                <offset-deg>-60</offset-deg>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+                    <x-m>0.18115</x-m>
+                    <z-m>-0.06</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>engRcutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[1]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>engRcutoff</object-name>
+		<property>controls/engines/engine[1]/cutoff</property>
+		<factor>60</factor>
+                <offset-deg>-60</offset-deg>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+                    <x-m>0.18115</x-m>
+                    <z-m>-0.06</z-m>
+		</center>
+	</animation>
+        <!--Rudder pedals-->
+        <animation>
+		<type>translate</type>
+		<object-name>LeftLeftPedal</object-name>
+                <object-name>RightLeftPedal</object-name>
+		<property>/controls/flight/rudder</property>
+                <factor>0.1</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftLeftPedal</object-name>
+                <object-name>RightLeftPedal</object-name>
+		<property>/controls/gear/brake-left</property>
+		<factor>-30</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+                    <x-m>-0.56874</x-m>
+                    <z-m>-0.5273</z-m>
+		</center>
+	</animation>
+        <animation>
+		<type>translate</type>
+		<object-name>LeftRightPedal</object-name>
+                <object-name>RightRightPedal</object-name>
+		<property>/controls/flight/rudder</property>
+                <factor>-0.1</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftRightPedal</object-name>
+                <object-name>RightRightPedal</object-name>
+		<property>/controls/gear/brake-right</property>
+		<factor>-30</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+                    <x-m>-0.56874</x-m>
+                    <z-m>-0.5273</z-m>
+		</center>
+	</animation>
+        <!--Autopilot-->
+	<animation>
+		<type>pick</type>
+		<object-name>hdg.knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/heading-select</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/heading-select</property>
+				<wrap type="bool">true</wrap>
+				<step type="double">-1</step>
+				<min>1</min>
+				<max>361</max>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>alt.knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<step>100</step>
+				<max>50000</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<step>-100</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+        
+	<animation>
+		<type>pick</type>
+		<object-name>vs.knob</object-name>
+		<action>
+                    <button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/vertical-speed-select</property>
+				<step>100</step>
+				<max>9000</max>
+			</binding>
+		</action>
+		<action>
+                    <button>0</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/vertical-speed-select</property>
+				<step>-100</step>
+				<min>-9000</min>
+			</binding>
+		</action>
+	</animation>
+	<!--<animation>
+		<type>rotate</type>
+		<object-name>hdg.knob</object-name>
+		<property>controls/autoflight/heading-select</property>
+		<factor>2</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.03157</y-m>
+			<z-m>0.00052</z-m>
+		</center>
+	</animation>-->
+               <!--Displays-->
+        <!--HDG display-->
+<animation>
+<type>textranslate</type>
+<object-name>hdg.100</object-name>
+				<property>controls/autoflight/heading-select</property>
+    <step>100</step>
+    <factor> 0.001 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>hdg.10</object-name>
+				<property>controls/autoflight/heading-select</property>
+    <step>10</step>
+    <factor> 0.01 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>hdg.1</object-name>
+				<property>controls/autoflight/heading-select</property>
+    <step>1</step>
+    <factor> 0.1 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+        <!--ALT display-->
+  <animation>
+    <type>select</type>
+<object-name>alt.10000</object-name>
+    <condition>
+      <greater-than>
+        <property>controls/autoflight/altitude-select</property>
+	<value>9999</value>
+      </greater-than>
+    </condition>
+  </animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.10000</object-name>
+				<property>controls/autoflight/altitude-select</property>
+    <step>10000</step>
+    <factor> 0.00001 </factor>
+<factor>0.000025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+  <animation>
+    <type>select</type>
+<object-name>alt.1000</object-name>
+    <condition>
+      <greater-than>
+        <property>controls/autoflight/altitude-select</property>
+	<value>999</value>
+      </greater-than>
+    </condition>
+  </animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.1000</object-name>
+				<property>controls/autoflight/altitude-select</property>
+    <step>1000</step>
+    <factor> 0.0001 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.100</object-name>
+				<property>controls/autoflight/altitude-select</property>
+    <step>100</step>
+    <factor> 0.001 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.10</object-name>
+				<property>controls/autoflight/altitude-select</property>
+    <step>10</step>
+    <factor> 0.01 </factor>
+<factor>0.025</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>alt.1</object-name>
+				<property>controls/autoflight/altitude-select</property>
+    <step>1</step>
+    <factor> 0.1 </factor>
+<factor>0.25</factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+  <animation>
+    <type>select</type>
+<object-name>vs.-</object-name>
+    <condition>
+      <less-than>
+    <property>controls/autoflight/vertical-speed-select</property>
+	<value>0</value>
+      </less-than>
+    </condition>
+  </animation>
+
+<animation>
+<type>textranslate</type>
+<object-name>vs.1000</object-name>
+    <property>controls/autoflight/vertical-speed-select</property>
+    <step>1000</step>
+    <factor> 0.0001 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.100</object-name>
+				<property>controls/autoflight/vertical-speed-select</property>
+    <step>100</step>
+    <factor> 0.001 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.10</object-name>
+				<property>controls/autoflight/vertical-speed-select</property>
+    <step>10</step>
+    <factor> 0.01 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.1</object-name>
+				<property>controls/autoflight/vertical-speed-select</property>
+    <step>1</step>
+    <factor> 0.1 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<!--
+<animation>
+<type>textranslate</type>
+<object-name>vs.1000</object-name>
+    <condition>
+      <less-than>
+    <property>controls/autoflight/vertical-speed-select</property>
+	<value>0</value>
+      </less-than>
+    </condition>
+    <property>controls/autoflight/vertical-speed-select</property>
+    <step>1000</step>
+    <factor> -0.0001 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.100</object-name>
+    <condition>
+      <less-than>
+    <property>controls/autoflight/vertical-speed-select</property>
+	<value>0</value>
+      </less-than>
+    </condition>
+				<property>controls/autoflight/vertical-speed-select</property>
+    <step>100</step>
+    <factor> -0.001 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.10</object-name>
+    <condition>
+      <less-than>
+    <property>controls/autoflight/vertical-speed-select</property>
+	<value>0</value>
+      </less-than>
+    </condition>
+				<property>controls/autoflight/vertical-speed-select</property>
+    <step>10</step>
+    <factor> -0.01 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.1</object-name>
+    <condition>
+      <less-than>
+    <property>controls/autoflight/vertical-speed-select</property>
+	<value>0</value>
+      </less-than>
+    </condition>
+				<property>controls/autoflight/vertical-speed-select</property>
+    <step>1</step>
+    <factor> -0.1 </factor>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>-->
+</PropertyList>

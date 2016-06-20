@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier C-series -->
+<!-- Overhead Panel -->
+
+<PropertyList>
+
+	<path>overhead.ac</path>
+
+	<panel-marking-emit>
+		<red>1</red>
+		<green>0.871</green>
+		<blue>0.427</blue>
+	</panel-marking-emit>
+
+	<!-- Visible only within 1/2 km -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>500</max-m>
+	</animation>
+        
+        <!--Batteries-->
+    
+    <animation>
+	<type>pick</type>
+	<object-name>batt1</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/electric/battery-switch</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>batt2</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/electric/battery-switch[1]</property>
+	    </binding>
+	</action>
+    </animation>
+        
+        
+</PropertyList>
