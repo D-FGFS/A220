@@ -7,7 +7,7 @@
         <description>Bombardier CS100</description>
         <author>ACJZA, Joshua Davidson, Jonathan Redpath, D-ECHO</author>
         <status>dev</status>
-        <aircraft-version>0.0</aircraft-version>
+        <aircraft-version>0.1</aircraft-version>
 		
         <flight-model>yasim</flight-model>
         <aero>CS100</aero>
