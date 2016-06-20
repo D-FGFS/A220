@@ -46,6 +46,107 @@
 	    </binding>
 	</action>
     </animation>
-        
-        
+    <!--Generators-->
+    <animation>
+	<type>pick</type>
+	<object-name>lgen</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/engines/engine/generator</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>rgen</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/engines/engine[1]/generator</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>apu</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/APU/electronic-control-unit</property>
+	    </binding>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/APU/fuel-pump</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>apustart</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/APU/off-on</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>apugen</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/APU/generator</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>pick</type>
+        <object-name>extpwr</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/electric/external-power</property>
+	    </binding>
+	</action>
+    </animation>
+    <!--Fuel-->
+     <animation>
+	<type>pick</type>
+        <object-name>fuelpumpL</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/engines/engine/fuel-pump</property>
+	    </binding>
+	</action>
+    </animation>
+     <animation>
+	<type>pick</type>
+        <object-name>fuelpumpR</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/engines/engine[1]/fuel-pump</property>
+	    </binding>
+	</action>
+    </animation>
+    
 </PropertyList>

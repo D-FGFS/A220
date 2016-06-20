@@ -6,7 +6,7 @@
 <PropertyList>
 
 	<path>flightdeck.ac</path>
-
+        <model><path>overhead.xml</path></model>
 	<panel-marking-emit>
 		<red>1</red>
 		<green>0.871</green>
