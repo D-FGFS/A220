@@ -14,6 +14,9 @@
 
         <model>
             <path>Aircraft/CSeries/Models/CS100.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
             <variant type="int">0</variant>
             <limits><!--according to https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications-->
 				<mtow-lb>134000</mtow-lb>
@@ -55,8 +58,35 @@
             <default>
                 <menu n="100">
                     <label>Bombardier CSeries 100</label>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
                 </menu>
             </default>
         </menubar>
+
+        <dimensions>
+            <radius-m type="float">32.51</radius-m>
+        </dimensions>
+            
+            <view n="0">
+            <internal archive="y">true</internal>
+            <config>
+                <x-offset-m archive="y"> -0.5 </x-offset-m> <!-- Right -->
+                <y-offset-m archive="y">  -1.52077 </y-offset-m> <!-- Up    -->
+                <z-offset-m archive="y"> -14.44355 </z-offset-m> <!-- Back  -->
+                <pitch-offset-deg> -10 </pitch-offset-deg>
+                <default-field-of-view-deg> 94 </default-field-of-view-deg>
+            </config>
+            </view>
     </sim>
+    <nasal>
+        <cseries>
+            <file>Aircraft/CSeries/Nasal/liveries.nas</file>
+        </cseries>
+    </nasal>
 </PropertyList>
