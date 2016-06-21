@@ -15,9 +15,12 @@
 	
 	<model>
 		<path>Aircraft/CSeries/Models/Cockpit/flightdeck.xml</path>
+		<offsets>
+			<x-m>-14.5</x-m>
+			<y-m>0</y-m>
+			<z-m>-2</z-m>
+		</offsets>
 	</model>
-	
-	
 
 	
 
