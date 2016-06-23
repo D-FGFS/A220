@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <PropertyList>
-	<name>Effects/reflect</name>
+	<name>Effects/CRJ700-reflect_generic</name>
 	<inherits-from>/Effects/model-combined-deferred</inherits-from>
 	<parameters>
 		<!-- Reflection -->

@@ -83,6 +83,17 @@
                 <default-field-of-view-deg> 94 </default-field-of-view-deg>
             </config>
             </view>
+            <view n="101">
+                <name>Copilot View</name>
+            <internal archive="y">true</internal>
+            <config>
+                <x-offset-m archive="y"> 0.5 </x-offset-m> <!-- Right -->
+                <y-offset-m archive="y">  -1.52077 </y-offset-m> <!-- Up    -->
+                <z-offset-m archive="y"> -14.44355 </z-offset-m> <!-- Back  -->
+                <pitch-offset-deg> -10 </pitch-offset-deg>
+                <default-field-of-view-deg> 94 </default-field-of-view-deg>
+            </config>
+            </view>
     </sim>
     <nasal>
         <cseries>

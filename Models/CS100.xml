@@ -1,20 +1,9 @@
 <PropertyList>
     
-
-    <model>
       <path>Aircraft/CSeries/Models/CS100.ac</path>
-       <offsets>
-                <x-m>0</x-m>
-                <y-m>0</y-m>
-                <z-m>0</z-m>
-       </offsets>
-                <!--<livery>
-                    <file type="string"></file>
-                </livery>-->
-    </model>
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/Tecnam-P2006T/Models/Liveries", 10);
+      var livery_update = aircraft.livery_update.new("Aircraft/CSeries/Models/Liveries", 10);
     </load>
 
     <unload>
@@ -44,11 +33,14 @@
     <object-name>doorFR</object-name>
     <object-name>doorRL</object-name>
     <object-name>doorRR</object-name>
+    <object-name>nacelleL</object-name>
+    <object-name>nacelleR</object-name>
+    <object-name>enginefix.</object-name>
   </effect>
   <effect>
-      <inherits-from>Effects/Glass</inherits-from>
-    <object-name>windows</object-name>
-  </effect>
+       <inherits-from>Aircraft/CSeries/Models/Effects/reflectglass</inherits-from>
+         <object-name>windows</object-name>
+     </effect> 
   <!--LIVERY-->
   <animation>
     <type>material</type>
