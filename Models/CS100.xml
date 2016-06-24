@@ -79,6 +79,12 @@
     </specular>
   </animation>
 
+	<animation>
+		<type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.png</texture>
+		<object-name>apu.chrome</object-name>
+	</animation>
 	
 	<animation>
 		<name>FanL</name>
