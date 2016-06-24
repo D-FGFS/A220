@@ -95,6 +95,22 @@
             </config>
             </view>
     </sim>
+            <input>
+                <keyboard>
+                    <key n="127">
+                    <name>Delete</name>
+                    <desc>Toggle thrust reversers or arm/disarm thrust reversers</desc>
+                    <binding>
+			<command>property-toggle</command>
+                        <property>/controls/engines/engine/reverser</property>
+                    </binding>
+                    <binding>
+			<command>property-toggle</command>
+                        <property>/controls/engines/engine[1]/reverser</property>
+                    </binding>
+                    </key>
+                </keyboard>
+            </input>
     <nasal>
         <cseries>
             <file>Aircraft/CSeries/Nasal/liveries.nas</file>
