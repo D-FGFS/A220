@@ -304,5 +304,56 @@
                     </center>
 	</animation>
         
-        
+        <!--CABIN-->
+        <!--Seats-->
+    <animation>
+		<type>pick</type>
+		<object-name>mixedclass1</object-name>
+		<object-name>mixedclass2</object-name>
+		<object-name>mixedclass3</object-name>
+		<object-name>mixedclass4</object-name>
+		<object-name>standard1</object-name>
+		<object-name>standard2</object-name>
+		<object-name>highdensity1</object-name>
+		<object-name>highdensity2</object-name>
+                <action>
+                    <button>0</button>
+                    <binding>
+                        <command>property-cycle</command>
+                <property>/controls/cabin/seating</property>
+                <value>0</value>
+                <value>1</value>
+                <value>2</value>
+            </binding>
+        </action>
+	</animation>
+    <animation>
+		<type>select</type>
+		<object-name>mixedclass1</object-name>
+		<object-name>mixedclass2</object-name>
+		<object-name>mixedclass3</object-name>
+		<object-name>mixedclass4</object-name>
+                <condition><equals>
+                <property>/controls/cabin/seating</property>
+                <value>0</value></equals>
+                </condition>
+	</animation>
+    <animation>
+		<type>select</type>
+		<object-name>standard1</object-name>
+		<object-name>standard2</object-name>
+                <condition><equals>
+                <property>/controls/cabin/seating</property>
+                <value>1</value></equals>
+                </condition>
+	</animation>
+    <animation>
+		<type>select</type>
+		<object-name>highdensity1</object-name>
+		<object-name>highdensity2</object-name>
+                <condition><equals>
+                <property>/controls/cabin/seating</property>
+                <value>2</value></equals>
+                </condition>
+	</animation>
 </PropertyList>
