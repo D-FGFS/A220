@@ -81,8 +81,8 @@
 
 	<animation>
 		<type>shader</type>
-        <shader>chrome</shader>
-        <texture>chrome.png</texture>
+                <shader>chrome</shader>
+                <texture>chrome.png</texture>
 		<object-name>apu.chrome</object-name>
 	</animation>
 	

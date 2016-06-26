@@ -24,7 +24,7 @@
     <airplane mass="131000">
 
     <!-- Approach configuration -->
-        <approach speed="120" aoa="4.0" fuel="0.6"> <!--no data avail?-->
+        <approach speed="110" aoa="4.0" fuel="0.6"> <!--no data avail?-->
 		<control-setting axis="/controls/engines/engine[0]/throttle" value="0.7" />
 		<control-setting axis="/controls/engines/engine[1]/throttle" value="0.7" />
           <control-setting axis="/controls/flight/flaps" value="1.0"/>
@@ -43,7 +43,7 @@
        </cruise>
 
 
-       <cockpit x="9.4" y="0.5" z="1.4"/>
+       <cockpit x="14.51701" y="0.5" z="-1.55091"/>
 
 
     <!--The fuselage pieces. A front cone, a main fuselage piece, and then a
@@ -67,7 +67,7 @@
 
        <!--The wing has two parts-->
 	<!-- Inner segment -->
-	<mstab x="2.7662" y="1.5" z="-3.2325" length="5" chord="6.057" sweep="14" taper=".615" dihedral="9" camber=".1" incidence="3" twist="-2.0" idrag="1.0">
+	<mstab x="2.7662" y="1.5" z="-3.2325" length="5" chord="5.4" sweep="14" taper=".615" dihedral="9" camber=".1" incidence="3" twist="-2.0" idrag="1.0">
 		<stall aoa="10.0" width="7" peak="1.5" />
 		<flap0 start="0.05" end="0.99" lift="1.4" drag="2.0" />
 		<spoiler start="0.18" end="0.94" lift="0.0" drag="2.0" />
@@ -80,13 +80,13 @@
 		<control-speed control="SPOILER" transition-time="0.7" />
 	</mstab>
 	<!-- Outer segment -->
-	<wing x="1.51605" y="6.28899" z="-2.5" length="11.5" chord="3.725" sweep="25" taper=".50" dihedral="11" camber=".1" incidence="3" twist="-2.0" idrag="1.0">
+	<wing x="1.51605" y="6.28899" z="-2.5" length="11.5" chord="3.321" sweep="25" taper=".50" dihedral="11" camber=".1" incidence="3" twist="-2.0" idrag="1.0">
 		<stall aoa="8.0" width="5" peak="0.8" />
 		<flap0 start="0.0" end="0.51" lift="1.4" drag="2.0" />
 		<flap1 start="0.51" end="0.8" lift="1.35" drag="1.3" />
 		<spoiler start="0.06" end="0.31" lift="0.0" drag="2.0" />
 		<control-input axis="/controls/flight/flaps" control="FLAP0" />
-		<control-input axis="/fcs/aileron-cmd-norm" control="FLAP1" split="true" />
+		<control-input axis="/controls/flight/aileron" control="FLAP1" split="true" />
 		<control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true" />
 		<control-input axis="/controls/flight/flaps" control="SLAT" />
 		<control-input axis="/controls/flight/speedbrake" control="SPOILER" />
@@ -102,9 +102,9 @@
        <!--Winglets-->
        <mstab x="-3.44543" y="16.51502" z="-0.77451" chord="1.85" length="3.2" taper=".35" sweep="39" dihedral="55" idrag="-.5"/>
 
-       <hstab x="-13.5" y="0.90079" z="-1.5419" chord="2.7" length="5.9" taper=".44" sweep="27" dihedral="-1" effectiveness="1">
+       <hstab x="-13.5" y="0.90079" z="-1.5419" chord="2.7" length="5.9" taper=".44" sweep="27" dihedral="10">
           <stall aoa="16" width="10" peak="1.5"/>
-          <flap0 start="0" end=".93" lift="1.5" drag="1.2"/>
+          <flap0 start="0" end=".93" lift="1.7" drag="1.55"/>
           <control-input axis="/controls/flight/elevator" control="FLAP0"/>
           <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
           <control-output control="FLAP0"  prop="/surface-positions/elevator-pos-norm"/>
@@ -179,16 +179,17 @@
        </gear>
 
        <!--No tank data available-->
-       <tank x="2.2437" y="3" z="-4.5705" jet="true" capacity="5000"/>
-       <tank x="2.2437" y="-3" z="-4.5705" jet="true" capacity="5000"/>
-       <tank x="0.0" y="0" z="-0.5" jet="true"  capacity="4305"/>
+       <tank x="2.5" y="3" z="-3.1259" jet="true" capacity="5000"/>
+       <tank x="2.5" y="-3" z="-3.1259" jet="true" capacity="5000"/>
+       <tank x="2.7" y="0" z="-0.5" jet="true"  capacity="4305"/>
 
-       <weight x="10" y="0" z="0.4" mass-prop="/sim/weight[0]/weight-lb"/><!--Crew mass-->
-       <weight x=".331" y="0" z="0.869" mass-prop="/sim/weight[1]/weight-lb"/><!--Passengers front mass-->
-       <weight x=".331" y="0" z="-0.4" mass-prop="/sim/weight[2]/weight-lb"/><!--Passengers rear mass-->
-       <weight x="-3.5" y="0" z="0.4" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass-->
+       <weight x="14.51701" y="0.0" z="-1.55091" mass-prop="/sim/weight[0]/weight-lb"/><!--Crew mass-->
+       <weight x="5.9957" y="0" z="-1.5" mass-prop="/sim/weight[1]/weight-lb"/><!--Passengers front mass-->
+       <weight x="-5" y="0" z="-1.5" mass-prop="/sim/weight[2]/weight-lb"/><!--Passengers rear mass-->
+       <weight x="9.97759" y="0" z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass front-->
+       <weight x="-4.68367" y="0" z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass rear-->
 
-       <ballast x="16"  y="0.0" z="0" mass="24000"/>
+       <ballast x="16"  y="0.0" z="-2" mass="36500"/>
        <!--ballast x="-10" y="0" z="0" mass="-3500"/-->
 
     </airplane>
