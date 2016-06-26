@@ -190,8 +190,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.29749</x-m>
-			<z-m>-5.07399</z-m>
+			<x-m>-0.53269</x-m>
+			<z-m>-5.06946</z-m>
                     </center>
 	</animation>
     <animation>
@@ -205,8 +205,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.13586</x-m>
-			<z-m>-4.44426</z-m>
+			<x-m>-0.38197</x-m>
+			<z-m>-4.44865</z-m>
                     </center>
 	</animation>
         <!--LRight main-->
@@ -234,8 +234,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.29749</x-m>
-			<z-m>-5.07399</z-m>
+			<x-m>-0.53269</x-m>
+			<z-m>-5.06946</z-m>
                     </center>
 	</animation>
     <animation>
@@ -249,8 +249,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.13586</x-m>
-			<z-m>-4.44426</z-m>
+			<x-m>-0.38197</x-m>
+			<z-m>-4.44865</z-m>
                     </center>
 	</animation>
         <!--Wheel spinning-->
@@ -280,7 +280,7 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.31558</x-m>
+			<x-m>-0.55741</x-m>
 			<z-m>-5.20529</z-m>
                     </center>
 	</animation>
@@ -295,11 +295,72 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.31558</x-m>
+			<x-m>-0.55741</x-m>
 			<z-m>-5.20529</z-m>
                     </center>
 	</animation>
+        <!--Gear retraction-->
+    <animation>
+		<type>rotate</type>
+		<object-name>wheelF</object-name>
+		<object-name>gearFU</object-name>
+		<object-name>gearFUdamper</object-name>
+		<object-name>gearFD</object-name>
+		<object-name>gearFDdamper</object-name>
+                <property>gear/gear/position-norm</property>
+		<offset-deg>108</offset-deg>
+		<factor>-108</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+                <center>
+			<x-m>-15.75171</x-m>
+			<z-m>-3.72991</z-m>
+                    </center>
+	</animation>
         
+    <animation>
+		<type>rotate</type>
+		<object-name>wheelL</object-name>
+		<object-name>gearLU</object-name>
+		<object-name>gearLUdamper</object-name>
+		<object-name>gearLD</object-name>
+		<object-name>gearLDdamper</object-name>
+                <property>gear/gear/position-norm</property>
+		<offset-deg>90</offset-deg>
+		<factor>-90</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+                <center>
+			<y-m>-2.36542</y-m>
+			<z-m>-3.32251</z-m>
+                    </center>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>wheelR</object-name>
+		<object-name>gearRU</object-name>
+		<object-name>gearRUdamper</object-name>
+		<object-name>gearRD</object-name>
+		<object-name>gearRDdamper</object-name>
+                <property>gear/gear/position-norm</property>
+		<offset-deg>-90</offset-deg>
+		<factor>90</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+                <center>
+			<y-m>2.36542</y-m>
+			<z-m>-3.32251</z-m>
+                    </center>
+	</animation>
         <!--CABIN-->
         <!--Seats-->
     <animation>
