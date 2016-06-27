@@ -118,6 +118,7 @@
             </input>
     <nasal>
         <cseries>
+            <file>Aircraft/CSeries/Nasal/doors.nas</file>
             <file>Aircraft/CSeries/Nasal/liveries.nas</file>
         </cseries>
     </nasal>

@@ -44,6 +44,8 @@
   <effect>
        <inherits-from>Aircraft/CSeries/Models/Effects/reflectglass</inherits-from>
          <object-name>windows</object-name>
+         <object-name>wingltL</object-name>
+         <object-name>wingltR</object-name>
      </effect> 
   <!--LIVERY-->
   <animation>
@@ -92,6 +94,8 @@
                 <shader>chrome</shader>
                 <texture>chrome.png</texture>
 		<object-name>apu.chrome</object-name>
+		<object-name>engineL.chrome</object-name>
+		<object-name>engineR.chrome</object-name>
 	</animation>
 	
 	<animation>
@@ -158,8 +162,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-13.94895</x-m>
-			<z-m>-5.13906</z-m>
+			<x-m>-1.09938</x-m>
+			<z-m>-5.04356</z-m>
                     </center>
 	</animation>
     <animation>
@@ -173,8 +177,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-13.79362</x-m>
-			<z-m>-4.51353</z-m>
+			<x-m>-0.97312</x-m>
+			<z-m>-4.44907</z-m>
                     </center>
 	</animation>
         <!--Left main-->
@@ -202,8 +206,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.29749</x-m>
-			<z-m>-5.07399</z-m>
+			<x-m>-1.09938</x-m>
+			<z-m>-5.04356</z-m>
                     </center>
 	</animation>
     <animation>
@@ -217,8 +221,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.13586</x-m>
-			<z-m>-4.44426</z-m>
+			<x-m>-0.97312</x-m>
+			<z-m>-4.44907</z-m>
                     </center>
 	</animation>
         <!--LRight main-->
@@ -340,6 +344,25 @@
 		<object-name>gearFUdamper</object-name>
 		<object-name>gearFD</object-name>
 		<object-name>gearFDdamper</object-name>
+                <property>gear/gear/steering-norm</property>
+		<factor>-50</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+                <center>
+			<x-m>-13.94843</x-m>
+			<z-m>-3.72991</z-m>
+                    </center>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>wheelF</object-name>
+		<object-name>gearFU</object-name>
+		<object-name>gearFUdamper</object-name>
+		<object-name>gearFD</object-name>
+		<object-name>gearFDdamper</object-name>
                 <property>gear/gear/position-norm</property>
 		<offset-deg>108</offset-deg>
 		<factor>-108</factor>
@@ -370,8 +393,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<y-m>-2.36542</y-m>
-			<z-m>-3.32251</z-m>
+			<y-m>-2.98813</y-m>
+			<z-m>-3.20894</z-m>
                     </center>
 	</animation>
     <animation>
@@ -390,8 +413,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<y-m>2.36542</y-m>
-			<z-m>-3.32251</z-m>
+			<y-m>2.98813</y-m>
+			<z-m>-3.20894</z-m>
                     </center>
 	</animation>
         <!--Wheel spinning-->
@@ -399,7 +422,7 @@
 		<type>spin</type>
 		<object-name>wheelF</object-name>
                 <property>gear/gear/rollspeed-ms</property>
-		<factor>100</factor>
+		<factor>10</factor>
 		<axis>
 			<x>0</x>
 			<y>-1</y>
@@ -414,14 +437,14 @@
 		<type>spin</type>
 		<object-name>wheelL</object-name>
                 <property>gear/gear[1]/rollspeed-ms</property>
-		<factor>100</factor>
+		<factor>10</factor>
 		<axis>
 			<x>0</x>
 			<y>-1</y>
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.31558</x-m>
+			<x-m>-1.13942</x-m>
 			<z-m>-5.20529</z-m>
                     </center>
 	</animation>
@@ -429,18 +452,206 @@
 		<type>spin</type>
 		<object-name>wheelR</object-name>
                 <property>gear/gear[2]/rollspeed-ms</property>
-		<factor>100</factor>
+		<factor>10</factor>
 		<axis>
 			<x>0</x>
 			<y>-1</y>
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.31558</x-m>
+			<x-m>-1.13942</x-m>
 			<z-m>-5.20529</z-m>
                     </center>
 	</animation>
-        
+        <!--Doors-->
+	<animation>
+		<type>pick</type>
+		<object-name>doorFL</object-name>
+		<object-name>doorFLint</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					cseries.doors.pax_left.toggle();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorFL</object-name>
+		<object-name>doorFLint</object-name>
+		<property>sim/model/door-positions/pax-left/position-norm</property>
+		<factor>-160</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-13.07616</x-m>
+			<y-m>-1.44239</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorFL</object-name>
+		<object-name>doorFLint</object-name>
+		<property>sim/model/door-positions/pax-left/position-norm</property>
+		<factor>160</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-12.48052</x-m>
+			<y-m>-1.54712</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>doorFR</object-name>
+		<object-name>doorFRint</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					cseries.doors.pax_right.toggle();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorFR</object-name>
+		<object-name>doorFRint</object-name>
+		<property>sim/model/door-positions/pax-right/position-norm</property>
+		<factor>160</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-13.07616</x-m>
+			<y-m>1.44239</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorFR</object-name>
+		<object-name>doorFRint</object-name>
+		<property>sim/model/door-positions/pax-right/position-norm</property>
+		<factor>-160</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-12.48052</x-m>
+			<y-m>1.54712</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>doorRR</object-name>
+		<object-name>doorRRint</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					cseries.doors.rear_right.toggle();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorRR</object-name>
+		<object-name>doorRRint</object-name>
+		<property>sim/model/door-positions/rear-right/position-norm</property>
+		<factor>-145</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>9.4</x-m>
+			<y-m>1.33287</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorRR</object-name>
+		<object-name>doorRRint</object-name>
+		<property>sim/model/door-positions/rear-right/position-norm</property>
+		<factor>145</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>8.92442</x-m>
+			<y-m>1.48063</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>doorRL</object-name>
+		<object-name>doorRLint</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					cseries.doors.rear_left.toggle();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorRL</object-name>
+		<object-name>doorRLint</object-name>
+		<property>sim/model/door-positions/rear-left/position-norm</property>
+		<factor>145</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>9.4</x-m>
+			<y-m>-1.33287</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>doorRL</object-name>
+		<object-name>doorRLint</object-name>
+		<property>sim/model/door-positions/rear-left/position-norm</property>
+		<factor>-145</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>8.92442</x-m>
+			<y-m>-1.48063</y-m>
+		</center>
+	</animation>
         <!--CABIN-->
         <!--Seats-->
     <animation>

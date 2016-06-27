@@ -155,7 +155,7 @@
           <control-output control="STEER" prop="gear/gear[0]/steering-norm"/>
        </gear>
 
-       <gear x="0.924" y="2.3337" z="-5.7541" spring=".3" compression="0.3" >
+       <gear x="0.924" y="3" z="-5.7541" spring=".3" compression="0.3" >
           <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
           <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
           <control-input axis="/controls/gear/autobrake" control="BRAKE"/>
@@ -164,7 +164,7 @@
           <control-speed control="EXTEND" transition-time="7"/>
        </gear>
 
-       <gear x="0.924" y="-2.3337" z="-5.7541" spring=".3" compression="0.3" >
+       <gear x="0.924" y="-3" z="-5.7541" spring=".3" compression="0.3" >
           <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
           <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
           <control-input axis="/controls/gear/autobrake" control="BRAKE"/>
