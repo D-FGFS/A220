@@ -94,6 +94,7 @@
                 <default-field-of-view-deg> 94 </default-field-of-view-deg>
             </config>
             </view>
+	    <chase-distance-m>-50</chase-distance-m>
     </sim>
     <controls>
         <cabin>

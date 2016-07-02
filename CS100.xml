@@ -147,7 +147,7 @@
        </thruster>
 
 
-       <gear x="13.94673"  y="0.00" z="-5.59563" compression="0.3" spring="0.2" damp="2">
+       <gear x="13.94673"  y="0.00" z="-5.59563" compression="0.15" spring="0.2" damp="2">
           <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
           <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
           <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>

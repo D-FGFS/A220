@@ -68,10 +68,6 @@
                 </menu>
             </default>
         </menubar>
-
-        <dimensions>
-            <radius-m type="float">32.51</radius-m>
-        </dimensions>
             
             <view n="0">
             <internal archive="y">true</internal>
@@ -94,6 +90,7 @@
                 <default-field-of-view-deg> 94 </default-field-of-view-deg>
             </config>
             </view>
+	    <chase-distance-m>-50</chase-distance-m>
     </sim>
     <controls>
         <cabin>
