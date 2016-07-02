@@ -5,8 +5,8 @@
     <model>
         <livery>
             <name type="string">Bombardier</name>
-            <texture>Liveries/bombardier.png</texture>
-            <texture-engine>Liveries/engines-bombardier.png</texture-engine>
+            <texture>Liveries/CS100/Bombardier.png</texture>
+            <texture-engine>Liveries/CS100/engines-bombardier.png</texture-engine>
         </livery>
     </model>
 </sim>

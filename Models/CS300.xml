@@ -3,7 +3,7 @@
       <path>Aircraft/CSeries/Models/CS300.ac</path>
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/CSeries/Models/Liveries", 10);
+      var livery_update = aircraft.livery_update.new("Aircraft/CSeries/Models/Liveries/CS300", 10);
     </load>
 
     <unload>

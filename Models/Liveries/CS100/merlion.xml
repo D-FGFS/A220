@@ -5,8 +5,8 @@
     <model>
         <livery>
             <name type="string">Merlion Virtual Airlines</name>
-            <texture>Liveries/merlion.png</texture>
-            <texture-engine>Liveries/engines-merlion.png</texture-engine>
+            <texture>Liveries/CS100/merlion.png</texture>
+            <texture-engine>Liveries/CS100/engines-merlion.png</texture-engine>
         </livery>
     </model>
 </sim>

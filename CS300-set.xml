@@ -15,7 +15,7 @@
         <model>
             <path>Aircraft/CSeries/Models/CS300.xml</path>
       <livery>
-        <file type="string">default</file>
+        <file type="string">BTI</file>
       </livery>
             <variant type="int">0</variant>
             <limits><!--according to https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications-->
@@ -119,7 +119,7 @@
             </input>
     <nasal>
         <cseries>
-            <file>Aircraft/CSeries/Nasal/liveries.nas</file>
+            <file>Aircraft/CSeries/Nasal/CS300liveries.nas</file>
         </cseries>
     </nasal>
 </PropertyList>

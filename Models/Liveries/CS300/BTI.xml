@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Air Baltic</name>
+            <texture>Liveries/CS300/BTI.png</texture>
+            <texture-engine>Liveries/CS300/engines-BT.png</texture-engine>
+        </livery>
+    </model>
+</sim>
+</PropertyList>
