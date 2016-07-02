@@ -172,11 +172,11 @@
           <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
           <control-speed control="EXTEND" transition-time="7"/>
        </gear>
-       <!--Engines-->
-       <gear x="5.51453" y="5.86412" z="-5.24404" skid="true" >
+       <!--Engines--><!--CAUSING SEVERE BANKING ON TAKEOFF-->
+       <!--<gear x="5.51453" y="5.86412" z="-5.24404" skid="true" >
        </gear>
        <gear x="5.51453" y="-5.86412" z="-5.24404" skid="true" >
-       </gear>
+       </gear>-->
 
        <!--No tank data available-->
        <tank x="2.5" y="3" z="-3.1259" jet="true" capacity="5000"/>

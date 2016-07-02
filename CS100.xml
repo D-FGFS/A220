@@ -24,7 +24,7 @@
     <airplane mass="131000">
 
     <!-- Approach configuration -->
-        <approach speed="110" aoa="4.0" fuel="0.6"> <!--no data avail?-->
+        <approach speed="100" aoa="4.0" fuel="0.6"> <!--no data avail?-->
 		<control-setting axis="/controls/engines/engine[0]/throttle" value="0.7" />
 		<control-setting axis="/controls/engines/engine[1]/throttle" value="0.7" />
           <control-setting axis="/controls/flight/flaps" value="1.0"/>
@@ -172,11 +172,11 @@
           <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
           <control-speed control="EXTEND" transition-time="7"/>
        </gear>
-       <!--Engines-->
-       <gear x="5.51453" y="5.86412" z="-5.24404" skid="true" >
+       <!--Engines--><!--CAUSING SEVERE BANKING ON TAKEOFF-->
+      <!-- <gear x="5.51453" y="5.86412" z="-5.24404" skid="true" >
        </gear>
        <gear x="5.51453" y="-5.86412" z="-5.24404" skid="true" >
-       </gear>
+       </gear>-->
 
        <!--No tank data available-->
        <tank x="2.5" y="3" z="-3.1259" jet="true" capacity="5000"/>
@@ -184,12 +184,12 @@
        <tank x="2.7" y="0" z="-0.5" jet="true"  capacity="4305"/>
 
        <weight x="14.51701" y="0.0" z="-1.55091" mass-prop="/sim/weight[0]/weight-lb"/><!--Crew mass-->
-       <weight x="5.9957" y="0" z="-1.5" mass-prop="/sim/weight[1]/weight-lb"/><!--Passengers front mass-->
-       <weight x="-5" y="0" z="-1.5" mass-prop="/sim/weight[2]/weight-lb"/><!--Passengers rear mass-->
+       <weight x="5.9957" y="0" z="-2" mass-prop="/sim/weight[1]/weight-lb"/><!--Passengers front mass-->
+       <weight x="-5" y="0" z="-2" mass-prop="/sim/weight[2]/weight-lb"/><!--Passengers rear mass-->
        <weight x="9.97759" y="0" z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass front-->
        <weight x="-4.68367" y="0" z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass rear-->
 
-       <ballast x="16"  y="0.0" z="-2" mass="36500"/>
+       <ballast x="16"  y="0.0" z="-4" mass="36500"/>
        <!--ballast x="-10" y="0" z="0" mass="-3500"/-->
 
     </airplane>
