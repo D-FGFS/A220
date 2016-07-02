@@ -65,6 +65,25 @@
           <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
+    <item n="10">
+     <label>Pushback</label>
+     <name>pushback</name>
+     <binding>
+      <command>dialog-show</command>
+      <dialog-name>pushback</dialog-name>
+     </binding>
+    </item>
+					<item>
+      					<label>Airport Operations</label>
+      					<binding>
+       					<command>nasal</command>
+       					<script>
+	  				var mal = gui.Dialog.new("/sim/gui/dialogs/E-jet-family[0]/menu/dialog", 
+                                                              "Aircraft/CSeries/Dialogs/operations-dlg.xml");
+        				mal.open();
+       					</script>
+      					</binding>
+     					</item>
                 </menu>
             </default>
         </menubar>
@@ -93,8 +112,11 @@
 	    <chase-distance-m>-50</chase-distance-m>
     </sim>
     <controls>
+	<gear>
+		<brake-parking type="bool">1</brake-parking>
+	</gear>
         <cabin>
-            <seating>0</seating> <!--Mixed Class-->
+            <seating>1</seating> <!--Standard, other classes are for the moment only in the .blend file due to high "vertice weight"-->
         </cabin>
     </controls>
             <input>

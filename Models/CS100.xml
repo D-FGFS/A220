@@ -13,6 +13,10 @@
 
 	
 	<model>
+		<path>Aircraft/CSeries/Models/ground/stairs/stairs.xml</path>
+	</model>
+	
+	<model>
 		<path>Aircraft/CSeries/Models/Cockpit/flightdeck.xml</path>
 		<offsets>
 			<x-m>-14.5</x-m>
@@ -132,7 +136,20 @@
 			<z-m>-4.01626</z-m>
                     </center>
 	</animation>
+
+
+
         <!--GEAR-->
+	<!--Pushback-->
+ <model>
+  <name>Pushback</name>
+  <path>Models/Airport/Pushback/Goldhofert.xml</path>
+  <offsets>
+   <x-m>-13.95034</x-m>
+   <y-m>0</y-m>
+   <z-m>-5.60202</z-m>
+  </offsets>
+ </model>
         <!--Compression-->
     <animation>
 		<type>translate</type>

@@ -142,7 +142,7 @@
        </jet>
 
     <!--user controlled pushback-->
-       <thruster x="10.1"  y="0.00" z="-1.75" vx="1" vy="0" vz="0" thrust="1500">
+       <thruster x="13.98613"  y="0.00" z="-4.76371" vx="1" vy="0" vz="0" thrust="4500">
           <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
        </thruster>
 

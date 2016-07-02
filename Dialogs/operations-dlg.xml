@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<PropertyList>
+  
+
+<name>Airport operations</name>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Airport Operations</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+    <layout>vbox</layout>
+    <halign>center</halign>
+    
+    <checkbox>
+      <halign>left</halign>
+      <label>Stairs Front</label>
+      <property>controls/ground/stairs/front</property>
+      <binding>
+        <command>property-toggle</command>
+      <property>controls/ground/stairs/front</property>
+      </binding>
+    </checkbox>
+    <checkbox>
+      <halign>left</halign>
+      <label>Stairs Rear</label>
+      <property>controls/ground/stairs/rear</property>
+      <binding>
+        <command>property-toggle</command>
+      <property>controls/ground/stairs/rear</property>
+      </binding>
+    </checkbox>
+
+  <hrule/>
+
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+</PropertyList>
