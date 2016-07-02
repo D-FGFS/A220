@@ -51,6 +51,12 @@
          <object-name>wingltL</object-name>
          <object-name>wingltR</object-name>
      </effect> 
+  <effect>
+       <inherits-from>Effects/model-transparent</inherits-from>
+         <object-name>windows</object-name>
+         <object-name>wingltL</object-name>
+         <object-name>wingltR</object-name>
+     </effect> 
   <!--LIVERY-->
   <animation>
     <type>material</type>
@@ -179,8 +185,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-1.09938</x-m>
-			<z-m>-5.04356</z-m>
+			<x-m>-13.94892</x-m>
+			<z-m>-5.13576</z-m>
                     </center>
 	</animation>
     <animation>
@@ -194,8 +200,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<x-m>-0.97312</x-m>
-			<z-m>-4.44907</z-m>
+			<x-m>-13.79485</x-m>
+			<z-m>-4.51472</z-m>
                     </center>
 	</animation>
         <!--Left main-->
@@ -361,8 +367,8 @@
 		<object-name>gearFUdamper</object-name>
 		<object-name>gearFD</object-name>
 		<object-name>gearFDdamper</object-name>
-                <property>gear/gear/steering-norm</property>
-		<factor>-50</factor>
+                <property>gear/gear/caster-angle-deg</property>
+		<factor>-1</factor>
 		<axis>
 			<x>0</x>
 			<y>0</y>

@@ -12,6 +12,11 @@
 		<green>0.871</green>
 		<blue>0.427</blue>
 	</panel-marking-emit>
+  <effect>
+       <inherits-from>Effects/model-transparent</inherits-from>
+         <object-name>hudL</object-name>
+         <object-name>hudR</object-name>
+     </effect> 
 
 	<!-- Visible only within 1/2 km -->
 	<animation>

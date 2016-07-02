@@ -2,7 +2,7 @@
 
 <PropertyList>
 	<name>reflectglass</name>
-	<inherits-from>Effects/model-combined-deferred</inherits-from>
+	<inherits-from>Effects/model-combined-transparent</inherits-from>
 	<parameters>
 		<rain-enabled type="int">1</rain-enabled>
 		<normalmap-enabled type="int">0</normalmap-enabled>

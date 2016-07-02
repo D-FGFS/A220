@@ -6,6 +6,7 @@
         <livery>
             <name type="string">Blank</name>
             <texture>cs100.png</texture>
+            <texture-engine>engines.png</texture-engine>
         </livery>
     </model>
 </sim>
