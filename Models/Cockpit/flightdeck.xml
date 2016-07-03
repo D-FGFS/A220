@@ -222,6 +222,10 @@
 				<command>property-toggle</command>
 				<property>controls/engines/engine[0]/cutoff</property>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>cseries.engine1.start()</script>
+			</binding>
 		</action>
 	</animation>
 	<animation>
@@ -249,6 +253,10 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>controls/engines/engine[1]/cutoff</property>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>cseries.engine2.start()</script>
 			</binding>
 		</action>
 	</animation>

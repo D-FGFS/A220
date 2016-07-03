@@ -110,8 +110,125 @@
             </config>
             </view>
 	    <chase-distance-m>-50</chase-distance-m>
-    </sim>
+    </sim>  
+    <autopilot>
+        <flight-director-serviceable type="bool">true</flight-director-serviceable>
+        <autoflight-serviceable type="bool">true</autoflight-serviceable>
+        <autothrottle-serviceable type="bool">true</autothrottle-serviceable>
+        <yaw-damper-serviceable type="bool">true</yaw-damper-serviceable>
+        <route-manager>
+            <vnav>
+                <climb-speed-kt type="int">400</climb-speed-kt>
+                <descent-speed-kt type="int">300</descent-speed-kt>
+                <climb-vpa-deg type="double">4</climb-vpa-deg>
+                <descent-vpa-deg type="double">3</descent-vpa-deg>
+                <target-altitude-ft type="double">0</target-altitude-ft>
+            </vnav>
+        </route-manager>
+    </autopilot>
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <name>LH Wing</name>
+            </tank>
+            <tank n="1">
+                <name>RH Wing</name>
+            </tank>
+            <tank n="2">
+                <name>Center Main</name>
+            </tank>
+        </fuel>
+    </consumables>
+
     <controls>
+        <anti-ice>
+            <wiper type="int">0</wiper>
+            <wiper type="int">0</wiper>
+        </anti-ice>
+        <autoflight>
+            <autopilot>
+                <engage type="bool">false</engage>
+            </autopilot>
+            <flight-director>
+                <engage type="bool">false</engage>
+            </flight-director>
+            <yaw-damper>
+                <engage type="bool">false</engage>
+            </yaw-damper>
+            <yaw-damper>
+                <engage type="bool">false</engage>
+            </yaw-damper>
+            <altitude-select type="double">10000</altitude-select>
+            <autothrottle-engage type="bool">false</autothrottle-engage>
+            <basic-roll-mode type="int">0</basic-roll-mode>
+            <basic-roll-target-heading-deg type="double">0</basic-roll-target-heading-deg>
+            <basic-roll-target-roll-deg type="double">0</basic-roll-target-roll-deg>
+            <bank-angle-select type="float">30</bank-angle-select>
+            <disengage-pos-norm type="int">0</disengage-pos-norm>
+            <heading-select type="double">360</heading-select>
+            <lateral-mode type="int">0</lateral-mode>
+            <mach-select type="double">0</mach-select>
+            <nav-mode type="int">0</nav-mode>
+            <pitch-select type="double">0</pitch-select>
+            <speed-mode type="int">0</speed-mode>
+            <speed-select type="double">200</speed-select>
+            <vertical-mode type="int">0</vertical-mode>
+            <vertical-speed-select type="double">1800</vertical-speed-select>
+        </autoflight>
+        <APU>
+            <electronic-control-unit type="bool">false</electronic-control-unit>
+            <fire-switch-armed type="bool">false</fire-switch-armed>
+            <fire-switch-cover type="bool">false</fire-switch-cover>
+            <off-on type="bool">false</off-on>
+        </APU>
+        <engines>
+            <engine>
+                <fire-bottle-discharge-armed type="bool">false</fire-bottle-discharge-armed>
+                <fire-bottle-discharge-cover type="bool">false</fire-bottle-discharge-cover>
+                <thrust-mode type="int">0</thrust-mode>
+            </engine>
+            <engine>
+                <fire-bottle-discharge-armed type="bool">false</fire-bottle-discharge-armed>
+                <fire-bottle-discharge-cover type="bool">false</fire-bottle-discharge-cover>
+                <thrust-mode type="int">0</thrust-mode>
+            </engine>
+        </engines>
+        <flight>
+            <ground-lift-dump type="int">1</ground-lift-dump>
+        </flight>
+        <gear>
+            <brake-parking type="bool">true</brake-parking>
+            <enable-tiller type="bool">true</enable-tiller>
+            <tiller-steer-deg type="float">0</tiller-steer-deg>
+        </gear>
+        <lighting>
+            <beacon type="bool">false</beacon>
+            <landing-lights n="0" type="bool">false</landing-lights>
+            <landing-lights n="1" type="bool">false</landing-lights>
+            <landing-lights n="2" type="bool">false</landing-lights>
+            <logo-lights type="bool">false</logo-lights>
+            <nav-lights type="bool">false</nav-lights>
+            <strobe type="bool">false</strobe>
+            <taxi-lights type="bool">false</taxi-lights>
+            <wing-lights type="bool">false</wing-lights>
+            <dome type="bool">false</dome>
+            <display-norm type="float">1</display-norm>
+            <standby-compass type="bool">false</standby-compass>
+            <panel-lights type="bool">true</panel-lights>
+            <panel-norm type="float">0.2</panel-norm>
+            <panel-flood-norm type="float">0</panel-flood-norm>
+            <panel-overhead-norm type="float">0.2</panel-overhead-norm>
+            <cabin-norm type="float">0.0</cabin-norm>
+        </lighting>
+        <pneumatic>
+            <bleed-source type="int">0</bleed-source>
+            <ram-air-turbine type="bool">false</ram-air-turbine>
+            <ram-air-turbine-cover type="bool">false</ram-air-turbine-cover>
+        </pneumatic>
+        <switches>
+            <no-smoking-sign type="int">1</no-smoking-sign>
+            <seatbelt-sign type="int">1</seatbelt-sign>
+        </switches>
 	<gear>
 		<brake-parking type="bool">1</brake-parking>
 	</gear>
@@ -119,6 +236,62 @@
             <seating>1</seating> <!--Standard, other classes are for the moment only in the .blend file due to high "vertice weight"-->
         </cabin>
     </controls>
+
+    <engines>
+        <apu>
+            <egt-degc type="double">0</egt-degc>
+            <rpm type="double">0</rpm>
+            <on-fire type="bool">false</on-fire>
+            <serviceable type="bool">true</serviceable>
+        </apu>
+        <engine>
+            <on-fire type="bool">false</on-fire>
+        </engine>
+        <engine>
+            <on-fire type="bool">false</on-fire>
+        </engine>
+    </engines>
+
+    <fcs>
+        <autopilot>
+            <throttle-cmd-norm type="double">0</throttle-cmd-norm>
+            <aileron-cmd-norm type="double">0</aileron-cmd-norm>
+        </autopilot>
+        <copilot>
+            <active type="bool">false</active>
+            <!-- These properties are kept aliased to the pilot's controls until they are un-aliased by the dual control system -->
+            <aileron-cmd-norm alias="/controls/flight/aileron" />
+            <elevator-cmd-norm alias="/controls/flight/elevator" />
+            <rudder-cmd-norm alias="/controls/flight/rudder" />
+            <throttle-cmd-norm alias="/controls/engines/engine[0]/throttle" />
+            <throttle-cmd-norm alias="/controls/engines/engine[1]/throttle" />
+            <tiller-steer-deg alias="/controls/gear/tiller-steer-deg" />
+            <brake-left-cmd-norm alias="/controls/gear/brake-left" />
+            <brake-right-cmd-norm alias="/controls/gear/brake-right" />
+        </copilot>
+        <throttle-cmd-norm type="double">0</throttle-cmd-norm>
+        <throttle-cmd-norm type="double">0</throttle-cmd-norm>
+        <aileron-cmd-norm type="double">0</aileron-cmd-norm>
+        <tiller-steer-deg type="float">0</tiller-steer-deg>
+        <nose-gear-steer-deg type="double">0</nose-gear-steer-deg>
+        <brake-left-cmd-norm type="float">0</brake-left-cmd-norm>
+        <brake-right-cmd-norm type="float">0</brake-right-cmd-norm>
+    </fcs>
+        <systems>
+            <!-- Disable the generic electrical system -->
+            <electrical>
+                <path></path>
+            </electrical>
+            <autopilot>
+                <name>Autopilot</name>
+                <path>Aircraft/CSeries/autopilot.xml</path>
+            </autopilot>
+            <autopilot>
+                <name>Flight control system</name>
+                <path>Aircraft/CSeries/flight-controls.xml</path>
+            </autopilot>
+        </systems>
+
             <input>
                 <keyboard>
                     <key n="127">
@@ -137,6 +310,9 @@
             </input>
     <nasal>
         <cseries>
+            <file>Aircraft/CSeries/Nasal/engines.nas</file>
+            <file>Aircraft/CSeries/Nasal/electrical.nas</file>
+            <file>Aircraft/CSeries/Nasal/systems.nas</file>
             <file>Aircraft/CSeries/Nasal/doors.nas</file>
             <file>Aircraft/CSeries/Nasal/CS100liveries.nas</file>
         </cseries>

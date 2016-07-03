@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier CRJ700 series -->
+<!-- Flight controls -->
+
+<PropertyList>
+
+	<!-- Ailerons -->
+	<filter>
+		<name>Autopilot aileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<property>autopilot/internal/autoflight-engaged</property>
+			</condition>
+		</enable>
+		<input>
+			<property>fcs/autopilot/aileron-cmd-norm</property>
+		</input>
+		<output>fcs/aileron-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Manual pilot aileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal/autoflight-engaged</property>
+					</not>
+					<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>controls/flight/aileron</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/aileron-cmd-norm</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/aileron</property>
+		</input>
+		<output>fcs/aileron-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Manual copilot aileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal/autoflight-engaged</property>
+					</not>
+					<property>fcs/copilot/active</property>
+					<not>
+						<property>autopilot/internal/autoflight-engaged</property>
+					</not>
+					<greater-than>
+						<expression>
+							<abs>
+								<property>fcs/copilot/aileron-cmd-norm</property>
+							</abs>
+						</expression>
+						<expression>
+							<abs>
+								<property>controls/flight/aileron</property>
+							</abs>
+						</expression>
+					</greater-than>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>fcs/copilot/aileron-cmd-norm</property>
+		</input>
+		<output>fcs/aileron-cmd-norm</output>
+	</filter>
+
+	<!-- Rudder -->
+	<filter>
+		<name>Yaw damper rudder controller (pilot input)</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>autopilot/yaw-damper-serviceable</property>
+					<or>
+						<property>controls/autoflight/yaw-damper[0]/engage</property>
+						<property>controls/autoflight/yaw-damper[1]/engage</property>
+					</or>
+					<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>controls/flight/rudder</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/rudder-cmd-norm</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<max>
+					<min>
+						<sum>
+							<property>controls/flight/rudder</property>
+							<property>fcs/autopilot/rudder-cmd-norm</property>
+						</sum>
+						<value>1</value>
+					</min>
+					<value>-1</value>
+				</max>
+			</expression>
+		</input>
+		<output>fcs/rudder-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Yaw damper rudder controller (copilot input)</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>autopilot/yaw-damper-serviceable</property>
+					<or>
+						<property>controls/autoflight/yaw-damper[0]/engage</property>
+						<property>controls/autoflight/yaw-damper[1]/engage</property>
+					</or>
+					<property>fcs/copilot/active</property>
+					<greater-than>
+						<expression>
+							<abs>
+								<property>fcs/copilot/rudder-cmd-norm</property>
+							</abs>
+						</expression>
+						<expression>
+							<abs>
+								<property>controls/flight/rudder</property>
+							</abs>
+						</expression>
+					</greater-than>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<max>
+					<min>
+						<sum>
+							<property>fcs/copilot/rudder-cmd-norm</property>
+							<property>fcs/autopilot/rudder-cmd-norm</property>
+						</sum>
+						<value>1</value>
+					</min>
+					<value>-1</value>
+				</max>
+			</expression>
+		</input>
+		<output>fcs/rudder-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Manual pilot rudder controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<not>
+							<property>autopilot/yaw-damper-serviceable</property>
+						</not>
+						<and>
+							<not>
+								<property>controls/autoflight/yaw-damper[0]/engage</property>
+							</not>
+							<not>
+								<property>controls/autoflight/yaw-damper[1]/engage</property>
+							</not>
+						</and>
+					</or>
+					<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>controls/flight/rudder</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/rudder-cmd-norm</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/rudder</property>
+		</input>
+		<output>fcs/rudder-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Manual copilot rudder controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<not>
+							<property>autopilot/yaw-damper-serviceable</property>
+						</not>
+						<and>
+							<not>
+								<property>controls/autoflight/yaw-damper[0]/engage</property>
+							</not>
+							<not>
+								<property>controls/autoflight/yaw-damper[1]/engage</property>
+							</not>
+						</and>
+					</or>
+					<property>fcs/copilot/active</property>
+					<greater-than>
+						<expression>
+							<abs>
+								<property>fcs/copilot/rudder-cmd-norm</property>
+							</abs>
+						</expression>
+						<expression>
+							<abs>
+								<property>controls/flight/rudder</property>
+							</abs>
+						</expression>
+					</greater-than>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/rudder</property>
+		</input>
+		<output>fcs/rudder-cmd-norm</output>
+	</filter>
+
+	<!-- Elevators -->
+	<filter>
+		<name>Pilot elevator controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<or>
+					<not>
+						<property>fcs/copilot/active</property>
+					</not>
+					<greater-than-equals>
+						<expression>
+							<abs>
+								<property>controls/flight/elevator</property>
+							</abs>
+						</expression>
+						<expression>
+							<abs>
+								<property>fcs/copilot/elevator-cmd-norm</property>
+							</abs>
+						</expression>
+					</greater-than-equals>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/elevator</property>
+		</input>
+		<output>fcs/elevator-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Copilot elevator controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>fcs/copilot/active</property>
+					<greater-than>
+						<expression>
+							<abs>
+								<property>fcs/copilot/elevator-cmd-norm</property>
+							</abs>
+						</expression>
+						<expression>
+							<abs>
+								<property>controls/flight/elevator</property>
+							</abs>
+						</expression>
+					</greater-than>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>fcs/copilot/elevator-cmd-norm</property>
+		</input>
+		<output>fcs/elevator-cmd-norm</output>
+	</filter>
+
+	<!-- Spoilers -->
+	<!-- In real life, automatic ground spoiler deployment is based on throttle position, radio altitude, wheel speed, and weight-on-wheels; since the flight manual is extremely vague about this, the following logic is used -->
+	<logic>
+		<name>Automatic ground spoiler deployment logic</name>
+		<input>
+			<and>
+				<equals>
+					<property>controls/engines/engine[0]/throttle</property>
+					<value>0</value>
+				</equals>
+				<equals>
+					<property>controls/engines/engine[0]/thrust-mode</property>
+					<value>0</value>
+				</equals>
+				<equals>
+					<property>controls/engines/engine[1]/throttle</property>
+					<value>0</value>
+				</equals>
+				<equals>
+					<property>controls/engines/engine[1]/thrust-mode</property>
+					<value>0</value>
+				</equals>
+				<or>
+					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
+				</or>
+				<or>
+					<greater-than>
+						<property>gear/gear[1]/rollspeed-ms</property>
+						<value>20</value>
+					</greater-than>
+					<greater-than>
+						<property>gear/gear[2]/rollspeed-ms</property>
+						<value>20</value>
+					</greater-than>
+				</or>
+			</and>
+		</input>
+		<output>controls/flight/spoilers-ground-auto-cmd</output>
+	</logic>
+	<logic>
+		<name>Ground spoilers deploy logic</name>
+		<input>
+			<and>
+				<or>
+					<property>controls/engines/engine[0]/reverser</property>
+					<property>controls/engines/engine[1]/reverser</property>
+					<equals>
+						<property>controls/flight/ground-lift-dump</property>
+						<value>2</value>
+					</equals>
+					<and>
+						<property>controls/flight/spoilers-ground-auto-cmd</property>
+						<equals>
+							<property>controls/flight/ground-lift-dump</property>
+							<value>1</value>
+						</equals>
+					</and>
+				</or>
+				<not>
+					<equals>
+						<property>controls/flight/ground-lift-dump</property>
+						<value>0</value>
+					</equals>
+				</not>
+			</and>
+		</input>
+		<output>controls/flight/spoilers-ground-cmd</output>
+	</logic>
+	<filter>
+		<name>Ground spoilers controller</name>
+		<type>noise-spike</type>
+		<debug type="bool">false</debug>
+		<max-rate-of-change>1</max-rate-of-change>
+		<input>
+			<property>controls/flight/spoilers-ground-cmd</property>
+		</input>
+		<output>surface-positions/spoiler-ground-pos-norm</output>
+	</filter>
+	<!-- In real life, proportional lift dumping (spoilerons) is based on Mach speed and flap position; since the flight manual is extremely vague about this, none of those are considered -->
+	<filter>
+		<name>Left spoileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<input>
+			<expression>
+				<table>
+					<property>fcs/aileron-cmd-norm</property>
+					<entry><ind>-1</ind><dep>0.5</dep></entry>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>controls/flight/left-speedbrake-aileron-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Right spoileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<input>
+			<expression>
+				<table>
+					<property>fcs/aileron-cmd-norm</property>
+					<entry><ind>-1</ind><dep>0</dep></entry>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.5</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>controls/flight/right-speedbrake-aileron-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Left speedbrake controller</name>
+		<type>noise-spike</type>
+		<debug type="bool">false</debug>
+		<max-rate-of-change>1</max-rate-of-change>
+		<input>
+			<expression>
+				<max>
+					<property>controls/flight/speedbrake</property>
+					<property>controls/flight/spoilers-ground-cmd</property>
+					<property>controls/flight/left-speedbrake-aileron-cmd-norm</property>
+				</max>
+			</expression>
+		</input>
+		<output>surface-positions/left-speedbrake-pos-norm</output>
+	</filter>
+	<filter>
+		<name>Right speedbrake controller</name>
+		<type>noise-spike</type>
+		<debug type="bool">false</debug>
+		<max-rate-of-change>1</max-rate-of-change>
+		<input>
+			<expression>
+				<max>
+					<property>controls/flight/speedbrake</property>
+					<property>controls/flight/spoilers-ground-cmd</property>
+					<property>controls/flight/right-speedbrake-aileron-cmd-norm</property>
+				</max>
+			</expression>
+		</input>
+		<output>surface-positions/right-speedbrake-pos-norm</output>
+	</filter>
+
+	<!-- Throttles/FADEC thrust modes -->
+	<!-- Autothrottle -->
+	<filter>
+		<name>Engine 1 autopilot controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>autopilot/internal/autothrottle-engaged</property>
+					<equals>
+						<property>controls/engines/engine[0]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>fcs/autopilot/throttle-cmd-norm</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[0]</output>
+	</filter>
+	<filter>
+		<name>Engine 2 autopilot controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>autopilot/internal/autothrottle-engaged</property>
+					<equals>
+						<property>controls/engines/engine[1]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>fcs/autopilot/throttle-cmd-norm</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[1]</output>
+	</filter>
+	<!-- 0 : Manual control -->
+	<!-- Interpolates the user's throttles between 0% and 92% -->
+	<filter>
+		<name>Pilot engine 1 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<!--<and>-->
+					<!--<not>
+						<property>autopilot/internal/autothrottle-engaged</property>
+					</not>-->
+					<equals>
+						<property>controls/engines/engine[0]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<!--<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>controls/engines/engine[0]/throttle</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/throttle-cmd-norm[0]</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>-->
+				<!--</and>-->
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>controls/engines/engine[0]/throttle</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[0]</output>
+	</filter>
+	<filter>
+		<name>Copilot engine 1 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>fcs/copilot/active</property>
+					<not>
+						<property>autopilot/internal/autothrottle-engaged</property>
+					</not>
+					<equals>
+						<property>controls/engines/engine[0]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<greater-than>
+						<expression>
+							<abs>
+								<property>fcs/copilot/throttle-cmd-norm[0]</property>
+							</abs>
+						</expression>
+						<expression>
+							<abs>
+								<property>controls/engines/engine[0]/throttle</property>
+							</abs>
+						</expression>
+					</greater-than>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>fcs/copilot/throttle-cmd-norm[0]</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[0]</output>
+	</filter>
+	<filter>
+		<name>Pilot engine 2 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal/autothrottle-engaged</property>
+					</not>
+					<equals>
+						<property>controls/engines/engine[1]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>controls/engines/engine[1]/throttle</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/throttle-cmd-norm[1]</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>controls/engines/engine[1]/throttle</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[1]</output>
+	</filter>
+	<filter>
+		<name>Copilot engine 2 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>fcs/copilot/active</property>
+					<not>
+						<property>autopilot/internal/autothrottle-engaged</property>
+					</not>
+					<equals>
+						<property>controls/engines/engine[1]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<greater-than>
+						<expression>
+							<abs>
+								<property>fcs/copilot/throttle-cmd-norm[1]</property>
+							</abs>
+						</expression>
+						<expression>
+							<abs>
+								<property>controls/engines/engine[1]/throttle</property>
+							</abs>
+						</expression>
+					</greater-than>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>fcs/copilot/throttle-cmd-norm[1]</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[1]</output>
+	</filter>
+	<!-- 1 : Climb -->
+	<!-- Maintains a 300-kt climb with a maximum power level of 91.1% -->
+	<pid-controller>
+		<name>Engine 1 climb mode controller</name>
+		<debug type="bool">false</debug>
+		<enable>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[0]/thrust-mode</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>autopilot/internal/lookahead-5-sec-airspeed-kt</property>
+		</input>
+		<reference>
+			<value>300</value>
+		</reference>
+		<output>fcs/throttle-cmd-norm[0]</output>
+		<config>
+			<Kp>0.05</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>0</u_min>
+			<u_max>0.911</u_max>
+		</config>
+	</pid-controller>
+	<pid-controller>
+		<name>Engine 2 climb mode controller</name>
+		<debug type="bool">false</debug>
+		<enable>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[1]/thrust-mode</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>autopilot/internal/lookahead-5-sec-airspeed-kt</property>
+		</input>
+		<reference>
+			<value>300</value>
+		</reference>
+		<output>fcs/throttle-cmd-norm[1]</output>
+		<config>
+			<Kp>0.05</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>0</u_min>
+			<u_max>0.911</u_max>
+		</config>
+	</pid-controller>
+	<!-- 2 : TO/GA -->
+	<!-- Holds 250 kts with a maximum power level specified by the FMS -->
+	<pid-controller>
+		<name>Engine 1 TO/GA mode controller</name>
+		<debug type="bool">false</debug>
+		<enable>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[0]/thrust-mode</property>
+					<value>2</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>autopilot/internal/lookahead-5-sec-airspeed-kt</property>
+		</input>
+		<reference>
+			<value>250</value>
+		</reference>
+		<output>fcs/throttle-cmd-norm[0]</output>
+		<config>
+			<Kp>0.05</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>0</u_min>
+			<u_max>
+				<property>instrumentation/fms/to-ga-maximum-n1</property>
+				<scale>0.01</scale>
+			</u_max>
+		</config>
+	</pid-controller>
+	<pid-controller>
+		<name>Engine 2 TO/GA mode controller</name>
+		<debug type="bool">false</debug>
+		<enable>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[1]/thrust-mode</property>
+					<value>2</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>autopilot/internal/lookahead-5-sec-airspeed-kt</property>
+		</input>
+		<reference>
+			<value>250</value>
+		</reference>
+		<output>fcs/throttle-cmd-norm[1]</output>
+		<config>
+			<Kp>0.05</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>0</u_min>
+			<u_max>
+				<property>instrumentation/fms/to-ga-maximum-n1</property>
+				<scale>0.01</scale>
+			</u_max>
+		</config>
+	</pid-controller>
+	<!-- 3 : Max -->
+	<!-- Keeps throttles at 100% power -->
+	<filter>
+		<name>Engine 1 maximum controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[0]/thrust-mode</property>
+					<value>3</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<value>1</value>
+		</input>
+		<output>fcs/throttle-cmd-norm[0]</output>
+	</filter>
+	<filter>
+		<name>Engine 1 maximum controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[0]/thrust-mode</property>
+					<value>3</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<value>1</value>
+		</input>
+		<output>fcs/throttle-cmd-norm[1]</output>
+	</filter>
+
+	<!-- Nose gear steering -->
+	<filter>
+		<name>Pilot tiller disabled nose gear steer</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>80</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>controls/gear/enable-tiller</property>
+					</not>
+					<property>gear/gear[0]/wow</property>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/rudder</property>
+		</input>
+		<output>fcs/tiller-steer-deg</output>
+	</filter>
+	<!-- Rudder can steer up to 8°, tiller steers up to 80° -->
+	<filter>
+		<name>Pilot nose gear rudder steer</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>8</gain>
+		<enable>
+			<condition>
+				<and>
+					<less-than-equals>
+						<expression>
+							<abs>
+								<property>controls/gear/tiller-steer-deg</property>
+							</abs>
+						</expression>
+						<value>8</value>
+					</less-than-equals>
+					<property>controls/gear/enable-tiller</property>
+					<property>gear/gear[0]/wow</property>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/rudder</property>
+		</input>
+		<output>fcs/tiller-steer-deg</output>
+	</filter>
+	<filter>
+		<name>Pilot nose gear tiller steer</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<greater-than>
+						<expression>
+							<abs>
+								<property>controls/gear/tiller-steer-deg</property>
+							</abs>
+						</expression>
+						<value>8</value>
+					</greater-than>
+					<property>controls/gear/enable-tiller</property>
+					<property>gear/gear[0]/wow</property>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/gear/tiller-steer-deg</property>
+		</input>
+		<output>fcs/tiller-steer-deg</output>
+	</filter>
+	<filter>
+		<name>Pilot nose gear controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>gear/gear[0]/wow</property>
+					<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>fcs/tiller-steer-deg</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/tiller-steer-deg</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>fcs/tiller-steer-deg</property>
+		</input>
+		<output>fcs/nose-gear-steer-deg</output>
+	</filter>
+	<filter>
+		<name>Copilot nose gear controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<property>gear/gear[0]/wow</property>
+					<and>
+						<property>fcs/copilot/active</property>
+						<greater-than>
+							<expression>
+								<abs>
+									<property>fcs/copilot/tiller-steer-deg</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/tiller-steer-deg</property>
+								</abs>
+							</expression>
+						</greater-than>
+					</and>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>fcs/copilot/tiller-steer-deg</property>
+		</input>
+		<output>fcs/nose-gear-steer-deg</output>
+	</filter>
+	<filter>
+		<name>Nose gear center</name>
+		<type>noise-spike</type>
+		<debug type="bool">false</debug>
+		<max-rate-of-change>26.666666667</max-rate-of-change>
+		<enable>
+			<condition>
+				<not>
+					<property>gear/gear[0]/wow</property>
+				</not>
+			</condition>
+		</enable>
+		<input>
+			<value>0</value>
+		</input>
+		<output>fcs/nose-gear-steer-deg</output>
+	</filter>
+
+	<!-- Brakes -->
+	<filter>
+		<name>Left brake controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<input>
+			<expression>
+				<max>
+					<property>controls/gear/brake-left</property>
+					<property>fcs/copilot/brake-left-cmd-norm</property>
+				</max>
+			</expression>
+		</input>
+		<output>fcs/brake-left-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Right brake controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<input>
+			<expression>
+				<max>
+					<property>controls/gear/brake-right</property>
+					<property>fcs/copilot/brake-right-cmd-norm</property>
+				</max>
+			</expression>
+		</input>
+		<output>fcs/brake-right-cmd-norm</output>
+	</filter>
+	
+	<!-- Alarm logic -->
+	<logic>
+		<name>Overspeed alarm</name>
+		<input>
+			<or>
+				<!-- 3 kts greater than Vmo -->
+				<greater-than-equals>
+					<property>instrumentation/airspeed-indicator[0]/indicated-speed-kt</property>
+					<value>338</value>
+				</greater-than-equals>
+				<!-- 0.01 Mach greater than Mmo -->
+				<greater-than-equals>
+					<property>instrumentation/airspeed-indicator[0]/indicated-mach</property>
+					<value>0.86</value>
+				</greater-than-equals>
+			</or>
+		</input>
+		<output>sim/alarms/overspeed-alarm</output>
+	</logic>
+	<logic>
+		<name>Master caution alarm</name>
+		<input>
+			<or>
+				<property>instrumentation/mk-viii/outputs/discretes/gpws-alert</property>
+				<property>instrumentation/mk-viii/outputs/discretes/gpws-warning</property>
+				<property>sim/alarms/overspeed-alarm</property>
+			</or>
+		</input>
+		<output>sim/alarms/master-caution</output>
+	</logic>
+	<logic>
+		<name>Master warning alarm</name>
+		<input>
+			<or>
+				<property>engines/apu/on-fire</property>
+				<property>engines/engine[0]/on-fire</property>
+				<property>engines/engine[1]/on-fire</property>
+			</or>
+		</input>
+		<output>sim/alarms/master-warning</output>
+	</logic>
+
+</PropertyList>
