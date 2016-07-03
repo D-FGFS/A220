@@ -19,7 +19,56 @@
 		<min-m>0</min-m>
 		<max-m>500</max-m>
 	</animation>
-        
+        <!--ELECTRICAL-->
+<!--Cabin Power-->
+    <animation>
+	<type>pick</type>
+	<object-name>cabinpwr</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/electric/cabin-power</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>cabinpwr</object-name>
+		<property>controls/electric/cabin-power</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+    </animation>
+<!--Ram Air Turbine Generator-->
+    <animation>
+	<type>pick</type>
+	<object-name>ratgen</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/pneumatic/ram-air-turbine</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>ratgen</object-name>
+		<property>controls/pneumatic/ram-air-turbine</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+    </animation>
+
         <!--Batteries-->
     
     <animation>
@@ -35,6 +84,21 @@
 	</action>
     </animation>
     <animation>
+	<type>texrotate</type>
+	<object-name>batt1</object-name>
+		<property>controls/electric/battery-switch</property>
+		<factor>55</factor>
+		<center>
+			<x>0.09</x>
+			<y>0.205</y>
+		</center>
+  		<axis>
+  	  		<x>0</x>
+  	 		 <y>0</y>
+  	  		<z>1</z>
+  		</axis>
+    </animation>
+    <animation>
 	<type>pick</type>
 	<object-name>batt2</object-name>
 	<action>
@@ -46,6 +110,21 @@
 	    </binding>
 	</action>
     </animation>
+    <animation>
+	<type>texrotate</type>
+	<object-name>batt2</object-name>
+		<property>controls/electric/battery-switch[1]</property>
+		<factor>55</factor>
+		<center>
+			<x>0.09</x>
+			<y>0.205</y>
+		</center>
+  		<axis>
+  	  		<x>0</x>
+  	 		 <y>0</y>
+  	  		<z>1</z>
+  		</axis>
+    </animation>
     <!--Generators-->
     <animation>
 	<type>pick</type>
@@ -55,9 +134,20 @@
 	    <repeatable type="bool">false</repeatable>
 	    <binding>
 		<command>property-toggle</command>
-		<property>controls/engines/engine/generator</property>
+		<property>controls/electric/engine/generator</property>
 	    </binding>
 	</action>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>lgen</object-name>
+		<property>controls/electric/engine[0]/generator</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
     </animation>
     <animation>
 	<type>pick</type>
@@ -67,9 +157,20 @@
 	    <repeatable type="bool">false</repeatable>
 	    <binding>
 		<command>property-toggle</command>
-		<property>controls/engines/engine[1]/generator</property>
+		<property>controls/electric/engine[1]/generator</property>
 	    </binding>
 	</action>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>rgen</object-name>
+		<property>controls/electric/engine[1]/generator</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
     </animation>
     <animation>
 	<type>pick</type>
@@ -87,6 +188,127 @@
 	    </binding>
 	</action>
     </animation>
+<!--BLEED-->
+
+    <!--Generators-->
+    <animation>
+	<type>pick</type>
+	<object-name>lbleed</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-assign</command>
+		<property>controls/pneumatic/bleed-source</property>
+		<value>1</value>
+	    </binding>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/pneumatic/l-bleed</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>lbleed</object-name>
+		<property>controls/pneumatic/l-bleed</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>rbleed</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-assign</command>
+		<property>controls/pneumatic/bleed-source</property>
+		<value>3</value>
+	    </binding>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/pneumatic/r-bleed</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>rbleed</object-name>
+		<property>controls/pneumatic/r-bleed</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>apubleed</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-assign</command>
+		<property>controls/pneumatic/bleed-source</property>
+		<value>2</value>
+	    </binding>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/pneumatic/APU-bleed</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>apubleed</object-name>
+		<property>controls/pneumatic/APU-bleed</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+    </animation>
+    <animation>
+	<type>texmultiple</type>
+	<object-name>apu</object-name>
+<!--While running-->
+  		<transform>
+   		 <subtype>texrotate</subtype>
+		<property>controls/APU/knob</property>
+		<factor>61.2</factor>
+		<center>
+			<x>0.09</x>
+			<y>0.205</y>
+		</center>
+  		<axis>
+  	  		<x>0</x>
+  	 		 <y>0</y>
+  	  		<z>1</z>
+  		</axis>
+ 		 </transform>
+<!--While starting-->
+  		<transform>
+   		 <subtype>texrotate</subtype>
+		<property>controls/APU/knob2</property>
+		<factor>120.81</factor>
+		<center>
+			<x>0.09</x>
+			<y>0.205</y>
+		</center>
+  		<axis>
+  	  		<x>0</x>
+  	 		 <y>0</y>
+  	  		<z>1</z>
+  		</axis>
+ 		 </transform>
+    </animation>
     <animation>
 	<type>pick</type>
 	<object-name>apugen</object-name>
@@ -100,6 +322,17 @@
 	</action>
     </animation>
     <animation>
+	<type>textranslate</type>
+	<object-name>apugen</object-name>
+		<property>controls/electric/APU-generator</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+    </animation>
+    <animation>
 	<type>pick</type>
         <object-name>extpwr</object-name>
 	<action>
@@ -110,6 +343,32 @@
 		<property>controls/electric/external-power</property>
 	    </binding>
 	</action>
+    </animation>
+    <animation>
+	<type>texmultiple</type>
+        <object-name>extpwr</object-name>
+<!--AVAIL-->
+  		<transform>
+   		 <subtype>textranslate</subtype>
+		<property>controls/ext-avail</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+ 		 </transform>
+<!--IN USE-->
+  		<transform>
+   		 <subtype>textranslate</subtype>
+		<property>controls/ext-run</property>
+		<factor>0.025</factor>
+  		<axis>
+  	  		<x>1</x>
+  	 		 <y>0</y>
+  	  		<z>0</z>
+  		</axis>
+ 		 </transform>
     </animation>
     <!--Fuel-->
      <animation>

@@ -5,10 +5,10 @@ var ammeter_ave = 0.0;
 var Lbus = props.globals.initNode("/systems/electrical/left-bus",0,"DOUBLE");
 var Rbus = props.globals.initNode("/systems/electrical/right-bus",0,"DOUBLE");
 var Amps = props.globals.initNode("/systems/electrical/amps",0,"DOUBLE");
-var EXT  = props.globals.initNode("/controls/electric/external-power",0,"DOUBLE");
+var EXT  = props.globals.initNode("/controls/electric/ext-run",0,"DOUBLE");
 var XTie  = props.globals.initNode("/systems/electrical/xtie",0,"BOOL");
 var APUgen=props.globals.initNode("controls/electric/APU-generator",0,"BOOL");
-var extpwr=props.globals.initNode("controls/electric/external-power",0,"BOOL");
+var extpwr=props.globals.initNode("controls/electric/ext-run",0,"BOOL");
 var lbus_volts = 0.0;
 var rbus_volts = 0.0;
 

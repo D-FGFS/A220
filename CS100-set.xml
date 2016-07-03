@@ -310,6 +310,7 @@
             </input>
     <nasal>
         <cseries>
+            <file>Aircraft/CSeries/Nasal/main.nas</file>
             <file>Aircraft/CSeries/Nasal/engines.nas</file>
             <file>Aircraft/CSeries/Nasal/electrical.nas</file>
             <file>Aircraft/CSeries/Nasal/systems.nas</file>

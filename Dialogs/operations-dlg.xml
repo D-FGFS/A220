@@ -35,6 +35,16 @@
     </checkbox>
 
   <hrule/>
+    <checkbox>
+      <halign>left</halign>
+      <label>External Power</label>
+      <property>controls/ext-avail</property>
+      <binding>
+        <command>property-toggle</command>
+      <property>controls/ext-avail</property>
+      </binding>
+    </checkbox>
+  <hrule/>
 
 
   <group>

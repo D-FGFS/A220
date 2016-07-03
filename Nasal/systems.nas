@@ -5,6 +5,7 @@
 
 ## Main systems update loop
 var Systems = {
+
     fast_loopid: -1,
     slow_loopid: -1,
     init: func
