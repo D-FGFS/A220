@@ -334,6 +334,63 @@
 		</center>
 	</animation>
         <!--Autopilot-->
+        <!--Master: Displays off without power-->
+<animation>
+  <type>select</type>
+  <object-name>ias.1</object-name>
+  <object-name>ias.10</object-name>
+  <object-name>ias.100</object-name>
+  <object-name>hdg.1</object-name>
+  <object-name>hdg.10</object-name>
+  <object-name>hdg.100</object-name>
+  <object-name>alt.1</object-name>
+  <object-name>alt.10</object-name>
+  <object-name>alt.100</object-name>
+  <object-name>alt.1000</object-name>
+  <object-name>alt.10000</object-name>
+  <object-name>vs.-</object-name>
+  <object-name>vs.1</object-name>
+  <object-name>vs.10</object-name>
+  <object-name>vs.100</object-name>
+  <object-name>vs.1000</object-name>
+  <condition>
+      <greater-than>
+      <property>/systems/electrical/left-bus</property>
+      <value>10</value>
+  </greater-than>
+</condition>
+</animation>
+        
+        <!--Main buttons-->
+<animation>
+  <type>pick</type>
+  <object-name>ap.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/it2/ap_mastersw</property>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>yd.btn</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/it2/yd_mastersw</property>
+      <step>1</step>
+      <min>0</min>
+      <max>380</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+        
         <!--IAS display-->
 <animation>
 <type>textranslate</type>
