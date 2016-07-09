@@ -121,5 +121,9 @@
         <cseries>
             <file>Aircraft/CSeries/Nasal/CS300liveries.nas</file>
         </cseries>
+		<it2>
+            <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
+            <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
+		</it2>
     </nasal>
 </PropertyList>

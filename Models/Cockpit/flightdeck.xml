@@ -334,113 +334,105 @@
 		</center>
 	</animation>
         <!--Autopilot-->
-	<animation>
-		<type>pick</type>
-		<object-name>hdg.knob</object-name>
-		<action>
-			<button>0</button>
-			<button>3</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/autoflight/heading-select</property>
-				<wrap type="bool">true</wrap>
-				<step type="double">1</step>
-				<min>1</min>
-				<max>361</max>
-			</binding>
-		</action>
-		<action>
-			<button>1</button>
-			<button>4</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/autoflight/heading-select</property>
-				<wrap type="bool">true</wrap>
-				<step type="double">-1</step>
-				<min>1</min>
-				<max>361</max>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>pick</type>
-		<object-name>alt.knob</object-name>
-		<action>
-			<button>0</button>
-			<button>3</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/autoflight/altitude-select</property>
-				<step>100</step>
-				<max>50000</max>
-			</binding>
-		</action>
-		<action>
-			<button>1</button>
-			<button>4</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/autoflight/altitude-select</property>
-				<step>-100</step>
-				<min>0</min>
-			</binding>
-		</action>
-	</animation>
-        
-	<animation>
-		<type>pick</type>
-		<object-name>vs.knob</object-name>
-		<action>
-                    <button>0</button>
-			<button>3</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/autoflight/vertical-speed-select</property>
-				<step>100</step>
-				<max>9000</max>
-			</binding>
-		</action>
-		<action>
-                    <button>0</button>
-			<button>4</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/autoflight/vertical-speed-select</property>
-				<step>-100</step>
-				<min>-9000</min>
-			</binding>
-		</action>
-	</animation>
-	<!--<animation>
-		<type>rotate</type>
-		<object-name>hdg.knob</object-name>
-		<property>controls/autoflight/heading-select</property>
-		<factor>2</factor>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>0</x-m>
-			<y-m>-0.03157</y-m>
-			<z-m>0.00052</z-m>
-		</center>
-	</animation>-->
-               <!--Displays-->
+        <!--IAS display-->
+<animation>
+<type>textranslate</type>
+<object-name>ias.100</object-name>
+				<property>autopilot/settings/target-speed-kt</property>
+  <factor>0.001</factor>
+  <step>100</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>ias.10</object-name>
+				<property>autopilot/settings/target-speed-kt</property>
+  <factor>0.01</factor>
+  <step>10</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>ias.1</object-name>
+				<property>autopilot/settings/target-speed-kt</property>
+  <factor>0.1</factor>
+  <step>1</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+
+<animation>
+        <type>select</type>
+<object-name>ias.knb</object-name>
+<object-name>ias.100</object-name>
+<object-name>ias.10</object-name>
+<object-name>ias.1</object-name>
+        <condition>
+            <equals>
+				<property>controls/it2/apthrmode</property>
+                <value>0</value>
+            </equals>
+        </condition>
+</animation>
+
+		<!-- Mach display -->
+<animation>
+<type>textranslate</type>
+<object-name>m.0.1</object-name>
+				<property>autopilot/settings/target-mach</property>
+  <factor>1.0</factor>
+  <step>0.1</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>m.0.01</object-name>
+				<property>autopilot/settings/target-mach</property>
+  <factor>10</factor>
+  <step>.01</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+
+<animation>
+        <type>select</type>
+<object-name>m.knb</object-name>
+<object-name>m.</object-name>
+<object-name>m.0.1</object-name>
+<object-name>m.0.01</object-name>
+        <condition>
+            <equals>
+				<property>controls/it2/apthrmode</property>
+                <value>1</value>
+            </equals>
+        </condition>
+</animation>
+
         <!--HDG display-->
 <animation>
 <type>textranslate</type>
 <object-name>hdg.100</object-name>
-				<property>controls/autoflight/heading-select</property>
-    <step>100</step>
-    <factor> 0.001 </factor>
+				<property>autopilot/settings/heading-bug-deg</property>
+        <factor>0.001</factor>
+        <step>100</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
@@ -450,9 +442,9 @@
 <animation>
 <type>textranslate</type>
 <object-name>hdg.10</object-name>
-				<property>controls/autoflight/heading-select</property>
-    <step>10</step>
-    <factor> 0.01 </factor>
+				<property>autopilot/settings/heading-bug-deg</property>
+        <factor>0.01</factor>
+        <step>10</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
@@ -462,9 +454,9 @@
 <animation>
 <type>textranslate</type>
 <object-name>hdg.1</object-name>
-				<property>controls/autoflight/heading-select</property>
-    <step>1</step>
-    <factor> 0.1 </factor>
+				<property>autopilot/settings/heading-bug-deg</property>
+        <factor>0.1</factor>
+        <step>1</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
@@ -472,45 +464,24 @@
       </axis>
 </animation>
         <!--ALT display-->
-  <animation>
-    <type>select</type>
-<object-name>alt.10000</object-name>
-    <condition>
-      <greater-than>
-        <property>controls/autoflight/altitude-select</property>
-	<value>9999</value>
-      </greater-than>
-    </condition>
-  </animation>
 <animation>
 <type>textranslate</type>
 <object-name>alt.10000</object-name>
-				<property>controls/autoflight/altitude-select</property>
-    <step>10000</step>
-    <factor> 0.00001 </factor>
-<factor>0.000025</factor>
+				<property>autopilot/settings/target-altitude-ft</property>
+        <factor>0.00001</factor>
+        <step>10000</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
         <z> 0 </z>
       </axis>
 </animation>
-  <animation>
-    <type>select</type>
-<object-name>alt.1000</object-name>
-    <condition>
-      <greater-than>
-        <property>controls/autoflight/altitude-select</property>
-	<value>999</value>
-      </greater-than>
-    </condition>
-  </animation>
 <animation>
 <type>textranslate</type>
 <object-name>alt.1000</object-name>
-				<property>controls/autoflight/altitude-select</property>
-    <step>1000</step>
-    <factor> 0.0001 </factor>
+				<property>autopilot/settings/target-altitude-ft</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
@@ -520,9 +491,9 @@
 <animation>
 <type>textranslate</type>
 <object-name>alt.100</object-name>
-				<property>controls/autoflight/altitude-select</property>
-    <step>100</step>
-    <factor> 0.001 </factor>
+				<property>autopilot/settings/target-altitude-ft</property>
+        <factor>0.001</factor>
+        <step>100</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
@@ -532,10 +503,9 @@
 <animation>
 <type>textranslate</type>
 <object-name>alt.10</object-name>
-				<property>controls/autoflight/altitude-select</property>
-    <step>10</step>
-    <factor> 0.01 </factor>
-<factor>0.025</factor>
+				<property>autopilot/settings/target-altitude-ft</property>
+        <factor>0.01</factor>
+        <step>10</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
@@ -545,33 +515,84 @@
 <animation>
 <type>textranslate</type>
 <object-name>alt.1</object-name>
-				<property>controls/autoflight/altitude-select</property>
-    <step>1</step>
-    <factor> 0.1 </factor>
-<factor>0.25</factor>
+				<property>autopilot/settings/target-altitude-ft</property>
+        <factor>0.1</factor>
+        <step>1</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
         <z> 0 </z>
       </axis>
 </animation>
-  <animation>
-    <type>select</type>
-<object-name>vs.-</object-name>
-    <condition>
-      <less-than>
-    <property>controls/autoflight/vertical-speed-select</property>
-	<value>0</value>
-      </less-than>
-    </condition>
-  </animation>
+
+<animation>
+        <type>select</type>
+<object-name>alt.10000</object-name>
+        <condition>
+            <greater-than>
+				<property>autopilot/settings/target-altitude-ft</property>
+                <value>9999</value>
+            </greater-than>
+        </condition>
+</animation>
+
+<!-- V/S -->
+<animation>
+<type>textranslate</type>
+<object-name>vs.1000</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.100</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>0.001</factor>
+        <step>100</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.10</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>0.01</factor>
+        <step>10</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
+<animation>
+<type>textranslate</type>
+<object-name>vs.1</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>0.1</factor>
+        <step>1</step>
+      <axis>
+        <x>  1 </x>
+        <y>  0 </y>
+        <z> 0 </z>
+      </axis>
+</animation>
 
 <animation>
 <type>textranslate</type>
-<object-name>vs.1000</object-name>
-    <property>controls/autoflight/vertical-speed-select</property>
-    <step>1000</step>
-    <factor> 0.0001 </factor>
+<object-name>vs.1000.-</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>-0.0001</factor>
+	<bias>999</bias>
+        <step>1000</step>
       <axis>
         <x>  1 </x>
         <y>  0 </y>
@@ -580,111 +601,244 @@
 </animation>
 <animation>
 <type>textranslate</type>
-<object-name>vs.100</object-name>
-				<property>controls/autoflight/vertical-speed-select</property>
-    <step>100</step>
-    <factor> 0.001 </factor>
+<object-name>vs.100.-</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>0.001</factor>
+        <step>-100</step>
       <axis>
-        <x>  1 </x>
+        <x> -1 </x>
         <y>  0 </y>
         <z> 0 </z>
       </axis>
 </animation>
 <animation>
 <type>textranslate</type>
-<object-name>vs.10</object-name>
-				<property>controls/autoflight/vertical-speed-select</property>
-    <step>10</step>
-    <factor> 0.01 </factor>
+<object-name>vs.10.-</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>0.01</factor>
+        <step>-10</step>
       <axis>
-        <x>  1 </x>
+        <x> -1 </x>
         <y>  0 </y>
         <z> 0 </z>
       </axis>
 </animation>
 <animation>
 <type>textranslate</type>
-<object-name>vs.1</object-name>
-				<property>controls/autoflight/vertical-speed-select</property>
-    <step>1</step>
-    <factor> 0.1 </factor>
+<object-name>vs.1.-</object-name>
+				<property>autopilot/settings/vertical-speed-fpm</property>
+        <factor>0.1</factor>
+        <step>-1</step>
       <axis>
-        <x>  1 </x>
+        <x> -1 </x>
         <y>  0 </y>
         <z> 0 </z>
       </axis>
 </animation>
-<!--
+
+	<animation>
+        <type>select</type>
+        <object-name>vs.-</object-name>
+	<object-name>vs.1000.-</object-name>
+	<object-name>vs.100.-</object-name>
+	<object-name>vs.10.-</object-name>
+	<object-name>vs.1.-</object-name>
+        <condition>
+            <less-than>
+                <property>autopilot/settings/vertical-speed-fpm</property>
+                <value>0</value>
+            </less-than>
+        </condition>
+	</animation>
+	<animation>
+        <type>select</type>
+	<object-name>vs.1000</object-name>
+	<object-name>vs.100</object-name>
+	<object-name>vs.10</object-name>
+	<object-name>vs.1</object-name>
+        <condition>
+			<or>
+            <greater-than>
+                <property>autopilot/settings/vertical-speed-fpm</property>
+                <value>0</value>
+            </greater-than>
+            <equals>
+                <property>autopilot/settings/vertical-speed-fpm</property>
+                <value>0</value>
+            </equals>
+			</or>
+        </condition>
+    </animation>
+	
+<!-- Knobs -->
+<!-- IAS knob -->
 <animation>
-<type>textranslate</type>
-<object-name>vs.1000</object-name>
-    <condition>
-      <less-than>
-    <property>controls/autoflight/vertical-speed-select</property>
-	<value>0</value>
-      </less-than>
-    </condition>
-    <property>controls/autoflight/vertical-speed-select</property>
-    <step>1000</step>
-    <factor> -0.0001 </factor>
-      <axis>
-        <x>  1 </x>
-        <y>  0 </y>
-        <z> 0 </z>
-      </axis>
+  <type>pick</type>
+  <object-name>ias.knb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-speed-kt</property>
+      <step>1</step>
+      <min>0</min>
+      <max>380</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
 </animation>
 <animation>
-<type>textranslate</type>
-<object-name>vs.100</object-name>
-    <condition>
-      <less-than>
-    <property>controls/autoflight/vertical-speed-select</property>
-	<value>0</value>
-      </less-than>
-    </condition>
-				<property>controls/autoflight/vertical-speed-select</property>
-    <step>100</step>
-    <factor> -0.001 </factor>
-      <axis>
-        <x>  1 </x>
-        <y>  0 </y>
-        <z> 0 </z>
-      </axis>
+  <type>pick</type>
+  <object-name>ias.knb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-speed-kt</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>380</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<!-- Mach knob -->
+<animation>
+  <type>pick</type>
+  <object-name>m.knb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-mach</property>
+      <step>0.01</step>
+      <min>0.60</min>
+      <max>0.92</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
 </animation>
 <animation>
-<type>textranslate</type>
-<object-name>vs.10</object-name>
-    <condition>
-      <less-than>
-    <property>controls/autoflight/vertical-speed-select</property>
-	<value>0</value>
-      </less-than>
-    </condition>
-				<property>controls/autoflight/vertical-speed-select</property>
-    <step>10</step>
-    <factor> -0.01 </factor>
-      <axis>
-        <x>  1 </x>
-        <y>  0 </y>
-        <z> 0 </z>
-      </axis>
+  <type>pick</type>
+  <object-name>m.knb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-mach</property>
+      <step>-0.01</step>
+      <min>0.60</min>
+      <max>0.92</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<!-- HDG knob -->
+<animation>
+  <type>pick</type>
+  <object-name>hdg.knb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/heading-bug-deg</property>
+      <step>1</step>
+      <min>1</min>
+      <max>361</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
 </animation>
 <animation>
-<type>textranslate</type>
-<object-name>vs.1</object-name>
-    <condition>
-      <less-than>
-    <property>controls/autoflight/vertical-speed-select</property>
-	<value>0</value>
-      </less-than>
-    </condition>
-				<property>controls/autoflight/vertical-speed-select</property>
-    <step>1</step>
-    <factor> -0.1 </factor>
-      <axis>
-        <x>  1 </x>
-        <y>  0 </y>
-        <z> 0 </z>
-      </axis>
-</animation>-->
+  <type>pick</type>
+  <object-name>hdg.knb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/heading-bug-deg</property>
+      <step>-1</step>
+      <min>1</min>
+      <max>361</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+
+<!-- ALT knob -->
+<animation>
+  <type>pick</type>
+  <object-name>alt.knb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/target-altitude-ft</property>
+      <step>100</step>
+      <min>0</min>
+      <max>50000</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>alt.knb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/target-altitude-ft</property>
+      <step>-100</step>
+      <min>0</min>
+      <max>50000</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<!-- V/S wheel -->
+<animation>
+  <type>pick</type>
+  <object-name>vs.knb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/vertical-speed-fpm</property>
+      <step>-100</step>
+      <min>-6000</min>
+      <max> 6000</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>vs.knb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/vertical-speed-fpm</property>
+      <step>100</step>
+      <min>-6000</min>
+      <max> 6000</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+	
 </PropertyList>

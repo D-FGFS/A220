@@ -275,3 +275,10 @@ var rat1 = Rat.new("systems/ram-air-turbine", "controls/pneumatic/ram-air-turbin
 #};
 #gui.menuBind("autopilot", "CRJ700.dialogs.autopilot.open();");
 #gui.menuBind("radio", "CRJ700.dialogs.radio.open();");
+
+# Stuff for IT AUTOFLIGHT added by Joshua Davidson (it0uchpods/411)
+
+setlistener("/sim/signals/fdm-initialized", func {
+  it2.ap_init();
+  var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/CSeries/Systems/autopilot-dlg.xml");
+});
