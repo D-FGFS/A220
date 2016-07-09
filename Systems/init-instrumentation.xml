@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<adf n="1">
+  <mode>adf</mode>
+  <serviceable type="bool">true</serviceable>
+  <frequencies>
+    <selected-khz type="int">353</selected-khz>  <!-- Pacoima near KBUR -->
+    <standby-khz type="int">373</standby-khz>    <!-- Conda near KJFK -->
+  </frequencies>
+</adf>
+
+<rmi-needle n="0">
+  <mode type="int">0</mode>
+</rmi-needle>
+<rmi-needle n="1">
+  <mode type="int">0</mode>
+</rmi-needle>
+
+<marker-beacon>
+  <test type="int">0</test>
+</marker-beacon>
+
+<altimeter>
+  <DH type="int">0</DH>
+</altimeter>
+
+<nav n="0">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">116.30</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
+</frequencies>
+</nav>
+<nav n="1">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">116.30</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
+  </frequencies>
+</nav>
+
+<comm n="0">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
+</frequencies>
+</comm>
+<comm n="1">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
+  </frequencies>
+</comm>
+
+
+<!--radar>
+  <entabled type="int">1</entabled>
+  <minimized type="bool" archive="y">false</minimized>
+  <switch type="string" archive="y">ON</switch>
+  <mode-control type="int" archive="y">2</mode-control>
+  <WXmode  type="string" archive="y">WX</WXmode>
+  <POSmode  type="string" archive="y">POS</POSmode>
+  <DATmode  type="string" archive="y">DAT</DATmode>
+  <display-controls> 
+    <WX type="bool" archive="y">false</WX>
+    <data type="bool" archive="y">false</data>
+    <pos type="bool" archive="y">true</pos>
+  </display-controls>
+  <serviceable type="bool">true</serviceable>
+  <range type="int" archive="y">8</range>
+  <display-mode type="string" archive="y">map</display-mode>
+</radar>
+<wxradar>
+  <range type="int" archive="y">8</range>
+  <minimized type="bool" archive="y">false</minimized>
+  <switch type="string" archive="y">ON</switch>
+  <mode type="string" archive="y">WX</mode>
+  <lightning type="bool" archive="y">false</lightning>
+  <display-mode type="string" archive="y">map</display-mode>
+  <serviceable type="bool" >true</serviceable>
+</wxradar-->
+
+
+
+<mk-viii>                           <!-- http://wiki.flightgear.org/index.php/GPWS -->
+
+     <serviceable>true</serviceable>   <!-- EGPWS_ENABLE -->
+
+     <configuration-module>
+       <category-1>   255 </category-1>  <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+       <category-3>   2 </category-3>  <!-- POSITION_INPUT_SELECT -->
+       <category-4>  13 </category-4>  <!-- ALTITUDE_CALLOUTS -->
+       <category-5>   0 </category-5>  <!-- AUDIO_MENU_SELECT -->
+       <category-6>   1 </category-6>  <!-- TERRAIN_DISPLAY_SELECT -->
+       <category-7> 124 </category-7>  <!-- OPTIONS_SELECT_GROUP_1 -->
+       <category-8>   3 </category-8>  <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+       <category-9>   3 </category-9>  <!-- NAVIGATION_INPUT_SELECT -->
+       <category-10>  6 </category-10> <!-- ATTITUDE_INPUT_SELECT -->
+       <category-13>  7 </category-13> <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+       <category-14>  0 </category-14> <!-- AUDIO_OUTPUT_LEVEL -->
+     </configuration-module>
+
+     <inputs>                          <!-- Module I/O -->
+       <arinc429>
+         <decision-height-ncd> false </decision-height-ncd>
+         <decision-height> 250 </decision-height>
+       </arinc429>
+     </inputs>
+
+     <speaker>                         <!-- Speaker Configuration -->
+       <max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+       <reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+       <volume> 1.5 </volume>          <!-- Volume at reference distance -->
+     </speaker>
+
+     <voice>
+         <file-prefix type="string">Aircraft/MD-88/Sounds/mk-viii/</file-prefix>
+                                         <!-- sound file path and prefix -->
+     </voice>
+
+   </mk-viii>
+
+ <tcas>
+            <serviceable type="bool">true</serviceable>
+            <inputs>
+                <mode type="int">3</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+            </inputs>
+            <voice>
+                <file-prefix type="string">Sounds/tcas/</file-prefix>
+            </voice>
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+                <volume type="double"> 1 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+        </tcas>
+
+
+</PropertyList>
