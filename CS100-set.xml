@@ -300,7 +300,10 @@
 		<it2>
             <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
             <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
-		</it2>
+		</it2> 
+                <tyresmoke>
+                    <file>Aircraft/CSeries/Nasal/tyresmoke.nas</file>
+                </tyresmoke>
     </nasal>	
     
     <aircraft>

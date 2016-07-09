@@ -10,7 +10,6 @@
 ############################################
 global_system = func{
 
-
 #function for APU knob
 if(getprop("/engines/apu/running")){
 setprop("/controls/APU/knob", getprop("/controls/APU/off-on") );
@@ -33,9 +32,23 @@ setprop("/controls/ext-run", getprop("/controls/electric/external-power"));
 }else{
 setprop("/controls/ext-run", 0);
 }
+
   settimer(global_system, 0);
 
 }
+
+#tyresmoke loop function
+#tyresmoke = func{
+#var rollspeed1=getprop("/gear/gear/rollspeed-ms");
+#var rollspeed2=getprop("/gear/gear/rollspeed-ms");
+#var diffrs=rollspeed2-rollspeed1;
+#if(diffrs >= 1){
+#setprop("/gear/gear/tyresmoke", 1);
+#}
+#setprop("/gear/gear/rollspeed-diff", diffrs);
+#settimer(tyresmoke, 0);
+#}
+
 
 ##########################################
 # SetListerner must be at the end of this file
@@ -43,5 +56,6 @@ setprop("/controls/ext-run", 0);
 var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
 
   settimer(global_system, 2);
+ # settimer(tyresmoke, 2);
   removelistener(nasalInit);
 });

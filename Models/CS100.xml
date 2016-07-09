@@ -175,6 +175,25 @@
    <z-m>-5.60202</z-m>
   </offsets>
  </model>
+ <!--Tyresmoke-->
+ <model>
+  <path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
+  <name>tyre-smoke-p</name>
+  <offsets>
+   <x-m>-1.13179</x-m>
+   <y-m>-2.99414</y-m>
+   <z-m>-5.72987</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
+  <name>tyre-smoke-s</name>
+  <offsets>
+   <x-m>-1.13179</x-m>
+   <y-m>2.99414</y-m>
+   <z-m>-5.72987</z-m>
+  </offsets>
+ </model>
         <!--Compression-->
     <animation>
 		<type>translate</type>
