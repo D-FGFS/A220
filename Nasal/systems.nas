@@ -10,7 +10,7 @@ var Systems = {
     slow_loopid: -1,
     init: func
     {
-        print("CS100 aircraft systems ... initialized");
+        print("Systems ... initialized");
         Systems.start();
         # create crossfeed valve
         var gravity_xflow = aircraft.crossfeed_valve.new(0.5, "controls/fuel/gravity-xflow", 0, 1);
@@ -265,20 +265,12 @@ var Rat = {
 };
 var rat1 = Rat.new("systems/ram-air-turbine", "controls/pneumatic/ram-air-turbine");
 
-## Aircraft-specific dialogs
-#var dialogs = {
-#    autopilot: gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/CRJ700-family/Systems/autopilot-dlg.xml"),
- #   radio: gui.Dialog.new("sim/gui/dialogs/radio-stack/dialog", "Aircraft/CRJ700-family/Systems/radio-stack-dlg.xml"),
-  #  lights: gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/CRJ700-family/Systems/lights-dlg.xml"),
-   # failures: gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/CRJ700-family/Systems/failures-dlg.xml"),
-    #tiller: gui.Dialog.new("sim/gui/dialogs/tiller/dialog", "Aircraft/CRJ700-family/Systems/tiller-dlg.xml")
-#};
-#gui.menuBind("autopilot", "CRJ700.dialogs.autopilot.open();");
-#gui.menuBind("radio", "CRJ700.dialogs.radio.open();");
-
-# Stuff for IT AUTOFLIGHT added by Joshua Davidson (it0uchpods/411)
-
 setlistener("/sim/signals/fdm-initialized", func {
   it2.ap_init();
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/CSeries/Systems/autopilot-dlg.xml");
+  setprop("/engines/engine[0]/n1-limit", "99.5");
+  setprop("/engines/engine[1]/n1-limit", "99.5");
+  setprop("/engines/engine[0]/itt-ind", "0.0");
+  setprop("/engines/engine[1]/itt-ind", "0.0");
+  setprop("/controls/engines/limit-type", "TO LIMIT");
 });
