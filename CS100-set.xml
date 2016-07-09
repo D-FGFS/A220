@@ -64,6 +64,13 @@
                 <menu n="100">
                     <label>Bombardier CSeries 100</label>
                     <item>
+                        <label>Autostart</label>
+                        <binding>
+                        <command>property-toggle</command>
+                        <property>/sim/model/start-idling</property>
+                        </binding>
+                    </item>
+                    <item>
                         <label>Select Livery</label>
                         <binding>
                             <command>nasal</command>
@@ -89,13 +96,6 @@
                             </script>
                         </binding>
                     </item>
-    <item>
-     <label>Autostart</label>
-     <binding>
-      <command>property-toggle</command>
-      <property>/sim/model/start-idling</property>
-     </binding>
-    </item>
                 </menu>
             </default>
         </menubar>
