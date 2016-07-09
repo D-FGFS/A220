@@ -5,7 +5,7 @@
 <PropertyList>
     <sim>
         <description>Bombardier CS300</description>
-        <author>ACJZA, Joshua Davidson, Jonathan Redpath, D-ECHO, Pakistan-1</author>
+        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1</author>
         <status>dev</status>
         <aircraft-version>0.1</aircraft-version>
 		
@@ -23,6 +23,10 @@
 				<mlw-lb>15550</mlw-lb>
 			</limits>
 		</model>
+		
+		<startup>
+            <splash-texture>Aircraft/CSeries/CS300.png</splash-texture>
+		</startup>
         
 		<sound>
 			<path>Aircraft/CSeries/Sounds/CSeries-sounds.xml</path>

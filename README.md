@@ -1,4 +1,11 @@
 # FGAircraft|CSeries
 FlightGear Bombardier CSeries
 
-fgfsdevteam.slack.com
+ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1\
+
+This aircraft is equipped with IT-AUTOFLIGHT.
+
+Want to help?
+Email to join our Slack: fgfsdevteam.slack.com
+joshuadavidson2000@gmail.com
+legoboyvdlp@gmail.com

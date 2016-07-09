@@ -5,7 +5,7 @@
 <PropertyList>
     <sim>
         <description>Bombardier CS100</description>
-        <author>ACJZA, Joshua Davidson, Jonathan Redpath, D-ECHO, Pakistan-1</author>
+        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1</author>
         <status>dev</status>
         <aircraft-version>0.1</aircraft-version>
 		
@@ -23,6 +23,10 @@
 				<mlw-lb>15550</mlw-lb>
 			</limits>
 		</model>
+		
+		<startup>
+            <splash-texture>Aircraft/CSeries/CS100.png</splash-texture>
+		</startup>
         
 		<sound>
 			<path>Aircraft/CSeries/Sounds/CSeries-sounds.xml</path>
@@ -145,36 +149,6 @@
             <wiper type="int">0</wiper>
             <wiper type="int">0</wiper>
         </anti-ice>
-        <autoflight>
-            <autopilot>
-                <engage type="bool">false</engage>
-            </autopilot>
-            <flight-director>
-                <engage type="bool">false</engage>
-            </flight-director>
-            <yaw-damper>
-                <engage type="bool">false</engage>
-            </yaw-damper>
-            <yaw-damper>
-                <engage type="bool">false</engage>
-            </yaw-damper>
-            <altitude-select type="double">10000</altitude-select>
-            <autothrottle-engage type="bool">false</autothrottle-engage>
-            <basic-roll-mode type="int">0</basic-roll-mode>
-            <basic-roll-target-heading-deg type="double">0</basic-roll-target-heading-deg>
-            <basic-roll-target-roll-deg type="double">0</basic-roll-target-roll-deg>
-            <bank-angle-select type="float">30</bank-angle-select>
-            <disengage-pos-norm type="int">0</disengage-pos-norm>
-            <heading-select type="double">360</heading-select>
-            <lateral-mode type="int">0</lateral-mode>
-            <mach-select type="double">0</mach-select>
-            <nav-mode type="int">0</nav-mode>
-            <pitch-select type="double">0</pitch-select>
-            <speed-mode type="int">0</speed-mode>
-            <speed-select type="double">200</speed-select>
-            <vertical-mode type="int">0</vertical-mode>
-            <vertical-speed-select type="double">1800</vertical-speed-select>
-        </autoflight>
         <APU>
             <electronic-control-unit type="bool">false</electronic-control-unit>
             <fire-switch-armed type="bool">false</fire-switch-armed>
