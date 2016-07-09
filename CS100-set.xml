@@ -40,6 +40,25 @@
 		<startup>
             <splash-texture>Aircraft/CSeries/CS100.png</splash-texture>
 		</startup>
+		
+        <systems>
+            <!-- Disable the generic electrical system -->
+            <electrical>
+                <path></path>
+            </electrical>
+            <autopilot>
+                <name>Autopilot</name>
+                <path>Aircraft/CSeries/Systems/it-autoflight.xml</path>
+            </autopilot>
+			<autopilot>
+				<name>Autopilot helpers</name>
+				<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+			</autopilot>
+        </systems>
+		
+		<instrumentation>
+			<path>Aircraft/MD-88/Systems/MD-88-instrumentation.xml</path>
+		</instrumentation>
         
 		<sound>
 			<path>Aircraft/CSeries/Sounds/CSeries-sounds.xml</path>
@@ -261,16 +280,6 @@
             <brake-right-cmd-norm alias="/controls/gear/brake-right" />
         </copilot>
     </fcs>
-        <systems>
-            <!-- Disable the generic electrical system -->
-            <electrical>
-                <path></path>
-            </electrical>
-            <autopilot>
-                <name>Autopilot</name>
-                <path>Aircraft/CSeries/Systems/it-autoflight.xml</path>
-            </autopilot>
-        </systems>
 
             <input>
                 <keyboard>

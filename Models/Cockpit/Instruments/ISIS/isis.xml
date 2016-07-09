@@ -1,0 +1,77 @@
+﻿<!--
+777-200LR Standby Altimeter 
+-->
+
+<PropertyList>
+ <path>isis.ac</path>
+
+ <animation>
+        <type>rotate</type>
+        <object-name>Roll.needle</object-name>
+        <object-name>Slip.needle</object-name>
+        <property>orientation/roll-deg</property>
+        <center>
+            <x-m> 0.002</x-m>
+            <y-m>0</y-m>
+            <z-m>0.01</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>Slip.needle</object-name>
+        <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+        <factor>0.0020</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+ <animation>
+   <type>texmultiple</type>
+   <object-name>AI</object-name>
+   <transform>
+     <property>orientation/pitch-deg</property>
+     <subtype>textranslate</subtype>
+     <factor>0.00475</factor>
+     <axis>
+       <x>0</x>
+       <y>1</y>
+       <z>0</z>
+     </axis>
+   </transform>
+   <transform>
+     <property>orientation/roll-deg</property>
+     <subtype>texrotate</subtype>
+     <center>
+       <x>0.25</x>
+       <y>0.50</y>
+     </center>
+     <axis>
+       <x>0</x>
+       <y>0</y>
+       <z>-1</z>
+     </axis>
+   </transform>
+
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>Off</object-name>
+        <condition>
+            <less-than>
+				<property>/systems/electrical/left-bus</property>
+				<value>10</value>
+            </less-than>
+        </condition>
+    </animation>
+
+</PropertyList>

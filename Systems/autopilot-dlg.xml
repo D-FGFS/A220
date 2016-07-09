@@ -874,7 +874,7 @@
 				<legend>AFDS MASTER OVRD OFF</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>/controls/it2/at_mastersw</property>
+				<property>/controls/it2/ap_mastersw</property>
 				<value>0</value>
 				</binding>
 				<binding>

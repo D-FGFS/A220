@@ -146,9 +146,9 @@ var Engine = {
         m.starter.setBoolValue(0);
         m.thrust_mode = props.globals.getNode("controls/engines/enigne[" ~ no ~ "]/thrust-mode", 1);
         m.thrust_mode.setValue(0);
-        m.throttle = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/throttle", 1);
+        m.throttle = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/throttle-lever", 1);
         m.throttle.setValue(0);
-        m.throttle_lever = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/throttle-lever", 1);
+        m.throttle_lever = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/throttle", 1);
         m.throttle_lever.setValue(0);
 
         return m;

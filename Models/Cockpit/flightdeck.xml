@@ -340,6 +340,9 @@
   <object-name>ias.1</object-name>
   <object-name>ias.10</object-name>
   <object-name>ias.100</object-name>
+  <object-name>m.</object-name>
+  <object-name>m.0.1</object-name>
+  <object-name>m.0.01</object-name>
   <object-name>hdg.displ</object-name>
   <object-name>hdg.1</object-name>
   <object-name>hdg.10</object-name>
@@ -354,42 +357,16 @@
   <object-name>vs.10</object-name>
   <object-name>vs.100</object-name>
   <object-name>vs.1000</object-name>
+  <object-name>vs.1.-</object-name>
+  <object-name>vs.10.-</object-name>
+  <object-name>vs.100.-</object-name>
+  <object-name>vs.1000.-</object-name>
   <condition>
       <greater-than>
       <property>/systems/electrical/left-bus</property>
       <value>10</value>
   </greater-than>
 </condition>
-</animation>
-        
-        <!--Main buttons-->
-<animation>
-  <type>pick</type>
-  <object-name>ap.btn</object-name>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-toggle</command>
-      <property>/controls/it2/ap_mastersw</property>
-    </binding>
-  </action>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>yd.btn</object-name>
-  <action>
-    <button>3</button>
-    <repeatable>true</repeatable>
-    <binding>
-      <command>property-toggle</command>
-      <property>/controls/it2/yd_mastersw</property>
-      <step>1</step>
-      <min>0</min>
-      <max>380</max>
-      <wrap>false</wrap>
-    </binding>
-  </action>
 </animation>
         
         <!--IAS display-->
@@ -728,6 +705,189 @@
         </condition>
     </animation>
 	
+<!-- Buttons -->
+<!-- AP Master -->
+<animation>
+  <type>pick</type>
+  <object-name>ap.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/it2/ap_mastersw</property>
+    </binding>
+  </action>
+</animation>
+
+<!-- AT Master -->
+<animation>
+  <type>pick</type>
+  <object-name>at.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/it2/at_mastersw</property>
+    </binding>
+  </action>
+</animation>
+
+<!-- Flight Director -->
+<animation>
+  <type>pick</type>
+  <object-name>fd.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/it2/fd_mastersw</property>
+    </binding>
+  </action>
+</animation>
+
+<!-- AFDS OVRD OFF -->
+<animation>
+  <type>pick</type>
+  <object-name>ovrd.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/ap_mastersw</property>
+	  <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/at_mastersw</property>
+	  <value>0</value>
+    </binding>
+  </action>
+</animation>
+
+<!-- Heading Button -->
+<animation>
+  <type>pick</type>
+  <object-name>hdg.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/aplatset</property>
+	  <value>0</value>
+    </binding>
+  </action>
+</animation>
+
+<!-- NAV (LNAV) Button -->
+<animation>
+  <type>pick</type>
+  <object-name>nav.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/aplatset</property>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+	
+<!-- Approach (LOC and G/S) ARM Button -->
+<animation>
+  <type>pick</type>
+  <object-name>appr.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/apvertset</property>
+	  <value>2</value>
+    </binding>
+  </action>
+</animation>
+
+<!-- Half Bank Button -->
+<animation>
+  <type>pick</type>
+  <object-name>halfbank.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/unimplemented_items</property>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<!-- Flight Level Change (Speed with Pitch) Button -->
+<animation>
+  <type>pick</type>
+  <object-name>flch.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/apvertset</property>
+	  <value>4</value>
+    </binding>
+  </action>
+</animation>
+
+<!-- Hold Altitude Button -->
+<animation>
+  <type>pick</type>
+  <object-name>althld.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/apvertset</property>
+	  <value>0</value>
+    </binding>
+  </action>
+</animation>
+
+<!-- VNAV Button -->
+<animation>
+  <type>pick</type>
+  <object-name>vnav.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/unimplemented_items</property>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<!-- Vertical Speed Button -->
+<animation>
+  <type>pick</type>
+  <object-name>vs.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/it2/apvertset</property>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+	
 <!-- Knobs -->
 <!-- IAS knob -->
 <animation>
@@ -898,5 +1058,17 @@
     </binding>
   </action>
 </animation>
+
+<!-- Instruments -->
+<model>
+  <name>ISIS</name>
+  <path>Aircraft/CSeries/Models/Cockpit/Instruments/ISIS/isis.xml</path>
+  <offsets>
+    <x-m>-0.4806</x-m>
+    <y-m> 0</y-m>
+    <z-m> 0.2163</z-m>
+	<pitch-deg>-7</pitch-deg>
+  </offsets>
+</model>
 	
 </PropertyList>
