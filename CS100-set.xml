@@ -14,15 +14,27 @@
 
         <model>
             <path>Aircraft/CSeries/Models/CS100.xml</path>
-      <livery>
-        <file type="string">bombardier</file>
-      </livery>
+            <livery>
+                <file type="string">bombardier</file>
+            </livery>
             <variant type="int">0</variant>
             <limits><!--according to https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications-->
 				<mtow-lb>134000</mtow-lb>
 				<mlw-lb>15550</mlw-lb>
-			</limits>
-                        <start-idling type="bool">false</start-idling>
+            </limits>
+            <start-idling type="bool">false</start-idling>
+            <door n="0">
+                    <position-x-m>-12.39652</position-x-m>
+                    <position-y-m>-1.61591</position-y-m>
+                    <position-z-m>-1.59743</position-z-m>
+                    <jetway-hood-deg>5</jetway-hood-deg>
+            </door>
+   <!--  <door>
+       <position-x-m type="float">-16.836</position-x-m>
+       <position-y-m type="float">-2.9</position-y-m>
+       <position-z-m type="float">-3.7</position-z-m>
+       <jetway-hood-deg type="float">9</jetway-hood-deg>
+</door>-->
 		</model>
 		
 		<startup>
@@ -123,6 +135,7 @@
             </view>
 	    <chase-distance-m>-50</chase-distance-m>
     </sim>  
+    
     <autopilot>
         <flight-director-serviceable type="bool">true</flight-director-serviceable>
         <autoflight-serviceable type="bool">true</autoflight-serviceable>
@@ -288,5 +301,15 @@
             <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
             <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
 		</it2>
-    </nasal>
+    </nasal>	
+    
+    <aircraft>
+		<jetway-pos>
+			<x-tra>-0.3</x-tra>
+			<y-rot>-4</y-rot>
+			<z-rot>21</z-rot>
+			<hood-rot>0</hood-rot>
+		</jetway-pos>
+	</aircraft>
+
 </PropertyList>
