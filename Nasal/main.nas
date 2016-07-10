@@ -33,21 +33,12 @@ setprop("/controls/ext-run", getprop("/controls/electric/external-power"));
 setprop("/controls/ext-run", 0);
 }
 
+
+
   settimer(global_system, 0);
 
 }
 
-#tyresmoke loop function
-#tyresmoke = func{
-#var rollspeed1=getprop("/gear/gear/rollspeed-ms");
-#var rollspeed2=getprop("/gear/gear/rollspeed-ms");
-#var diffrs=rollspeed2-rollspeed1;
-#if(diffrs >= 1){
-#setprop("/gear/gear/tyresmoke", 1);
-#}
-#setprop("/gear/gear/rollspeed-diff", diffrs);
-#settimer(tyresmoke, 0);
-#}
 
 
 ##########################################
