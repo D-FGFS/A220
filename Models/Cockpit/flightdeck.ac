@@ -311,7 +311,7 @@ refs 4
 kids 0
 OBJECT poly
 name "1/2"
-loc -0.3637650 0.3259698 0.1796111
+loc -0.3662243 0.3514966 0.1796111
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -370,7 +370,7 @@ refs 4
 kids 0
 OBJECT poly
 name "1/2.001"
-loc -0.3637650 0.3259698 -0.3425683
+loc -0.3662243 0.3514966 -0.3425683
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -529,7 +529,7 @@ refs 4
 kids 0
 OBJECT poly
 name "alt.1"
-loc -0.3620227 0.3600792 -0.0738345
+loc -0.3644819 0.3856061 -0.0738345
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -549,7 +549,7 @@ refs 4
 kids 0
 OBJECT poly
 name "alt.10"
-loc -0.3620227 0.3600792 -0.0647179
+loc -0.3644819 0.3856061 -0.0647179
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -569,7 +569,7 @@ refs 4
 kids 0
 OBJECT poly
 name "alt.100"
-loc -0.3620227 0.3600792 -0.0559053
+loc -0.3644819 0.3856061 -0.0559053
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -589,7 +589,7 @@ refs 4
 kids 0
 OBJECT poly
 name "alt.1000"
-loc -0.3620227 0.3600792 -0.0471686
+loc -0.3644819 0.3856061 -0.0471686
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -609,7 +609,7 @@ refs 4
 kids 0
 OBJECT poly
 name "alt.10000"
-loc -0.3620227 0.3600792 -0.0383560
+loc -0.3644819 0.3856061 -0.0383560
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -629,7 +629,7 @@ refs 4
 kids 0
 OBJECT poly
 name "alt.knb"
-loc -0.3580730 0.3316567 -0.0717582
+loc -0.3605323 0.3571835 -0.0717582
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -820,7 +820,7 @@ refs 16
 kids 0
 OBJECT poly
 name "althld.btn"
-loc -0.3630514 0.3211473 -0.0433481
+loc -0.3655107 0.3466741 -0.0433481
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -879,7 +879,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ap.btn"
-loc -0.3630514 0.3613542 0.0011497
+loc -0.3655107 0.3868810 0.0011497
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -938,7 +938,7 @@ refs 4
 kids 0
 OBJECT poly
 name "appr.btn"
-loc -0.3630514 0.3014033 0.0742859
+loc -0.3655107 0.3269301 0.0742859
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -997,7 +997,7 @@ refs 4
 kids 0
 OBJECT poly
 name "at.btn"
-loc -0.3630514 0.3416091 0.0011497
+loc -0.3655107 0.3671359 0.0011497
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -1056,7 +1056,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atc.DL.btn"
-loc -0.3637650 0.3104935 0.2872423
+loc -0.3662243 0.3360204 0.2872423
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -1115,7 +1115,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atc.DL.btn.001"
-loc -0.3637650 0.3104935 -0.2349372
+loc -0.3662243 0.3360204 -0.2349372
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -1174,7 +1174,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atc.L.btn"
-loc -0.3637650 0.3265913 0.2872423
+loc -0.3662243 0.3521182 0.2872423
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -1233,7 +1233,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atc.L.btn.001"
-loc -0.3637650 0.3265913 -0.2349372
+loc -0.3662243 0.3521182 -0.2349372
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -1292,7 +1292,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atc.R.btn"
-loc -0.3637650 0.3265913 0.1948716
+loc -0.3662243 0.3521182 0.1948716
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -1351,7 +1351,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atc.R.btn.001"
-loc -0.3637650 0.3265913 -0.3273080
+loc -0.3662243 0.3521182 -0.3273080
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -1410,7 +1410,7 @@ refs 4
 kids 0
 OBJECT poly
 name "autopilot.001"
-loc -0.3670000 0.3324427 0.0011497
+loc -0.3694593 0.3579696 0.0011497
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -1758,7 +1758,7 @@ refs 4
 kids 0
 OBJECT poly
 name "baro.knb"
-loc -0.3396764 0.3060141 0.3145973
+loc -0.3421356 0.3315409 0.3145973
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -2637,7 +2637,7 @@ refs 4
 kids 0
 OBJECT poly
 name "baro.knb.001"
-loc -0.3396764 0.3060141 -0.2075822
+loc -0.3421356 0.3315409 -0.2075822
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -3516,7 +3516,7 @@ refs 4
 kids 0
 OBJECT poly
 name "baro.sw.knb"
-loc -0.3547819 0.3060141 0.3145973
+loc -0.3572412 0.3315409 0.3145973
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -4395,7 +4395,7 @@ refs 4
 kids 0
 OBJECT poly
 name "baro.sw.knb.001"
-loc -0.3547819 0.3060141 -0.2075822
+loc -0.3572412 0.3315409 -0.2075822
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -5374,7 +5374,7 @@ refs 4
 kids 0
 OBJECT poly
 name "btn"
-loc -0.3637650 0.2978562 0.3374619
+loc -0.3662243 0.3233830 0.3374619
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -5433,7 +5433,7 @@ refs 4
 kids 0
 OBJECT poly
 name "btn.001"
-loc -0.3637650 0.2978562 -0.1847175
+loc -0.3662243 0.3233830 -0.1847175
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -5510,7 +5510,7 @@ refs 4
 kids 0
 OBJECT poly
 name "checkl.btn"
-loc -0.3637650 0.3327622 0.3342543
+loc -0.3662243 0.3582890 0.3342543
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -5569,7 +5569,7 @@ refs 4
 kids 0
 OBJECT poly
 name "checkl.btn.001"
-loc -0.3637650 0.3327622 -0.1879251
+loc -0.3662243 0.3582890 -0.1879251
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -14700,7 +14700,7 @@ refs 3
 kids 0
 OBJECT poly
 name "Circle.013"
-loc -0.4129113 0.3276561 -0.0008400
+loc -0.4153706 0.3531830 -0.0008400
 crease 30.0
 texture "autopilot.png"
 texrep 1 1
@@ -19586,7 +19586,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cns.btn"
-loc -0.3637650 0.3446641 0.3042268
+loc -0.3662243 0.3701909 0.3042268
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -19645,7 +19645,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cns.btn.001"
-loc -0.3637650 0.3446641 -0.2179526
+loc -0.3662243 0.3701909 -0.2179526
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -20604,7 +20604,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Cube.023"
-loc -0.3637650 0.3588005 0.1796111
+loc -0.3662243 0.3843273 0.1796111
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -20663,7 +20663,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Cube.026"
-loc -0.3630514 0.3233007 0.0011497
+loc -0.3655107 0.3488275 0.0011497
 crease 35.0
 numvert 8
 0.0070904 -0.0052261 0.0077422
@@ -20720,7 +20720,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Cube.028"
-loc -0.3637650 0.3588005 -0.3425683
+loc -0.3662243 0.3843273 -0.3425683
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -21679,7 +21679,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Cube.092"
-loc -0.3637103 0.3035787 0.0011497
+loc -0.3661696 0.3291055 0.0011497
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -37714,7 +37714,7 @@ refs 16
 kids 0
 OBJECT poly
 name "Cylinder.027"
-loc -0.3589053 0.3689353 -0.3321114
+loc -0.3589053 0.3944621 -0.3321114
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -38081,7 +38081,7 @@ refs 32
 kids 0
 OBJECT poly
 name "Cylinder.030"
-loc -0.3589053 0.3689353 0.1900682
+loc -0.3589053 0.3944621 0.1900682
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -38448,7 +38448,7 @@ refs 32
 kids 0
 OBJECT poly
 name "Cylinder.032"
-loc -0.3580730 0.3391354 -0.1403278
+loc -0.3605323 0.3646622 -0.1403278
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -38639,7 +38639,7 @@ refs 16
 kids 0
 OBJECT poly
 name "data.big.knob"
-loc -0.3546784 0.3049273 0.1893425
+loc -0.3571377 0.3304541 0.1893425
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -39518,7 +39518,7 @@ refs 4
 kids 0
 OBJECT poly
 name "data.big.knob.001"
-loc -0.3546784 0.3049273 -0.3328369
+loc -0.3571377 0.3304541 -0.3328369
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -40397,7 +40397,7 @@ refs 4
 kids 0
 OBJECT poly
 name "data.btn"
-loc -0.3637650 0.3329887 0.3041412
+loc -0.3662243 0.3585155 0.3041412
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -40456,7 +40456,7 @@ refs 4
 kids 0
 OBJECT poly
 name "data.btn.001"
-loc -0.3637650 0.3329887 -0.2180383
+loc -0.3662243 0.3585155 -0.2180383
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -40515,7 +40515,7 @@ refs 4
 kids 0
 OBJECT poly
 name "data.small.knob"
-loc -0.3391246 0.3049273 0.1893425
+loc -0.3415839 0.3304541 0.1893425
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -41394,7 +41394,7 @@ refs 4
 kids 0
 OBJECT poly
 name "data.small.knob.001"
-loc -0.3391246 0.3049273 -0.3328369
+loc -0.3415839 0.3304541 -0.3328369
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -47549,7 +47549,7 @@ refs 3
 kids 0
 OBJECT poly
 name "fd.btn"
-loc -0.3630514 0.3057102 0.1306969
+loc -0.3655107 0.3312370 0.1306969
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -47608,7 +47608,7 @@ refs 4
 kids 0
 OBJECT poly
 name "fd.btn.001"
-loc -0.3630514 0.3050212 -0.1393083
+loc -0.3655107 0.3305480 -0.1393083
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -50121,7 +50121,7 @@ refs 3
 kids 0
 OBJECT poly
 name "flch.btn"
-loc -0.3630514 0.3394556 -0.0433481
+loc -0.3655107 0.3649825 -0.0433481
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -50180,7 +50180,7 @@ refs 4
 kids 0
 OBJECT poly
 name "fms.btn"
-loc -0.3637650 0.3446641 0.3194044
+loc -0.3662243 0.3701909 0.3194044
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -50239,7 +50239,7 @@ refs 4
 kids 0
 OBJECT poly
 name "fms.btn.001"
-loc -0.3637650 0.3446641 -0.2027751
+loc -0.3662243 0.3701909 -0.2027751
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -50298,7 +50298,7 @@ refs 4
 kids 0
 OBJECT poly
 name "fpa.btn"
-loc -0.3630514 0.3050212 -0.1043108
+loc -0.3655107 0.3305480 -0.1043108
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -50357,7 +50357,7 @@ refs 4
 kids 0
 OBJECT poly
 name "freq1"
-loc -0.3640832 0.3321423 0.2620642
+loc -0.3665424 0.3576691 0.2620642
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -50481,7 +50481,7 @@ refs 3
 kids 0
 OBJECT poly
 name "freq1.001"
-loc -0.3640832 0.3321423 -0.2601152
+loc -0.3665424 0.3576691 -0.2601152
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -54898,7 +54898,7 @@ refs 4
 kids 0
 OBJECT poly
 name "halfbank.btn"
-loc -0.3630514 0.3014033 0.0439421
+loc -0.3655107 0.3269301 0.0439421
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -54957,7 +54957,7 @@ refs 4
 kids 0
 OBJECT poly
 name "hdg.1"
-loc -0.3626480 0.3600792 0.0385746
+loc -0.3651073 0.3856061 0.0385746
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -54977,7 +54977,7 @@ refs 4
 kids 0
 OBJECT poly
 name "hdg.10"
-loc -0.3626480 0.3600792 0.0478953
+loc -0.3651073 0.3856061 0.0478953
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -54997,7 +54997,7 @@ refs 4
 kids 0
 OBJECT poly
 name "hdg.100"
-loc -0.3626480 0.3600792 0.0570848
+loc -0.3651073 0.3856061 0.0570848
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -55017,7 +55017,7 @@ refs 4
 kids 0
 OBJECT poly
 name "hdg.btn"
-loc -0.3630514 0.3394556 0.0742499
+loc -0.3655107 0.3649825 0.0742499
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -55076,7 +55076,7 @@ refs 4
 kids 0
 OBJECT poly
 name "hdg.displ"
-loc -0.3626399 0.3638903 0.0778555
+loc -0.3650992 0.3894171 0.0778555
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -55096,7 +55096,7 @@ refs 4
 kids 0
 OBJECT poly
 name "hdg.knb"
-loc -0.3580730 0.3316567 0.0412298
+loc -0.3605323 0.3571835 0.0412298
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -72024,7 +72024,7 @@ refs 4
 kids 0
 OBJECT poly
 name "I.btn"
-loc -0.3635936 0.3574284 0.3126619
+loc -0.3660529 0.3829553 0.3126619
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -72083,7 +72083,7 @@ refs 4
 kids 0
 OBJECT poly
 name "I.btn.001"
-loc -0.3635936 0.3574284 -0.2095175
+loc -0.3660529 0.3829553 -0.2095175
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -72142,7 +72142,7 @@ refs 4
 kids 0
 OBJECT poly
 name "I.light"
-loc -0.3622095 0.3663699 0.3130943
+loc -0.3622095 0.3918967 0.3130943
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -72201,7 +72201,7 @@ refs 4
 kids 0
 OBJECT poly
 name "I.light.001"
-loc -0.3622095 0.3663699 -0.2090851
+loc -0.3622095 0.3918967 -0.2090851
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -72260,7 +72260,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ias.1"
-loc -0.3626480 0.3600792 0.0995487
+loc -0.3651073 0.3856061 0.0995487
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -72280,7 +72280,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ias.10"
-loc -0.3626480 0.3600792 0.1088695
+loc -0.3651073 0.3856061 0.1088695
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -72300,7 +72300,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ias.100"
-loc -0.3626480 0.3600792 0.1180594
+loc -0.3651073 0.3856061 0.1180594
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -72320,7 +72320,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ias.knb"
-loc -0.3597571 0.3316567 0.1094663
+loc -0.3622164 0.3571835 0.1094663
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -72511,7 +72511,7 @@ refs 16
 kids 0
 OBJECT poly
 name "ident"
-loc -0.3637650 0.3420078 0.1796111
+loc -0.3662243 0.3675346 0.1796111
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -72570,7 +72570,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ident.001"
-loc -0.3637650 0.3420078 -0.3425683
+loc -0.3662243 0.3675346 -0.3425683
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -73938,19 +73938,19 @@ crease 30.0
 texture "panel.png"
 texrep 1 1
 numvert 185
--5.7439981 0.4671157 0.8425902
--5.7439981 0.4671157 -0.8385922
--5.7439981 0.4801486 0.7904478
--5.7439981 0.4801486 -0.7864497
--5.7439981 0.5105606 0.5583074
--5.7439981 0.5105606 -0.5543094
--5.7439981 0.5181032 0.5007451
--5.7439981 0.5181032 -0.4967470
--5.7439981 0.5231311 0.3972279
--5.7439981 0.5231311 -0.3932289
--5.7439981 0.5231311 0.0019991
--5.7439981 0.4296715 0.8604077
--5.7439981 0.4296715 -0.8564096
+-5.7439981 0.4902787 0.8425902
+-5.7439981 0.4902787 -0.8385922
+-5.7439981 0.5033116 0.7904478
+-5.7439981 0.5033116 -0.7864497
+-5.7439981 0.5337236 0.5583074
+-5.7439981 0.5337236 -0.5543094
+-5.7439981 0.5412661 0.5007451
+-5.7439981 0.5412661 -0.4967470
+-5.7439981 0.5462941 0.3972279
+-5.7439981 0.5462941 -0.3932289
+-5.7439981 0.5462941 0.0019991
+-5.7439981 0.4528344 0.8604077
+-5.7439981 0.4528344 -0.8564096
 -6.0918999 0.4305330 0.7551860
 -6.0918999 0.4367760 -0.7277650
 -6.0918999 0.4367760 0.7396340
@@ -74028,27 +74028,27 @@ numvert 185
 -5.4448700 -0.5450110 -0.9474190
 -5.4230099 -0.5450110 -0.9555040
 -5.3967700 -0.5450110 -0.9799350
--5.7439981 0.4600990 0.8604077
--5.7439981 0.4600990 0.8604077
--5.7439981 0.4600990 0.8604077
--5.7439981 0.4600990 -0.8564096
--5.7439981 0.4600990 -0.8564096
--5.7439981 0.4600990 -0.8564096
--5.7439981 0.4671157 0.8425902
--5.7439981 0.4671157 -0.8385922
--5.7439981 0.4801486 0.7904478
--5.7439981 0.4801486 -0.7864497
--5.7439981 0.5105606 0.5583074
--5.7439981 0.5105606 -0.5543094
--5.7439981 0.5181032 0.5007451
--5.7439981 0.5181032 -0.4967470
--5.7439981 0.5231311 0.3972279
--5.7439981 0.5231311 -0.3932289
--5.7439981 0.5231311 0.0019991
--5.7439981 0.4296715 0.8604077
--5.7439981 0.4296715 0.8604077
--5.7439981 0.4296715 -0.8564096
--5.7439981 0.4296715 -0.8564096
+-5.7439981 0.4832620 0.8604077
+-5.7439981 0.4832620 0.8604077
+-5.7439981 0.4832620 0.8604077
+-5.7439981 0.4832620 -0.8564096
+-5.7439981 0.4832620 -0.8564096
+-5.7439981 0.4832620 -0.8564096
+-5.7439981 0.4902787 0.8425902
+-5.7439981 0.4902787 -0.8385922
+-5.7439981 0.5033116 0.7904478
+-5.7439981 0.5033116 -0.7864497
+-5.7439981 0.5337236 0.5583074
+-5.7439981 0.5337236 -0.5543094
+-5.7439981 0.5412661 0.5007451
+-5.7439981 0.5412661 -0.4967470
+-5.7439981 0.5462941 0.3972279
+-5.7439981 0.5462941 -0.3932289
+-5.7439981 0.5462941 0.0019991
+-5.7439981 0.4528344 0.8604077
+-5.7439981 0.4528344 0.8604077
+-5.7439981 0.4528344 -0.8564096
+-5.7439981 0.4528344 -0.8564096
 -6.0918999 0.4305330 -0.7433170
 -5.8661299 0.4203240 0.8775380
 -5.8661299 0.4203240 0.7878950
@@ -74077,38 +74077,38 @@ numvert 185
 -5.2931800 0.1189610 1.2909100
 -5.3792801 -0.5450110 1.0014800
 -5.8290801 0.1282220 -0.8204670
--5.7350183 0.4685952 0.8608675
--5.7350183 0.4685952 -0.8568695
--5.7350183 0.4835835 0.8075926
--5.7350183 0.4835835 -0.8035946
--5.7350183 0.5185577 0.5704039
--5.7350183 0.5185577 -0.5664060
--5.7350183 0.5272322 0.5115896
--5.7350183 0.5272322 -0.5075916
--5.7350183 0.5330145 0.4058213
--5.7350183 0.5330145 -0.4018234
--5.7350183 0.5330145 0.0019991
--5.7350183 0.4255325 0.8790731
--5.7350183 0.4255325 -0.8750752
--5.7350183 0.4605258 0.8790731
--5.7350183 0.4605258 0.8790731
--5.7350183 0.4605258 0.8790731
--5.7350183 0.4605258 -0.8750752
--5.7350183 0.4605258 -0.8750752
--5.7350183 0.4605258 -0.8750752
--5.7350183 0.4685952 0.8608675
--5.7350183 0.4685952 -0.8568695
--5.7350183 0.4835835 0.8075926
--5.7350183 0.4835835 -0.8035946
--5.7350183 0.5185577 0.5704039
--5.7350183 0.5185577 -0.5664060
--5.7350183 0.5272322 0.5115896
--5.7350183 0.5272322 -0.5075916
--5.7350183 0.5330145 0.4058213
--5.7350183 0.5330145 -0.4018234
--5.7350183 0.5330145 0.0019991
--5.7350183 0.4255325 0.8790731
--5.7350183 0.4255325 -0.8750752
+-5.7350183 0.4917582 0.8608675
+-5.7350183 0.4917582 -0.8568695
+-5.7350183 0.5067464 0.8075926
+-5.7350183 0.5067464 -0.8035946
+-5.7350183 0.5417207 0.5704039
+-5.7350183 0.5417207 -0.5664060
+-5.7350183 0.5503952 0.5115896
+-5.7350183 0.5503952 -0.5075916
+-5.7350183 0.5561774 0.4058213
+-5.7350183 0.5561774 -0.4018234
+-5.7350183 0.5561774 0.0019991
+-5.7350183 0.4486955 0.8790731
+-5.7350183 0.4486955 -0.8750752
+-5.7350183 0.4836887 0.8790731
+-5.7350183 0.4836887 0.8790731
+-5.7350183 0.4836887 0.8790731
+-5.7350183 0.4836887 -0.8750752
+-5.7350183 0.4836887 -0.8750752
+-5.7350183 0.4836887 -0.8750752
+-5.7350183 0.4917582 0.8608675
+-5.7350183 0.4917582 -0.8568695
+-5.7350183 0.5067464 0.8075926
+-5.7350183 0.5067464 -0.8035946
+-5.7350183 0.5417207 0.5704039
+-5.7350183 0.5417207 -0.5664060
+-5.7350183 0.5503952 0.5115896
+-5.7350183 0.5503952 -0.5075916
+-5.7350183 0.5561774 0.4058213
+-5.7350183 0.5561774 -0.4018234
+-5.7350183 0.5561774 0.0019991
+-5.7350183 0.4486955 0.8790731
+-5.7350183 0.4486955 -0.8750752
 -6.0918999 0.4754330 -0.4796330
 -6.0918999 0.4821450 -0.4293900
 -6.0918999 0.4866190 -0.3390360
@@ -77361,7 +77361,7 @@ refs 4
 kids 0
 OBJECT poly
 name "L.btn"
-loc -0.3635936 0.3574284 0.3281234
+loc -0.3660529 0.3829553 0.3281234
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -77420,7 +77420,7 @@ refs 4
 kids 0
 OBJECT poly
 name "L.btn.001"
-loc -0.3635936 0.3574284 -0.1940560
+loc -0.3660529 0.3829553 -0.1940560
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -77479,7 +77479,7 @@ refs 4
 kids 0
 OBJECT poly
 name "L.light"
-loc -0.3622095 0.3663699 0.3283629
+loc -0.3622095 0.3918967 0.3283629
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -77538,7 +77538,7 @@ refs 4
 kids 0
 OBJECT poly
 name "L.light.001"
-loc -0.3622095 0.3663699 -0.1938165
+loc -0.3622095 0.3918967 -0.1938165
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -79523,7 +79523,7 @@ refs 4
 kids 0
 OBJECT poly
 name "lyn.btn"
-loc -0.3637650 0.3327622 0.3188584
+loc -0.3662243 0.3582890 0.3188584
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -79582,7 +79582,7 @@ refs 4
 kids 0
 OBJECT poly
 name "lyn.btn.001"
-loc -0.3637650 0.3327622 -0.2033211
+loc -0.3662243 0.3582890 -0.2033211
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -79641,7 +79641,7 @@ refs 4
 kids 0
 OBJECT poly
 name "m."
-loc -0.3620227 0.3565480 0.1144761
+loc -0.3644819 0.3820748 0.1144761
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -79661,7 +79661,7 @@ refs 4
 kids 0
 OBJECT poly
 name "m.0.01"
-loc -0.3626480 0.3600792 0.0995487
+loc -0.3651073 0.3856061 0.0995487
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -79681,7 +79681,7 @@ refs 4
 kids 0
 OBJECT poly
 name "m.0.1"
-loc -0.3626480 0.3600792 0.1088695
+loc -0.3651073 0.3856061 0.1088695
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -79701,7 +79701,7 @@ refs 4
 kids 0
 OBJECT poly
 name "m.knb"
-loc -0.3597571 0.3316567 0.1094663
+loc -0.3622164 0.3571835 0.1094663
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -79892,7 +79892,7 @@ refs 4
 kids 0
 OBJECT poly
 name "map.btn"
-loc -0.3637650 0.3446641 0.3342543
+loc -0.3662243 0.3701909 0.3342543
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -79951,7 +79951,7 @@ refs 4
 kids 0
 OBJECT poly
 name "map.btn.001"
-loc -0.3637650 0.3446641 -0.1879251
+loc -0.3662243 0.3701909 -0.1879251
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -82709,7 +82709,7 @@ refs 3
 kids 0
 OBJECT poly
 name "nav.btn"
-loc -0.3630514 0.3211473 0.0742499
+loc -0.3655107 0.3466741 0.0742499
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -82768,7 +82768,7 @@ refs 4
 kids 0
 OBJECT poly
 name "nav1.act.btn"
-loc -0.3637650 0.3424685 0.2872423
+loc -0.3662243 0.3679953 0.2872423
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -82827,7 +82827,7 @@ refs 4
 kids 0
 OBJECT poly
 name "nav1.act.btn.001"
-loc -0.3637650 0.3424685 -0.2349372
+loc -0.3662243 0.3679953 -0.2349372
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -82886,7 +82886,7 @@ refs 4
 kids 0
 OBJECT poly
 name "nav1.stby.btn"
-loc -0.3637650 0.3424685 0.1948716
+loc -0.3662243 0.3679953 0.1948716
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -82945,7 +82945,7 @@ refs 4
 kids 0
 OBJECT poly
 name "nav1.stby.btn.001"
-loc -0.3637650 0.3424685 -0.3273080
+loc -0.3662243 0.3679953 -0.3273080
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -83204,7 +83204,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ovrd.btn"
-loc -0.3647471 0.3035567 0.0011497
+loc -0.3672064 0.3290836 0.0011497
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -83921,7 +83921,7 @@ refs 4
 kids 0
 OBJECT poly
 name "range.knb"
-loc -0.3524981 0.3610332 0.3479135
+loc -0.3549573 0.3865600 0.3479135
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -84288,7 +84288,7 @@ refs 32
 kids 0
 OBJECT poly
 name "range.knb.001"
-loc -0.3524981 0.3610332 -0.1742659
+loc -0.3549573 0.3865600 -0.1742659
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -95813,7 +95813,7 @@ refs 3
 kids 0
 OBJECT poly
 name "terr.btn"
-loc -0.3637650 0.3286113 0.3551980
+loc -0.3662243 0.3541381 0.3551980
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -95872,7 +95872,7 @@ refs 4
 kids 0
 OBJECT poly
 name "terr.btn.001"
-loc -0.3637650 0.3286113 -0.1669814
+loc -0.3662243 0.3541381 -0.1669814
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -95931,7 +95931,7 @@ refs 4
 kids 0
 OBJECT poly
 name "tfc.btn"
-loc -0.3637650 0.3154036 0.3551980
+loc -0.3662243 0.3409304 0.3551980
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -95990,7 +95990,7 @@ refs 4
 kids 0
 OBJECT poly
 name "tfc.btn.001"
-loc -0.3637650 0.3154036 -0.1669814
+loc -0.3662243 0.3409304 -0.1669814
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -119998,7 +119998,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vhf1.act.btn"
-loc -0.3637650 0.3580835 0.2872423
+loc -0.3662243 0.3836103 0.2872423
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -120057,7 +120057,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vhf1.act.btn.001"
-loc -0.3637650 0.3580835 -0.2349372
+loc -0.3662243 0.3836103 -0.2349372
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -120116,7 +120116,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vhf1.stby.btn"
-loc -0.3637650 0.3580835 0.1948716
+loc -0.3662243 0.3836103 0.1948716
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -120175,7 +120175,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vhf1.stby.btn.001"
-loc -0.3637650 0.3580835 -0.3273080
+loc -0.3662243 0.3836103 -0.3273080
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -120334,7 +120334,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vnav.btn"
-loc -0.3630514 0.3014033 -0.0434237
+loc -0.3655107 0.3269301 -0.0434237
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120393,7 +120393,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.-"
-loc -0.3620227 0.3600792 -0.0960687
+loc -0.3644819 0.3856061 -0.0960687
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120413,7 +120413,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.1"
-loc -0.3620227 0.3600792 -0.1294438
+loc -0.3644819 0.3856061 -0.1294438
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120433,7 +120433,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.1.-"
-loc -0.3620227 0.3600792 -0.1294438
+loc -0.3644819 0.3856061 -0.1294438
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120453,7 +120453,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.10"
-loc -0.3620227 0.3600792 -0.1203272
+loc -0.3644819 0.3856061 -0.1203272
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120473,7 +120473,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.10.-"
-loc -0.3620227 0.3600792 -0.1203272
+loc -0.3644819 0.3856061 -0.1203272
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120493,7 +120493,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.100"
-loc -0.3620227 0.3600792 -0.1115145
+loc -0.3644819 0.3856061 -0.1115145
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120513,7 +120513,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.100.-"
-loc -0.3620227 0.3600792 -0.1115145
+loc -0.3644819 0.3856061 -0.1115145
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120533,7 +120533,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.1000"
-loc -0.3620227 0.3600792 -0.1027779
+loc -0.3644819 0.3856061 -0.1027779
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120553,7 +120553,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.1000.-"
-loc -0.3620227 0.3600792 -0.1027779
+loc -0.3644819 0.3856061 -0.1027779
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120573,7 +120573,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.btn"
-loc -0.3630514 0.3365555 -0.1043108
+loc -0.3655107 0.3620823 -0.1043108
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120632,7 +120632,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vs.knb"
-loc -0.3717415 0.3203878 -0.1212034
+loc -0.3742008 0.3459147 -0.1212034
 crease 35.0
 texture "autopilot.png"
 texrep 1 1
@@ -120943,7 +120943,7 @@ refs 4
 kids 0
 OBJECT poly
 name "wx.btn"
-loc -0.3637650 0.3025731 0.3551980
+loc -0.3662243 0.3281000 0.3551980
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1
@@ -121002,7 +121002,7 @@ refs 4
 kids 0
 OBJECT poly
 name "wx.btn.001"
-loc -0.3637650 0.3025731 -0.1669814
+loc -0.3662243 0.3281000 -0.1669814
 crease 35.0
 texture "freqpanel.png"
 texrep 1 1

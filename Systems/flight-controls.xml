@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier CRJ700 series -->
+<!-- Flight controls -->
+
+<PropertyList>
+
+
+	<!-- 0 : Manual control -->
+	<!-- Interpolates the user's throttles between 0% and 92% -->
+	<filter>
+		<name>Pilot engine 1 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<!--<and>-->
+					<!--<not>
+						<property>autopilot/internal/autothrottle-engaged</property>
+					</not>-->
+					<equals>
+						<property>controls/engines/engine[0]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<!--<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>controls/engines/engine[0]/throttle</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/throttle-cmd-norm[0]</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>-->
+				<!--</and>-->
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+				<property>controls/engines/engine[0]/throttle</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[0]</output>
+	</filter>
+<!--	<filter>
+-		<name>Copilot engine 1 manual controller</name>
+-		<type>gain</type>
+-		<debug type="bool">false</debug>
+-		<gain>1</gain>
+-		<enable>
+-			<condition>
+-				<and>
+-					<property>fcs/copilot/active</property>
+-					<not>
+-						<property>autopilot/internal/autothrottle-engaged</property>
+-					</not>
+-					<equals>
+-						<property>controls/engines/engine[0]/thrust-mode</property>
+-						<value>0</value>
+-					</equals>
+-					<greater-than>
+-						<expression>
+-							<abs>
+-								<property>fcs/copilot/throttle-cmd-norm[0]</property>
+-							</abs>
+-						</expression>
+-						<expression>
+-							<abs>
+-								<property>controls/engines/engine[0]/throttle</property>
+-							</abs>
+-						</expression>
+-					</greater-than>
+-				</and>
+-			</condition>
+-		</enable>
+-		<input>
+-			<expression>
+-				<table>
+-					<property>fcs/copilot/throttle-cmd-norm[0]</property>
+-					<entry><ind>0</ind><dep>0</dep></entry>
+-					<entry><ind>1</ind><dep>0.92</dep></entry>
+-				</table>
+-			</expression>
+-		</input>
+-		<output>fcs/throttle-cmd-norm[0]</output>
+-	</filter>-->
+	<filter>
+		<name>Pilot engine 2 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal/autothrottle-engaged</property>
+					</not>
+				<equals>
+						<property>controls/engines/engine[1]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<or>
+						<not>
+							<property>fcs/copilot/active</property>
+						</not>
+						<greater-than-equals>
+							<expression>
+								<abs>
+									<property>controls/engines/engine[1]/throttle</property>
+								</abs>
+							</expression>
+							<expression>
+								<abs>
+									<property>fcs/copilot/throttle-cmd-norm[1]</property>
+								</abs>
+							</expression>
+						</greater-than-equals>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>controls/engines/engine[1]/throttle</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.92</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[1]</output>
+	</filter>
+	<!--<filter>
+		<name>Copilot engine 2 manual controller</name>
+-		<type>gain</type>
+-		<debug type="bool">false</debug>
+-		<gain>1</gain>
+-		<enable>
+-			<condition>
+-				<and>
+-					<property>fcs/copilot/active</property>
+-					<not>
+-						<property>autopilot/internal/autothrottle-engaged</property>
+-					</not>
+-					<equals>
+-						<property>controls/engines/engine[1]/thrust-mode</property>
+-						<value>0</value>
+-					</equals>
+-					<greater-than>
+-						<expression>
+-							<abs>
+-								<property>fcs/copilot/throttle-cmd-norm[1]</property>
+-							</abs>
+-						</expression>
+-						<expression>
+-							<abs>
+-								<property>controls/engines/engine[1]/throttle</property>
+-							</abs>
+-						</expression>
+-					</greater-than>
+-				</and>
+-			</condition>
+-		</enable>
+-		<input>
+-			<expression>
+-				<table>
+-					<property>fcs/copilot/throttle-cmd-norm[1]</property>
+-					<entry><ind>0</ind><dep>0</dep></entry>
+-					<entry><ind>1</ind><dep>0.92</dep></entry>
+-				</table>
+-			</expression>
+-		</input>
+-		<output>fcs/throttle-cmd-norm[1]</output>
+        -	</filter>-->
+
+</PropertyList>
