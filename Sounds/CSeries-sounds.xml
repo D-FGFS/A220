@@ -14,18 +14,16 @@
 <!-- #########################   ENGINE: JET (bass) ################################ -->
 		<engine>
 			<name>left engine</name>
-			<path>Aircraft/A320neo/Sounds/res/jet.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<not>
-					<property>controls/engines/engine[0]/cutoff</property>
-				</not>
+					<property>controls/engines/engine[0]/running</property>
 				<not>
 					<property>sim/current-view/internal</property>
 				</not>
 			</condition>
 			<volume>
-				<property>engines/engine[0]/thrust_lb</property>
+				<property>engines/engine[0]/rpm</property>
 				<factor>0.000028571</factor>
 				<min>0.0</min>
 				<max>1</max>
@@ -41,18 +39,16 @@
 
 		<engine>
 			<name>right engine</name>
-			<path>Aircraft/A320neo/Sounds/res/jet.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<not>
-					<property>controls/engines/engine[0]/cutoff</property>
-				</not>
+					<property>controls/engines/engine[1]/running</property>
 				<not>
 					<property>sim/current-view/internal</property>
 				</not>
 			</condition>
 			<volume>
-				<property>engines/engine[0]/thrust_lb</property>
+				<property>engines/engine[1]/rpm</property>
 				<factor>0.000028571</factor>
 				<min>0.0</min>
 				<max>1</max>
@@ -73,11 +69,11 @@
 
 		<engine>
 			<name>left n1_2</name>
-			<path>Aircraft/A320neo/Sounds/res/turbine.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/turbine.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[0]/n1</property>
+					<property>engines/engine[0]/rpm</property>
 					<value>2</value>
 				</greater-than>
 				<not>
@@ -85,14 +81,14 @@
 				</not>
 			</condition>
 			<pitch>
-				<property>/engines/engine[0]/n1</property>
+				<property>/engines/engine[0]/rpm</property>
 				<offset>0</offset>
 				<factor>0.02</factor>
 				<min>0.0</min>
 				<max>2.0</max>
 			</pitch>
 			<volume>
-				<property>engines/engine[0]/n1</property>
+				<property>engines/engine[0]/rpm</property>
 				<factor>0.01</factor>
 				<min>0</min>
 				<max>0.6</max>
@@ -107,11 +103,11 @@
 		</engine>
 		<engine>
 			<name>right n1_2</name>
-			<path>Aircraft/A320neo/Sounds/res/turbine.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/turbine.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[1]/n1</property>
+					<property>engines/engine[1]/rpm</property>
 					<value>2</value>
 				</greater-than>
 				<not>
@@ -119,14 +115,14 @@
 				</not>
 			</condition>
 			<pitch>
-				<property>/engines/engine[1]/n1</property>
+				<property>/engines/engine[1]/rpm</property>
 				<offset>0</offset>
 				<factor>0.02</factor>
 				<min>0.0</min>
 				<max>2.0</max>
 			</pitch>
 			<volume>
-				<property>engines/engine[1]/n1</property>
+				<property>engines/engine[1]/rpm</property>
 				<factor>0.01</factor>
 				<min>0</min>
 				<max>0.6</max>
@@ -146,10 +142,10 @@
 
 		<engine>
 			<name>left engine Revers</name>
-			<path>Aircraft/A320neo/Sounds/res/reverser2.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/reverser2.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[0]/reversed</property>
+				<property>engines/engine[0]/reverser</property>
 				<not>
 					<property>sim/current-view/internal</property>
 				</not>
@@ -175,10 +171,10 @@
 
 		<engine>
 			<name>right engine Revers</name>
-			<path>Aircraft/A320neo/Sounds/res/reverser2.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/reverser2.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[1]/reversed</property>
+				<property>engines/engine[1]/reverser</property>
 				<not>
 					<property>sim/current-view/internal</property>
 				</not>
@@ -212,16 +208,14 @@
 
 		<engine>
 			<name>inside left engine</name>
-			<path>Aircraft/A320neo/Sounds/res/jet.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<not>
-					<property>controls/engines/engine[0]/cutoff</property>
-				</not>
+					<property>controls/engines/engine[0]/running</property>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<volume>
-				<property>engines/engine[0]/thrust_lb</property>
+				<property>engines/engine[0]/rpm</property>
 				<factor>0.000021428</factor>
 				<min>0.0</min>
 				<max>1</max>
@@ -239,16 +233,14 @@
 
 		<engine>
 			<name>inside right engine</name>
-			<path>Aircraft/A320neo/Sounds/res/jet.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<not>
-					<property>controls/engines/engine[0]/cutoff</property>
-				</not>
+					<property>controls/engines/engine[1]/running</property>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<volume>
-				<property>engines/engine[0]/thrust_lb</property>
+				<property>engines/engine[1]/rpm</property>
 				<factor>0.000021428</factor>
 				<min>0.0</min>
 				<max>1</max>
@@ -265,24 +257,24 @@
 
 		<engine>
 			<name>inside left n1_2</name>
-			<path>Aircraft/A320neo/Sounds/res/turbine.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/turbine.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[0]/n1</property>
+					<property>engines/engine[0]/rpm</property>
 					<value>2</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<pitch>
-				<property>/engines/engine[0]/n1</property>
+				<property>/engines/engine[0]/rpm</property>
 				<offset>0</offset>
 				<factor>0.02</factor>
 				<min>0.0</min>
 				<max>2.0</max>
 			</pitch>
 			<volume>
-				<property>engines/engine[0]/n1</property>
+				<property>engines/engine[0]/rpm</property>
 				<factor>0.0025</factor>
 				<min>0</min>
 				<max>1.6</max>
@@ -299,25 +291,25 @@
 		
 		<engine>
 			<name>inside right n1_2</name>
-			<path>Aircraft/A320neo/Sounds/res/turbine.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/turbine.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[1]/n1</property>
+					<property>engines/engine[1]/rpm</property>
 					<value>2</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 
 			</condition>
 			<pitch>
-				<property>/engines/engine[1]/n1</property>
+				<property>/engines/engine[1]/rpm</property>
 				<offset>0</offset>
 				<factor>0.02</factor>
 				<min>0.0</min>
 				<max>2.0</max>
 			</pitch>
 			<volume>
-				<property>engines/engine[1]/n1</property>
+				<property>engines/engine[1]/rpm</property>
 				<factor>0.0025</factor>
 				<min>0</min>
 				<max>1.6</max>
@@ -335,17 +327,17 @@
 		
 		<engine>
 			<name>inside left buzz</name>
-			<path>Aircraft/A320neo/Sounds/res/a320_eng_buzz.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/a320_eng_buzz.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[0]/n1</property>
+					<property>engines/engine[0]/rpm</property>
 					<value>2</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<pitch>
-				<property>/engines/engine[0]/n1</property>
+				<property>/engines/engine[0]/rpm</property>
 				<offset>0.0</offset>
 				<factor>0.01</factor>
 				<min>0</min>
@@ -358,7 +350,7 @@
 				<max>1.6</max>
 			</volume-->
 			<volume>
-				<property>/engines/engine[1]/n1</property>
+				<property>/engines/engine[1]/rpm</property>
 				<offset>0.0</offset>
 				<factor>0.006</factor>
 				<min>0</min>
@@ -376,18 +368,18 @@
 
 		<engine>
 			<name>inside right buzz</name>
-			<path>Aircraft/A320neo/Sounds/res/a320_eng_buzz.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/a320_eng_buzz.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[1]/n1</property>
+					<property>engines/engine[1]/rpm</property>
 					<value>2</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 
 			</condition>
 			<pitch>
-				<property>/engines/engine[1]/n1</property>
+				<property>/engines/engine[1]/rpm</property>
 				<offset>0.0</offset>
 				<factor>0.01</factor>
 				<min>0</min>
@@ -400,7 +392,7 @@
 				<max>1.6</max>
 			</volume-->
 			<volume>
-				<property>/engines/engine[1]/n1</property>
+				<property>/engines/engine[1]/rpm</property>
 				<offset>0.0</offset>
 				<factor>0.006</factor>
 				<min>0</min>
@@ -418,12 +410,12 @@
 		
 		<engine>
 			<name>N2 inside turb left n1_2</name>
-			<path>Aircraft/A320neo/Sounds/res/airbus_turbine_long.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/airbus_turbine_long.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
 					<property>engines/engine[0]/n2</property>
-					<value>2</value>
+					<value>67.3</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 			</condition>
@@ -449,12 +441,12 @@
 
 		<engine>
 			<name>N2 inside turb right n1_2</name>
-			<path>Aircraft/A320neo/Sounds/res/airbus_turbine_long.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/airbus_turbine_long.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
 					<property>engines/engine[1]/n2</property>
-					<value>2</value>
+					<value>67.3</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 			</condition>
@@ -483,10 +475,10 @@
 
 		<engine>
 			<name>inside left engine Revers</name>
-			<path>Aircraft/A320neo/Sounds/res/reverser2.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/reverser2.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[0]/reversed</property>
+				<property>engines/engine[0]/reverser</property>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<volume>
@@ -508,10 +500,10 @@
 
 		<engine>
 			<name>inside right engine Revers</name>
-			<path>Aircraft/A320neo/Sounds/res/reverser2.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/reverser2.wav</path>
 			<mode>looped</mode>
 			<condition>
-				<property>engines/engine[1]/reversed</property>
+				<property>engines/engine[1]/reverser</property>
 
 				<property>sim/current-view/internal</property>
 
@@ -544,7 +536,7 @@
 		<passngrs>
 			<name>passenger cabin</name>
 			<mode>looped</mode>
-			<path>Aircraft/A320neo/Sounds/res/PassgCab5.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/PassgCab5.wav</path>
 			<condition>
 				<and>
 					<property>sim/current-view/internal</property>
@@ -577,7 +569,7 @@
 		<inside>
 			<name>inside</name>
 			<mode>looped</mode>
-			<path>Aircraft/A320neo/Sounds/res/inside.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/inside.wav</path>
 			<condition>
 				<and>
 					<property>sim/current-view/internal</property>
@@ -616,7 +608,7 @@
 		<wind>
 			<name>wind</name>
 			<mode>looped</mode>
-			<path>Aircraft/A320neo/Sounds/res/wind.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/wind.wav</path>
 			<property>/velocities/airspeed-kt</property>
 			<volume>
 				<property>/position/altitude-ft</property>
@@ -647,7 +639,7 @@
 
 		<roll>
 			<name>Roll</name>
-			<path>Aircraft/A320neo/Sounds/res/roll.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/roll.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>sim/current-view/internal</property>
@@ -688,7 +680,7 @@
 		</roll>
 		<Wheels>
 			<name>nose Wheel Touchdown</name>
-			<path>Aircraft/A320neo/Sounds/res/touchdown.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/touchdown.wav</path>
 			<condition>
 				<property>/gear/gear[0]/wow</property>
 			</condition>
@@ -723,7 +715,7 @@
 		</Wheels>
 		<Wheels>
 			<name>left main Wheel Touchdown</name>
-			<path>Aircraft/A320neo/Sounds/res/touchdown.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/touchdown.wav</path>
 			<condition>
 				<property>/gear/gear[1]/wow</property>
 			</condition>
@@ -758,7 +750,7 @@
 		</Wheels>
 		<Wheels>
 			<name>right main Wheel Touchdown</name>
-			<path>Aircraft/A320neo/Sounds/res/touchdown.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/touchdown.wav</path>
 			<condition>
 				<property>/gear/gear[2]/wow</property>
 			</condition>
@@ -825,7 +817,7 @@
 
 		<fuselage>
 			<name>fuselage</name>
-			<path>Aircraft/A320neo/Sounds/res/scrach.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/scrach.wav</path>
 			<mode>loop</mode>
 			<condition>
 				<or>
@@ -872,7 +864,7 @@
 			<name>flaps left</name>
 			<mode>in-transit</mode>
 			<!--path>Aircraft/A320neo/Sounds/res/flaps.wav</path-->
-			<path>Aircraft/A320neo/Sounds/res/A320_flaps.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/A320_flaps.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<!--volume>
  <property>sim/sound/effects/volume</property>
@@ -892,7 +884,7 @@
 			<name>flaps right</name>
 			<mode>in-transit</mode>
 			<!--path>Aircraft/A320neo/Sounds/res/flaps.wav</path-->
-			<path>Aircraft/A320neo/Sounds/res/A320_flaps.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/A320_flaps.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<!--volume>
  <property>sim/sound/effects/volume</property>
@@ -912,7 +904,7 @@
 		<gear1>
 			<name>gear</name>
 			<mode>in-transit</mode>
-			<path>Aircraft/A320neo/Sounds/res/gear.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/gear.wav</path>
 			<property>/gear/gear[0]/position-norm</property>
 			<volume>
 				<property>sim/sound/effects/volume</property>
@@ -955,7 +947,7 @@
 		<speedbrake>
 			<name>left speedbrake</name>
 			<mode>in-transit</mode>
-			<path>Aircraft/A320neo/Sounds/res/flaps.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/flaps.wav</path>
 			<property>/surface-positions/speedbrake-pos-norm</property>
 			<volume>
 				<property>sim/sound/effects/volume</property>
@@ -972,7 +964,7 @@
 		<speedbrake>
 			<name>right speedbrake</name>
 			<mode>in-transit</mode>
-			<path>Aircraft/A320neo/Sounds/res/flaps.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/flaps.wav</path>
 			<property>/surface-positions/speedbrake-pos-norm</property>
 			<volume>
 				<property>sim/sound/effects/volume</property>
@@ -997,7 +989,7 @@
 
 		<retard>
 			<name>retard</name>
-			<path>Aircraft/A320neo/Sounds/res/retard.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/retard.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
@@ -1051,7 +1043,7 @@
 
 		<v1>
 			<name>V1</name>
-			<path>Aircraft/A320neo/Sounds/res/v1.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/v1.wav</path>
 			<condition>
 				<and>
 					<property>sim/current-view/internal</property>
@@ -1093,7 +1085,7 @@
   <!-- Seatbelt/No smoking signs -->
 		<seatbelt>
 			<name>Seatbelt sign</name>
-			<path>Aircraft/A320neo/Sounds/res/cabinalert.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/cabinalert.wav</path>
 			<mode>once</mode>
 			<condition>
 				<or>
@@ -1174,7 +1166,7 @@
 		
 		<autopilotoff>
 			<name>Autopilot off</name>
-			<path>Aircraft/A320neo/Sounds/res/airbus-warning.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/airbus-warning.wav</path>
 			<mode>once</mode>
 			<type>avionics</type>
 			<condition>
@@ -1200,7 +1192,7 @@
 		<ptu>
 			<name>ptu</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/airbus_ptu.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/airbus_ptu.wav</path>
 			<condition>
 				<property>/hydraulics/control/ptu-apply</property>
 			</condition>
@@ -1386,7 +1378,7 @@
 
 		<announcement>
 			<name>welcome</name>
-			<path>Aircraft/A320neo/Sounds/announce/welcome.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/welcome.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/welcome</property>
@@ -1405,7 +1397,7 @@
 
 		<announcement>
 			<name>safety</name>
-			<path>Aircraft/A320neo/Sounds/announce/safety.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/safety.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/safety</property>
@@ -1424,7 +1416,7 @@
 
 		<announcement>
 			<name>cruise</name>
-			<path>Aircraft/A320neo/Sounds/announce/cruise.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/cruise.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/cruise</property>
@@ -1443,7 +1435,7 @@
 
 		<announcement>
 			<name>climb</name>
-			<path>Aircraft/A320neo/Sounds/announce/climb.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/climb.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/climb</property>
@@ -1459,7 +1451,7 @@
 
 		<announcement>
 			<name>cruise-seatbelt</name>
-			<path>Aircraft/A320neo/Sounds/announce/cruise-seatbelt.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/cruise-seatbelt.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/cruise-seatbelt</property>
@@ -1478,7 +1470,7 @@
 
 		<announcement>
 			<name>turbulence</name>
-			<path>Aircraft/A320neo/Sounds/announce/turbulence.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/turbulence.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/turbulence</property>
@@ -1497,7 +1489,7 @@
 
 		<announcement>
 			<name>descent</name>
-			<path>Aircraft/A320neo/Sounds/announce/descent.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/descent.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/descent</property>
@@ -1516,7 +1508,7 @@
 
 		<announcement>
 			<name>land</name>
-			<path>Aircraft/A320neo/Sounds/announce/land.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/land.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/land</property>
@@ -1535,7 +1527,7 @@
 
 		<announcement>
 			<name>gate</name>
-			<path>Aircraft/A320neo/Sounds/announce/gate.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/gate.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/gate</property>
@@ -1554,7 +1546,7 @@
 
 		<announcement>
 			<name>emergency</name>
-			<path>Aircraft/A320neo/Sounds/announce/emergency.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/emergency.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/emergency</property>
@@ -1573,7 +1565,7 @@
 
 		<announcement>
 			<name>pretakeoff</name>
-			<path>Aircraft/A320neo/Sounds/announce/pretakeoff.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/pretakeoff.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/pretakeoff</property>
@@ -1592,7 +1584,7 @@
 
 		<announcement>
 			<name>boarding1</name>
-			<path>Aircraft/A320neo/Sounds/announce/music.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/music.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>sim/sound/music1</property>
@@ -1611,7 +1603,7 @@
 
 		<announcement>
 			<name>boarding2</name>
-			<path>Aircraft/A320neo/Sounds/announce/music2.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/music2.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>sim/sound/music2</property>
@@ -1630,7 +1622,7 @@
 
 		<announcement>
 			<name>boarding3</name>
-			<path>Aircraft/A320neo/Sounds/announce/etihad-board.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/etihad-board.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>sim/sound/music3</property>
@@ -1649,7 +1641,7 @@
 
 		<announcement>
 			<name>boarding4</name>
-			<path>Aircraft/A320neo/Sounds/announce/qatar-board.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/qatar-board.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>sim/sound/music4</property>
@@ -1668,7 +1660,7 @@
 
 		<announcement>
 			<name>brace</name>
-			<path>Aircraft/A320neo/Sounds/announce/brace.wav</path>
+			<path>Aircraft/CSeries/Sounds/announce/brace.wav</path>
 			<mode>once</mode>
 			<condition>
 				<property>sim/sound/brace</property>
@@ -1689,7 +1681,7 @@
 		<switch>
 			<name>switch</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click.wav</path>
 			<condition>
 				<property>sim/sound/click</property>
 			</condition>
@@ -1708,7 +1700,7 @@
 		<switch>
 			<name>switch1</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click1.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click1.wav</path>
 			<condition>
 				<property>sim/sound/click1</property>
 			</condition>
@@ -1726,7 +1718,7 @@
 		<switch>
 			<name>switch2</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click2.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click2.wav</path>
 			<condition>
 				<property>sim/sound/click2</property>
 			</condition>
@@ -1744,7 +1736,7 @@
 		<switch>
 			<name>click3</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click3.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click3.wav</path>
 			<condition>
 				<property>sim/sound/click3</property>
 			</condition>
@@ -1762,7 +1754,7 @@
 		<switch>
 			<name>click4</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click4.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click4.wav</path>
 			<condition>
 				<property>sim/sound/click4</property>
 			</condition>
@@ -1780,7 +1772,7 @@
 		<switch>
 			<name>click5</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click5.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click5.wav</path>
 			<condition>
 				<property>sim/sound/click5</property>
 			</condition>
@@ -1798,7 +1790,7 @@
 		<switch>
 			<name>click6</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click6.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click6.wav</path>
 			<condition>
 				<property>sim/sound/click6</property>
 			</condition>
@@ -1816,7 +1808,7 @@
 		<switch>
 			<name>click7</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click7.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click7.wav</path>
 			<condition>
 				<property>sim/sound/click7</property>
 			</condition>
@@ -1834,7 +1826,7 @@
 		<switch>
 			<name>click8</name>
 			<mode>once</mode>
-			<path>Aircraft/A320neo/Sounds/res/click8.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/click8.wav</path>
 			<condition>
 				<property>sim/sound/click8</property>
 			</condition>
