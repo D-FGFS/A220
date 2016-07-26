@@ -61,7 +61,7 @@
         </systems>
 		
 		<instrumentation>
-			<path>Aircraft/MD-88/Systems/MD-88-instrumentation.xml</path>
+			<path>Aircraft/CSeries/Systems/init-instrumentation.xml</path>
 		</instrumentation>
         
 		<sound>
