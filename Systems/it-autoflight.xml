@@ -9,7 +9,7 @@
  <!-- =============================================================== -->
 
 	<predict-simple>
-		<name>predicted altitude 5 seconds ahead</name>
+		<name>ALTITUDE 5 SECONDS AHEAD</name>
 		<debug>false</debug>
 		<input>/instrumentation/altimeter/indicated-altitude-ft</input>
 		<output>/autopilot/internal/altitude-5-sec-ahead</output>
@@ -18,7 +18,7 @@
 	</predict-simple>
 
 	<predict-simple>
-		<name>predicted nav1-error 5 seconds ahead</name>
+		<name>VOR/LOC 5 SECONDS AHEAD</name>
 		<input>/autopilot/internal/nav1-track-error-deg</input>
 		<output>/autopilot/internal/nav1-error-5-sec-ahead</output>
 		<seconds>12</seconds>
@@ -26,7 +26,7 @@
 	</predict-simple>
 	
 	<filter>
-		<name>Nav1 heading error Filter</name>
+		<name>VOR/LOC HEADING ERROR FILTER</name>
 		<debug>false</debug>
 		<type>noise-spike</type>
 		<input>/autopilot/internal/nav1-error-5-sec-ahead</input>
@@ -39,19 +39,19 @@
  <!-- =============================================================== -->
  
 	<filter>
-		<name>Target Roll Computer</name>
+		<name>IT-TARGET ROLL CONTROLLER</name>
 		<debug>false</debug>
 		<type>gain</type>
 		<enable>
 			<condition>
 				<or>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>dg-heading-hold</value>
+						<property>/it-autoflight/locks/lateral</property>
+						<value>it-hdg-sel</value>
 					</equals>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>true-heading-hold</value>
+						<property>/it-autoflight/locks/lateral</property>
+						<value>it-nav-fms</value>
 					</equals>
 				</or>
 			</condition>
@@ -59,8 +59,8 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/autopilot/locks/heading</property>
-					<value>dg-heading-hold</value>
+					<property>/it-autoflight/locks/lateral</property>
+					<value>it-hdg-sel</value>
 				</equals>
 			</condition>
 			<property>/autopilot/internal/heading-bug-error-deg</property>
@@ -69,8 +69,8 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/autopilot/locks/heading</property>
-					<value>true-heading-hold</value>
+					<property>/it-autoflight/locks/lateral</property>
+					<value>it-nav-fms</value>
 				</equals>
 			</condition>
 			<property>/autopilot/internal/true-heading-error-deg</property>
@@ -90,18 +90,18 @@
 	</filter>
 	
 	<pid-controller>
-		<name>System Command: Roll</name>
+		<name>IT-CONTROLLER: ROLL</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
 				<or>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>dg-heading-hold</value>
+						<property>/it-autoflight/locks/lateral</property>
+						<value>it-hdg-sel</value>
 					</equals>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>true-heading-hold</value>
+						<property>/it-autoflight/locks/lateral</property>
+						<value>it-nav-fms</value>
 					</equals>
 				</or>
 			</condition>
@@ -112,7 +112,7 @@
 		<reference>
 			<condition>
 				<not-equals> 
-					<property>/autopilot/locks/heading</property>
+					<property>/it-autoflight/locks/lateral</property>
 					<value>wing-leveler</value>
 				</not-equals>
 			</condition>
@@ -121,7 +121,7 @@
 		<reference>
 			<condition>
 				<equals> 
-					<property>/autopilot/locks/heading</property>
+					<property>/it-autoflight/locks/lateral</property>
 					<value>wing-leveler</value>
 				</equals>
 			</condition>
@@ -145,11 +145,11 @@
 
 	
   <pid-controller>
-    <name>Nav1 Hold Stage 1</name>
+    <name>VOR/LOC Hold Stage 1</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>nav1-hold</value>
+      <prop>/it-autoflight/locks/lateral</prop>
+      <value>it-vorloc</value>
     </enable>
     <input>
       <prop>/autopilot/internal/nav1-heading-error-deg</prop>
@@ -174,11 +174,11 @@
   </pid-controller>
 
   <pid-controller>
-    <name>Nav1 Hold Stage 2</name>
+    <name>VOR/LOC Hold Stage 2</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>nav1-hold</value>
+      <prop>/it-autoflight/locks/lateral</prop>
+      <value>it-vorloc</value>
     </enable>
     <input>
       <prop>/orientation/roll-deg</prop>
@@ -207,17 +207,17 @@
  <!-- =============================================================== -->
 	
 	<pid-controller>
-		<name>Altitude Hold Computer</name>
+		<name>ALTITUDE CAPTURE/HOLD</name>
 		<debug>false</debug>
 		<enable>
-			<property>/autopilot/locks/altitude</property>
-			<value>altitude-hold</value>
+			<property>/it-autoflight/locks/pitch</property>
+			<value>it-alt-cap-hld</value>
 		</enable>
 		<input>
 			<property>/autopilot/internal/altitude-5-sec-ahead</property>
 		</input>
 		<reference>
-			<property>/autopilot/settings/target-altitude-ft</property>
+			<property>/it-autoflight/settings/target-altitude-ft-actual</property>
 		</reference>
 		<output>
 			<property>/autopilot/internal/target-pitch-deg</property>
@@ -240,17 +240,17 @@
 	</pid-controller>
 	
 	<pid-controller>
-		<name>Vertical Speed Hold</name>
+		<name>VERTICAL SPEED HOLD</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/autopilot/locks/altitude</prop>
-			<value>vertical-speed-hold</value>
+			<prop>/it-autoflight/locks/pitch</prop>
+			<value>it-vert-spd</value>
 		</enable>
 		<input>
 			<prop>/velocities/vertical-speed-fps</prop>
 		</input>
 		<reference>
-			<prop>/autopilot/settings/vertical-speed-fpm</prop>
+			<prop>/it-autoflight/settings/vertical-speed-fpm</prop>
 			<scale>0.01667</scale>
 		</reference>
 		<output>
@@ -270,13 +270,13 @@
 	</pid-controller>
 	
 	<pid-controller>
-		<name>Glideslope Hold</name>
+		<name>GLIDESLOPE HOLD</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
 				<equals>
-					<property>/autopilot/locks/altitude</property>
-					<value>gs1-hold</value>
+					<property>/it-autoflight/locks/pitch</property>
+					<value>it-gs</value>
 				</equals>
 			</condition>
 		</enable>
@@ -301,18 +301,17 @@
 		</config>
 	</pid-controller>
 	
-	<!-- Hold speed by varying pitch (Two stage cascading controller) --> 
 	<pid-controller>
-		<name>Speed hold (vary pitch) Stage #1</name>
+		<name>FLIGHT LEVEL CHANGE</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/autopilot/locks/altitude</prop>
-			<value>flch</value>
+			<prop>/it-autoflight/locks/pitch</prop>
+			<value>it-flch</value>
 		</enable>
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -321,7 +320,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -331,24 +330,24 @@
 		<reference>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>0</value>
 				</equals>
 			</condition>
-			<prop>/autopilot/settings/target-speed-kt</prop>
+			<prop>/it-autoflight/settings/target-speed-kt</prop>
 		</reference>
 		<reference>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>1</value>
 				</equals>
 			</condition>
-			<prop>/autopilot/settings/target-mach</prop>
+			<prop>/it-autoflight/settings/target-mach</prop>
 			<scale>10.0</scale>
 		</reference>
 		<output>
-			<prop>/autopilot/settings/target-pitch-deg</prop>
+			<prop>/it-autoflight/settings/target-pitch-deg</prop>
 		</output>
 		<config>
 			<Kp>-0.25</Kp>       <!-- proportional gain -->
@@ -358,23 +357,57 @@
 			<!-- unfiltered derivative error -->
 			<Ti>10.0</Ti>        <!-- integrator time -->
 			<Td>0.00001</Td>    <!-- derivator time -->
-			<u_min>-15.0</u_min><!-- minimum output clamp -->
-			<u_max>15.0</u_max> <!-- maximum output clamp -->
+            <u_min>
+                <condition>
+                    <greater-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </greater-than>
+                </condition>
+                <value>3.0</value>
+            </u_min>
+            <u_min>
+                <condition>
+                    <less-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </less-than>
+                </condition>
+                <value>-15.0</value>
+            </u_min>
+            <u_max>
+                <condition>
+                    <greater-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </greater-than>
+                </condition>
+                <value>20.0</value>
+            </u_max>
+            <u_max>
+                <condition>
+                    <less-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </less-than>
+                </condition>
+                <value>0.0</value>
+            </u_max>
 		</config>
 	</pid-controller>
 
 	<pid-controller>
-		<name>Speed hold (vary pitch) Stage #2</name>
+		<name>IT-CONTROLLER: FLCH</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/autopilot/locks/altitude</prop>
-			<value>flch</value>
+			<prop>/it-autoflight/locks/pitch</prop>
+			<value>it-flch</value>
 		</enable>
 		<input>
 			<prop>/orientation/pitch-deg</prop>
 		</input>
 		<reference>
-			<prop>/autopilot/settings/target-pitch-deg</prop>
+			<prop>/it-autoflight/settings/target-pitch-deg</prop>
 		</reference>
 		<output>
 			<prop>/controls/flight/elevator-trim-filter</prop>
@@ -393,11 +426,11 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>System Command: Pitch</name>
+		<name>IT-CONTROLLER: PITCH</name>
 		<debug>false</debug>
 		<enable>
-			<property>/autopilot/locks/altitude</property>
-			<value>altitude-hold</value>
+			<property>/it-autoflight/locks/pitch</property>
+			<value>it-alt-cap-hld</value>
 		</enable>
 		<input>
 			<property>/orientation/pitch-deg</property>
@@ -421,12 +454,12 @@
 	</pid-controller>
 	
 	<filter>
-		<name>Elevator control filter</name>
+		<name>IT-CONTROLLER: PITCH LIMIT</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
 		<enable>
-			<prop>/controls/it2/ap_master</prop>
+			<prop>/it-autoflight/ap_master</prop>
 			<value>1</value>
 		</enable>
 		<input>
@@ -434,7 +467,7 @@
 		</input>
 		<output>/controls/flight/elevator-trim</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.2</max-rate-of-change>
+		<max-rate-of-change>0.15</max-rate-of-change>
 	</filter>
 
  <!-- =============================================================== -->
@@ -443,17 +476,17 @@
 
  <!-- Auto throttle --> 
  <pid-controller>
-    <name>Auto Throttle</name>
+    <name>IAS THR</name>
     <debug>false</debug>
     <enable>
 	  <condition>
 		<and>
 		  <equals>
-			<property>/autopilot/locks/speed</property>
-			<value>thr</value>
+			<property>/it-autoflight/locks/throttle</property>
+			<value>it-thr</value>
 		  </equals>
 		  <equals>
-			<property>/controls/it2/apthrmode</property>
+			<property>/it-autoflight/apthrmode</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -463,7 +496,7 @@
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
+      <prop>/it-autoflight/settings/target-speed-kt</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -491,17 +524,17 @@
 <!-- Auto throttle (Mach Hold)-->
 
  <pid-controller>
-    <name>Auto Throttle (Mach Hold)</name>
+    <name>MACH THR</name>
     <debug>false</debug>
     <enable>
 	  <condition>
 		<and>
 		  <equals>
-			<property>/autopilot/locks/speed</property>
-			<value>thr</value>
+			<property>/it-autoflight/locks/throttle</property>
+			<value>it-thr</value>
 		  </equals>
 		  <equals>
-			<property>/controls/it2/apthrmode</property>
+			<property>/it-autoflight/apthrmode</property>
 			<value>1</value>
 		  </equals>
 		</and>
@@ -511,7 +544,7 @@
       <prop>/velocities/mach</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-mach</prop>
+      <prop>/it-autoflight/settings/target-mach</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -541,14 +574,14 @@
     <name>IDLE</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>idle</value>
+      <prop>/it-autoflight/locks/throttle</prop>
+      <value>it-idle</value>
     </enable>
     <input>
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/idlethr</prop>
+      <prop>/it-autoflight/settings/idlethr</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -578,14 +611,14 @@
     <name>CLB</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>clb</value>
+      <prop>/it-autoflight/locks/throttle</prop>
+      <value>it-clb</value>
     </enable>
     <input>
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/clbthr</prop>
+      <prop>/it-autoflight/settings/clbthr</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>

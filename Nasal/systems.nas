@@ -273,4 +273,5 @@ setlistener("/sim/signals/fdm-initialized", func {
   setprop("/engines/engine[0]/itt-ind", "0.0");
   setprop("/engines/engine[1]/itt-ind", "0.0");
   setprop("/controls/engines/limit-type", "TO LIMIT");
+  setprop("/controls/internal/value1", "1");
 });
