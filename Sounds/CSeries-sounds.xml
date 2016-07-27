@@ -414,13 +414,13 @@
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[0]/n2</property>
-					<value>67.3</value>
+					<property>engines/engine[0]/rpm</property>
+					<value>4</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<pitch>
-				<property>/engines/engine[0]/n2</property>
+				<property>/engines/engine[0]/rpm</property>
 				<offset>0</offset>
 				<!--factor>0.033</factor-->
 				<factor>0.0166</factor><!-- FOR N2 -->
@@ -445,13 +445,13 @@
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
-					<property>engines/engine[1]/n2</property>
-					<value>67.3</value>
+					<property>engines/engine[1]/rpm</property>
+					<value>4</value>
 				</greater-than>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<pitch>
-				<property>/engines/engine[1]/n2</property>
+				<property>/engines/engine[1]/rpm</property>
 				<offset>0</offset>
 				<!--factor>0.033</factor-->
 				<factor>0.0166</factor><!-- FOR N2 -->
