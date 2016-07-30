@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<name>failures-dlg</name>
+	<layout>vbox</layout>
+
+	<text>
+		<label>Failures</label>
+	</text>
+
+	<hrule/>
+
+	<text>
+		<label>Engine fire</label>
+	</text>
+
+	<group>
+		<layout>hbox</layout>
+
+		<checkbox>
+			<label>Engine 1</label>
+			<property>engines/engine[0]/on-fire</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
+		<label>Fail Flaps</label>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/sim/failure-manager/controls/flight/flaps/serviceable", 0);
+			</script>
+		</binding>
+		<live>false</live>
+	</checkbox>
+
+
+
+
+
+<checkbox>
+			<label>Engine 2</label>
+			<property>engines/engine[1]/on-fire</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+			</group>
+
+	<hrule/>
+
+<button>
+		<legend>Reset All (must restart engines)</legend>
+		<padding>1</padding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/sim/failure-manager/controls/flight/flaps/serviceable", 1);
+			setprop("/controls/fires/fire[1]/on-fire", 0);
+			setprop("/controls/fires/fire/on-fire", 0);
+			setprop("/sim/failure-manager/engines/engine[1]/serviceable", 1);
+			setprop("/sim/failure-manager/engines/engine[0]/serviceable", 1);
+			</script>
+		</binding>
+	</button>
+
+
+	<group>
+		<layout>vbox</layout>
+
+		<button>
+			<legend>Close</legend>
+			<default>true</default>
+			<key>Esc</key>
+			<padding>10</padding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+</PropertyList>

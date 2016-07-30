@@ -131,6 +131,40 @@
                             </script>
                         </binding>
                     </item>
+<item>
+			<name>lights</name>
+			<label>Lights</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/CSeries/Systems/lights-dlg.xml");
+						lights.open();
+					</script>
+				</binding>
+		  </item>
+<item>
+		      <label>Announcements</label>
+		      <binding>
+					<command>nasal</command>
+					<script>
+						var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", "Aircraft/CSeries/Dialogs/announcements-dialog.xml");
+						mal.open();
+		       </script>
+		      </binding>
+          </item> 
+
+<item>
+						<label>Failures</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/CSeries/Systems/failures-dlg.xml");
+							 failures.open();
+							</script>
+						</binding>
+					</item>
+
+
                 </menu>
             </default>
         </menubar>
@@ -220,24 +254,16 @@
             <tiller-steer-deg type="float">0</tiller-steer-deg>
         </gear>
         <lighting>
-            <beacon type="bool">false</beacon>
-            <landing-lights n="0" type="bool">false</landing-lights>
-            <landing-lights n="1" type="bool">false</landing-lights>
-            <landing-lights n="2" type="bool">false</landing-lights>
-            <logo-lights type="bool">false</logo-lights>
-            <nav-lights type="bool">false</nav-lights>
-            <strobe type="bool">false</strobe>
-            <taxi-lights type="bool">false</taxi-lights>
-            <wing-lights type="bool">false</wing-lights>
-            <dome type="bool">false</dome>
-            <display-norm type="float">1</display-norm>
-            <standby-compass type="bool">false</standby-compass>
-            <panel-lights type="bool">true</panel-lights>
-            <panel-norm type="float">0.2</panel-norm>
-            <panel-flood-norm type="float">0</panel-flood-norm>
-            <panel-overhead-norm type="float">0.2</panel-overhead-norm>
-            <cabin-norm type="float">0.0</cabin-norm>
-        </lighting>
+			<beacon type="bool">false</beacon>
+			<strobe type="bool">false</strobe>
+			<nav-lights type="bool">false</nav-lights>
+			<landing-lights type="bool">false</landing-lights>
+			<logo-lights type="bool">false</logo-lights>
+			<dome-norm type="double">0</dome-norm>
+			<interior type="double">0</interior>
+			<cones type="bool">true</cones>
+		</lighting>
+
         <pneumatic>
             <bleed-source type="int">0</bleed-source>
             <ram-air-turbine type="bool">false</ram-air-turbine>
@@ -316,7 +342,8 @@
             <file>Aircraft/CSeries/Nasal/systems.nas</file>
             <file>Aircraft/CSeries/Nasal/doors.nas</file>
             <file>Aircraft/CSeries/Nasal/CS100liveries.nas</file>
-        </cseries>
+            <file>Aircraft/CSeries/Nasal/registration.nas</file>      
+ </cseries>
 		<it2>
             <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
             <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>

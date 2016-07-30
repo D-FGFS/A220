@@ -24,7 +24,130 @@
 			<z-m>-2</z-m>
 		</offsets>
 	</model>
+
+<!-- Registration fuselage upper back -->
+<model>
+	<name>registrationFuselageRightBack</name>
+  <path>Aircraft/CSeries/Models/Registration/registration.xml</path>
+  <offsets>
+    <x-m>10.90</x-m>
+    <y-m>1.50</y-m>
+    <z-m>-1.60</z-m>
+    <roll-deg>34</roll-deg>
+    <heading-deg>-1.0</heading-deg>
+  </offsets>
+  <overlay>
+    <params>
+      <size>0.5</size>
+      <alignment>reversed-xz-plane</alignment>
+    </params>
+  </overlay>
+</model>
+
+<model>
+	<name>registrationFuselageLeftBack</name>
+  <path>Aircraft/CSeries/Models/Registration/registration.xml</path>
+  <offsets>
+    <x-m>10.90</x-m>
+    <y-m>-1.50</y-m>
+    <z-m>-1.60</z-m>
+    <roll-deg>34</roll-deg>
+    <heading-deg>181.0</heading-deg>
+  </offsets>
+  <overlay>
+    <params>
+      <size>0.5</size>
+      <alignment>reversed-xz-plane</alignment>
+    </params>
+  </overlay>
+</model>
+
+
+<!-- Lights -->
+	<model>
+		<name>Left nav light</name>
+		<path>Aircraft/CSeries/Models/Lights/rednav.xml</path>
+		<offsets>
+			<x-m>3.80</x-m>
+			<y-m>-16.23</y-m>
+			<z-m>-1.116</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Right nav light</name>
+		<path>Aircraft/CSeries/Models/Lights/greennav.xml</path>
+		<offsets>
+			<x-m>3.80</x-m>
+			<y-m>16.23</y-m>
+			<z-m>-1.116</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Left strobe light</name>
+		<path>Aircraft/CSeries/Models/Lights/strobe.xml</path>
+		<offsets>
+			<x-m>3.70</x-m>
+			<y-m>-17.06</y-m>
+			<z-m>-1.009</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Right strobe light</name>
+		<path>Aircraft/CSeries/Models/Lights/strobe.xml</path>
+		<offsets>
+			<x-m>3.62</x-m>
+			<y-m>17.06</y-m>
+			<z-m>-5.009</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Beacon light</name>
+		<path>Aircraft/CSeries/Models/Lights/beacon.xml</path>
+		<offsets>
+			<x-m>-q.98</x-m>
+			<y-m>0</y-m>
+			<z-m>5.28</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Landing light</name>
+		<path>Aircraft/CSeries/Models/Lights/landing.xml</path>
+		<offsets>
+			<x-m>-14.25</x-m>
+			<y-m>0</y-m>
+			<z-m>-4.39</z-m>
+		</offsets>
+	</model>
+
+
+<!-- Engine fire -->
+	<model>
+		<name>Left engine fire</name>
+		<path>Aircraft/CSeries/Models/Effects/enginefire.xml</path>
+		<condition>
+			<property>engines/engine[0]/on-fire</property>
+		</condition>
+		<offsets>
+			<x-m>-3.84</x-m>
+			<y-m>-4.75</y-m>
+			<z-m>-3.84</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Right engine fire</name>
+		<path>Aircraft/CSeries/Models/Effects/enginefire.xml</path>
+		<condition>
+			<property>engines/engine[1]/on-fire</property>
+		</condition>
+		<offsets>
+			<x-m>-3.84</x-m>
+			<y-m>4.92</y-m>
+			<z-m>-3.84</z-m>
+		</offsets>
+	</model>
 	
+
+
 	
   <effect>
       <inherits-from>Aircraft/CSeries/Models/Effects/reflect</inherits-from>
