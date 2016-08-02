@@ -343,7 +343,7 @@
             <file>Aircraft/CSeries/Nasal/doors.nas</file>
             <file>Aircraft/CSeries/Nasal/CS100liveries.nas</file>
             <file>Aircraft/CSeries/Nasal/registration.nas</file>      
- </cseries>
+		</cseries>
 		<it2>
             <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
             <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>

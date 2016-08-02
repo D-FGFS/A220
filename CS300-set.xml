@@ -150,11 +150,21 @@
             </input>
     <nasal>
         <cseries>
-            <file>Aircraft/CSeries/Nasal/CS300liveries.nas</file>
-        </cseries>
+            <file>Aircraft/CSeries/Nasal/main.nas</file>
+            <file>Aircraft/CSeries/Nasal/engines.nas</file>
+            <file>Aircraft/CSeries/Nasal/electrical.nas</file>
+            <file>Aircraft/CSeries/Nasal/systems.nas</file>
+            <file>Aircraft/CSeries/Nasal/doors.nas</file>
+            <file>Aircraft/CSeries/Nasal/CS100liveries.nas</file>
+            <file>Aircraft/CSeries/Nasal/registration.nas</file>      
+		</cseries>
 		<it2>
             <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
             <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
-		</it2>
+		</it2> 
+                <tyresmoke>
+                    <file>Aircraft/CSeries/Nasal/tyresmoke.nas</file>
+                </tyresmoke>
     </nasal>
+	
 </PropertyList>
