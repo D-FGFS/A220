@@ -956,6 +956,21 @@
         <!--Left-->
     <animation>
 		<type>rotate</type>
+		<object-name>flapacLI</object-name>
+                <property>surface-positions/flap-pos-norm</property>
+		<factor>20</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.08002</x-m>
+			<z-m>-3.01396</z-m>
+		</center>
+	</animation>
+    <animation>
+		<type>rotate</type>
 		<object-name>flapLI</object-name>
                 <property>surface-positions/flap-pos-norm</property>
 		<factor>-30</factor>

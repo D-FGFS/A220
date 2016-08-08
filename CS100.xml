@@ -24,7 +24,7 @@
     <airplane mass="131000">
 
     <!-- Approach configuration -->
-        <approach speed="90" aoa="3.0" fuel="0.6"> <!--no data avail?-->
+        <approach speed="80" aoa="3.0" fuel="0.6"> <!--no data avail?-->
 		<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.7" />
 		<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.7" />
           <control-setting axis="/controls/flight/flaps" value="1.0"/>
