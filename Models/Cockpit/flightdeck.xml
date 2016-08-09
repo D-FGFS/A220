@@ -181,6 +181,102 @@
 			<z-m>-0.19271</z-m>
 		</center>
 	</animation>
+        <!--Engine Panel-->
+	<animation>
+		<type>pick</type>
+		<object-name>engstartL</object-name>
+		<action>
+			<button>0</button>
+                        <visible>0</visible>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>cseries.engine1.start()</script>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+		<property>/controls/engines/start1</property>
+                <value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+		<property>/controls/engines/start2</property>
+                <value>0</value>
+			</binding>
+		</action>
+	</animation>
+        <animation>
+		<type>pick</type>
+		<object-name>engstarter</object-name>
+		<action>
+			<button>0</button>
+                        <visible>0</visible>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-assign</command>
+                                <property>/controls/engines/start1</property>
+                                <value>0</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+                                <property>/controls/engines/start2</property>
+                                <value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>engstartR</object-name>
+		<action>
+			<button>0</button>
+                        <visible>0</visible>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>cseries.engine2.start()</script>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+                                <property>/controls/engines/start2</property>
+                                <value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+                                <property>/controls/engines/start1</property>
+                                <value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>engstarter</object-name>
+		<property>/controls/engines/start2</property>
+		<factor>-35</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+                    <x-m>0.25198</x-m>
+                    <y-m>0.0</y-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>engstarter</object-name>
+		<property>/controls/engines/start1</property>
+		<factor>35</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+                    <x-m>0.25198</x-m>
+                    <y-m>0.0</y-m>
+		</center>
+	</animation>
         
         <!--Gear lever-->
 	<animation>
@@ -222,10 +318,6 @@
 				<command>property-toggle</command>
 				<property>controls/engines/engine[0]/cutoff</property>
 			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>cseries.engine1.start()</script>
-			</binding>
 		</action>
 	</animation>
 	<animation>
@@ -253,10 +345,6 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>controls/engines/engine[1]/cutoff</property>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>cseries.engine2.start()</script>
 			</binding>
 		</action>
 	</animation>

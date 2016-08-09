@@ -62,7 +62,7 @@
 		</instrumentation>
         
 		<sound>
-			<path>Aircraft/CSeries/Sounds/CSeries-sounds.xml</path>
+			<path>Aircraft/CSeries/Sounds/CSeries-sound.xml</path>
 		</sound>
 
         <dimensions>
@@ -311,11 +311,11 @@
             <brake-left-cmd-norm alias="/controls/gear/brake-left" />
             <brake-right-cmd-norm alias="/controls/gear/brake-right" />
         </copilot>
--        <aileron-cmd-norm type="double">0</aileron-cmd-norm>
+<!---        <aileron-cmd-norm type="double">0</aileron-cmd-norm>
 -        <tiller-steer-deg type="float">0</tiller-steer-deg>
 -        <nose-gear-steer-deg type="double">0</nose-gear-steer-deg>
 -        <brake-left-cmd-norm type="float">0</brake-left-cmd-norm>
--        <brake-right-cmd-norm type="float">0</brake-right-cmd-norm>
+-        <brake-right-cmd-norm type="float">0</brake-right-cmd-norm>-->
     </fcs>
 
             <input>

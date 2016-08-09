@@ -6,10 +6,10 @@
 
 	<!-- EXTRA MODELS -->
 	<!-- 3d light cone -->
-	<model>
+	<!--<model>
 		<name>Cone</name>
 		<path>Aircraft/717/Models/Lights/light-cone.xml</path>
-	</model>
+	</model>-->
 
 	<!-- ANIMATIONS -->
 	<!-- On/off -->
@@ -24,14 +24,14 @@
 			</and>
 		</condition>
 	</animation>
-	<animation>
+	<!--<animation>
 		<name>Cone on/off</name>
 		<type>select</type>
 		<object-name>Cone</object-name>
 		<condition>
 			<property>controls/lighting/cones</property>
 		</condition>
-	</animation>
+	</animation>-->
 
 	<!-- Rotate and scale the light -->
 	<animation>

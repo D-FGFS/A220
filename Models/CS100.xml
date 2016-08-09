@@ -858,7 +858,7 @@
 	</animation>
         <!--CABIN-->
         <!--Seats-->
-    <animation>
+    <!--<animation>
 		<type>pick</type>
 		<object-name>mixedclass1</object-name>
 		<object-name>mixedclass2</object-name>
@@ -907,7 +907,7 @@
                 <property>/controls/cabin/seating</property>
                 <value>2</value></equals>
                 </condition>
-	</animation>
+	</animation>-->
         <!--FLIGHT SURFACES-->
         <!--WINGS-->
         <!--AILERONS-->
