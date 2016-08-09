@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
     <name>skin_reflect</name>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
@@ -5,7 +6,7 @@
         <normalmap-enabled type="int">0</normalmap-enabled>
         <reflection-enabled type="int">1</reflection-enabled>
         <reflection-dynamic type="int">1</reflection-dynamic>
-        <reflect_map-enabled type="int">0</reflect_map-enabled>
+        <reflect_map-enabled type="int">1</reflect_map-enabled>
         <reflection-correction type="float">0.1</reflection-correction>
  <!--       <lightmap-enabled type="int">1</lightmap-enabled>
         <lightmap-multi type="int">1</lightmap-multi>

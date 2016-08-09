@@ -170,8 +170,7 @@
 
 	
  <effect>
-		<name>Landing/Logo Lightmap</name>
-		<inherits-from>Effects/model-combined</inherits-from>
+		<inherits-from>Effects/reflect</inherits-from>
     <object-name>body</object-name>
     <object-name>geardoorF1</object-name>
     <object-name>geardoorF2</object-name>

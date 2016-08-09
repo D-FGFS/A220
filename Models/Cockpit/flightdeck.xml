@@ -17,7 +17,24 @@
          <object-name>hudL</object-name>
          <object-name>hudR</object-name>
      </effect> 
-
+     <!--HUD-->
+        <model>
+            <path>hud/hud.xml</path>
+            <offsets>
+                    <x-m>11.445</x-m>
+                    <y-m> -0.056</y-m>
+                    <z-m>-2.16</z-m>
+            </offsets>
+        </model>
+        <model>
+            <path>hud/hud.xml</path>
+            <offsets>
+                    <x-m>11.445</x-m>
+                    <y-m> 0.913</y-m>
+                    <z-m>-2.16</z-m>
+            </offsets>
+        </model>
+     
 	<!-- Visible only within 1/2 km -->
 	<animation>
 		<type>range</type>
