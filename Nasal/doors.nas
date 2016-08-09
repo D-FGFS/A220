@@ -16,5 +16,6 @@ var doors =
 	rear_left: Door.new("rear-left", 3),
 	rear_right: Door.new("rear-right", 3),
 	flight_deck: Door.new("flight-deck", 1),
-	overhead_bins: Door.new("overhead-bins", 2)
+	cargo: Door.new("cargo", 2),
+	cargoR: Door.new("cargoR", 2)
 };

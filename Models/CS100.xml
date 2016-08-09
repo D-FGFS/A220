@@ -169,8 +169,9 @@
 
 
 	
-  <effect>
-      <inherits-from>Aircraft/CSeries/Models/Effects/reflect</inherits-from>
+ <effect>
+		<name>Landing/Logo Lightmap</name>
+		<inherits-from>Effects/model-combined</inherits-from>
     <object-name>body</object-name>
     <object-name>geardoorF1</object-name>
     <object-name>geardoorF2</object-name>
@@ -190,6 +191,8 @@
     <object-name>elevatorR</object-name>
     <object-name>vstab</object-name>
     <object-name>rudder</object-name>
+    <object-name>cargodoor</object-name>
+    <object-name>cargoRdoor</object-name>
     <object-name>doorFL</object-name>
     <object-name>doorFR</object-name>
     <object-name>doorRL</object-name>
@@ -229,6 +232,8 @@
     <object-name>hstab</object-name>
     <object-name>elevatorL</object-name>
     <object-name>elevatorR</object-name>
+    <object-name>cargodoor</object-name>
+    <object-name>cargoRdoor</object-name>
     <object-name>vstab</object-name>
     <object-name>rudder</object-name>
     <object-name>doorFL</object-name>
@@ -668,6 +673,64 @@
                     </center>
 	</animation>
         <!--Doors-->
+	<animation>
+		<type>pick</type>
+		<object-name>cargodoor</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					cseries.doors.cargo.toggle();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>cargodoor</object-name>
+		<property>sim/model/door-positions/cargo/position-norm</property>
+		<factor>160</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<y-m>1.63847</y-m>
+			<z-m>-2.68322</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>cargoRdoor</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					cseries.doors.cargoR.toggle();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>cargoRdoor</object-name>
+		<property>sim/model/door-positions/cargoR/position-norm</property>
+		<factor>160</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<y-m>1.67483</y-m>
+			<z-m>-2.6845</z-m>
+		</center>
+	</animation>
 	<animation>
 		<type>pick</type>
 		<object-name>doorFL</object-name>
