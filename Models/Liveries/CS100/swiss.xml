@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Swiss International Airlines</name>
+            <texture>Liveries/CS100/swiss.png</texture>
+            <texture-engine>Liveries/CS100/engines-swiss.png</texture-engine>
+        </livery>
+    </model>
+</sim>
+</PropertyList>
