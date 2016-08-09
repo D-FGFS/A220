@@ -387,19 +387,23 @@
 	</action>
     </animation>
     <animation>
-	<type>texrotate</type>
+	<type>rotate</type>
 	<object-name>batt1</object-name>
 		<property>controls/electric/battery-switch</property>
-		<factor>55</factor>
-		<center>
-			<x>0.09</x>
-			<y>0.205</y>
-		</center>
-  		<axis>
-  	  		<x>0</x>
-  	 		 <y>0</y>
-  	  		<z>1</z>
-  		</axis>
+		<factor>-55</factor>
+        <center>
+                <x-m>-0.04156</x-m>
+                <y-m>-0.0951</y-m>
+                <z-m>0.83304</z-m>
+        </center>
+		<axis>
+			<x1-m>-0.17479</x1-m>
+			<y1-m>-0.12621</y1-m>
+			<z1-m>0.78263</z1-m>
+			<x2-m>-0.1695</x2-m>
+			<y2-m>-0.12621</y2-m>
+			<z2-m>0.75911</z2-m>
+		</axis>
     </animation>
     <animation>
 	<type>pick</type>
@@ -414,19 +418,23 @@
 	</action>
     </animation>
     <animation>
-	<type>texrotate</type>
+	<type>rotate</type>
 	<object-name>batt2</object-name>
 		<property>controls/electric/battery-switch[1]</property>
-		<factor>55</factor>
-		<center>
-			<x>0.09</x>
-			<y>0.205</y>
-		</center>
-  		<axis>
-  	  		<x>0</x>
-  	 		 <y>0</y>
-  	  		<z>1</z>
-  		</axis>
+		<factor>-55</factor>
+        <center>
+                <x-m>-0.04156</x-m>
+                <y-m>-0.03514</y-m>
+                <z-m>0.83304</z-m>
+        </center>
+		<axis>
+			<x1-m>-0.17479</x1-m>
+			<y1-m>-0.12621</y1-m>
+			<z1-m>0.78263</z1-m>
+			<x2-m>-0.1695</x2-m>
+			<y2-m>-0.12621</y2-m>
+			<z2-m>0.75911</z2-m>
+		</axis>
     </animation>
     <!--Generators-->
     <animation>
@@ -579,39 +587,34 @@
   		</axis>
     </animation>
     <animation>
-	<type>texmultiple</type>
+	<type>rotate</type>
 	<object-name>apu</object-name>
-<!--While running-->
-  		<transform>
-   		 <subtype>texrotate</subtype>
-		<property>controls/APU/knob</property>
-		<factor>61.2</factor>
-		<center>
-			<x>0.09</x>
-			<y>0.205</y>
-		</center>
-  		<axis>
-  	  		<x>0</x>
-  	 		 <y>0</y>
-  	  		<z>1</z>
-  		</axis>
- 		 </transform>
-<!--While starting-->
-  		<transform>
-   		 <subtype>texrotate</subtype>
-		<property>controls/APU/knob2</property>
-		<factor>120.81</factor>
-		<center>
-			<x>0.09</x>
-			<y>0.205</y>
-		</center>
-  		<axis>
-  	  		<x>0</x>
-  	 		 <y>0</y>
-  	  		<z>1</z>
-  		</axis>
- 		 </transform>
-    </animation>
+        <property>controls/APU/knob</property>
+		<factor>-61.2</factor>
+		<axis>
+			<x1-m>-0.17479</x1-m>
+			<y1-m>-0.12621</y1-m>
+			<z1-m>0.78263</z1-m>
+			<x2-m>-0.1695</x2-m>
+			<y2-m>-0.12621</y2-m>
+			<z2-m>0.75911</z2-m>
+		</axis>
+            </animation>
+            <!--While starting-->
+    <animation>
+	<type>rotate</type>
+	<object-name>apu</object-name>
+        <property>controls/APU/knob2</property>
+		<factor>-120.81</factor>
+		<axis>
+			<x1-m>-0.17479</x1-m>
+			<y1-m>-0.12621</y1-m>
+			<z1-m>0.78263</z1-m>
+			<x2-m>-0.1695</x2-m>
+			<y2-m>-0.12621</y2-m>
+			<z2-m>0.75911</z2-m>
+		</axis>
+            </animation>
     <animation>
 	<type>pick</type>
 	<object-name>apugen</object-name>
