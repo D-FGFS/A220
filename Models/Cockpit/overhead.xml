@@ -320,8 +320,133 @@
             <z>0</z>
         </axis>
     </animation>
-    
-    
+    <!--ENGINE FIRE-->
+    <!--Left-->
+    <animation>
+	<type>pick</type>
+	<object-name>engcoverL</object-name>
+	<object-name>engcoverLglass</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+				<property>controls/engines/engine[0]/fire-bottle-discharge-cover</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>rotate</type>
+	<object-name>engcoverL</object-name>
+	<object-name>engcoverLglass</object-name>
+				<property>controls/engines/engine[0]/fire-bottle-discharge-cover</property>
+        <factor>-130</factor>
+        <center>
+                <x-m>0.25526</x-m>
+                <z-m>0.94348</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>engLfire</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+				<property>controls/engines/engine[0]/fire-bottle-discharge-armed</property>
+	    </binding>
+	</action>
+    </animation>
+    <!--Right-->
+    <animation>
+	<type>pick</type>
+	<object-name>engcoverR</object-name>
+	<object-name>engcoverRglass</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+				<property>controls/engines/engine[1]/fire-bottle-discharge-cover</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>rotate</type>
+	<object-name>engcoverR</object-name>
+	<object-name>engcoverRglass</object-name>
+				<property>controls/engines/engine[1]/fire-bottle-discharge-cover</property>
+        <factor>-130</factor>
+        <center>
+                <x-m>0.25526</x-m>
+                <z-m>0.94348</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>engRfire</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+				<property>controls/engines/engine[1]/fire-bottle-discharge-armed</property>
+	    </binding>
+	</action>
+    </animation>
+    <!--APU-->
+    <animation>
+	<type>pick</type>
+	<object-name>engcoverAPU</object-name>
+	<object-name>engcoverAPUglass</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>controls/APU/fire-switch-cover</property>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>rotate</type>
+	<object-name>engcoverAPU</object-name>
+	<object-name>engcoverAPUglass</object-name>
+		<property>controls/APU/fire-switch-cover</property>
+        <factor>-130</factor>
+        <center>
+                <x-m>0.25526</x-m>
+                <z-m>0.94348</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>APUfire</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+				<property>controls/APU/fire-switch-armed</property>
+	    </binding>
+	</action>
+    </animation>
         <!--ELECTRICAL-->
 <!--Cabin Power-->
     <animation>
