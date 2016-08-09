@@ -2,9 +2,11 @@
 <!--CS100-->
 <!--Data, source:   https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications
                     http://commercialaircraft.bombardier.com/content/dam/Websites/bca/literature/cseries/Bombardier-Commercial-Aircraft-CSeries-Brochure-en.pdf.pdf
+                    http://commercialaircraft.bombardier.com/content/dam/Websites/bca/literature/cseries/BCA_5446_01_CSeries_Factsheet_Update_CS100_EN_vF.pdf
+                    http://aviation.answers.wikia.com/wiki/Empty_weight_of_bombardier_cs100
                     
     Dimensions: lenght: 35 m    heigth:  11.5   wingspan:35.1m   Fuselage diameter: 3.7m
-    mass: empty: 131000lbs?; MTOW: 134000lbs max payload= 33 350lbs
+    mass: empty: 84000lbs (guessed: 129000-14000 of fuel and 30 000 of passengers?); MTOW: 129000lbs
     ceiling: 41000ft
     range: 5741km
     engine:
@@ -21,7 +23,7 @@
             
             <!--THE COORDINATES NEED TO BE ADJUSTED!!-->
 
-    <airplane mass="131000">
+    <airplane mass="84000">
 
     <!-- Approach configuration -->
         <approach speed="80" aoa="3.0" fuel="0.6"> <!--no data avail?-->
@@ -189,7 +191,7 @@
        <weight x="9.97759"  y="0"   z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass front-->
        <weight x="-4.68367" y="0"   z="-3.05628" mass-prop="/sim/weight[4]/weight-lb"/><!--Cargo mass rear-->
 
-       <ballast x="16"  y="0.0" z="-4" mass="36500"/>
+       <ballast x="16"  y="0.0" z="-4" mass="20000"/>
        <!--ballast x="-10" y="0" z="0" mass="-3500"/-->
 
     </airplane>

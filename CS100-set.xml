@@ -58,6 +58,7 @@
 		
 		<instrumentation>
 			<path>Aircraft/CSeries/Systems/init-instrumentation.xml</path>
+			<path>Aircraft/CSeries/Systems/instrumentation.xml</path>
 		</instrumentation>
         
 		<sound>
@@ -85,13 +86,13 @@
             <min-lb>0</min-lb>
         </weight>
         <weight n="3"><!--Cargo front weight-->
-            <weight-lb>4000</weight-lb>
-            <max-lb>8000</max-lb>
+            <weight-lb>2000</weight-lb>
+            <max-lb>4000</max-lb>
             <min-lb>0</min-lb>
         </weight>
         <weight n="4"><!--Cargo rear weight-->
-            <weight-lb>4000</weight-lb>
-            <max-lb>8000</max-lb>
+            <weight-lb>2000</weight-lb>
+            <max-lb>4000</max-lb>
             <min-lb>0</min-lb>
         </weight>
 
