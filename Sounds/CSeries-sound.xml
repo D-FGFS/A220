@@ -1082,7 +1082,7 @@
 	
 <seatbelt>
 			<name>cabinalert</name>
-			<path>Aircraft/737-800/sounds/cabinalert.wav</path>
+			<path>res/cabinalert.wav</path>
 			<mode>once</mode>
 			<condition>
 				<or>
@@ -1576,68 +1576,11 @@
 		</announcement>
 
 		<announcement>
-			<name>boarding1</name>
-			<path>Aircraft/CSeries/Sounds/announce/music.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<property>sim/sound/music1</property>
-			</condition>
-			<volume>
-				<factor>8</factor>
-			</volume>
-			<position>
-				<x>0.00</x>
-				<y>0.00</y>
-				<z>0.00</z>
-			</position>
-			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
-		</announcement>
-
-		<announcement>
 			<name>boarding2</name>
 			<path>Aircraft/CSeries/Sounds/announce/music2.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>sim/sound/music2</property>
-			</condition>
-			<volume>
-				<factor>8</factor>
-			</volume>
-			<position>
-				<x>0.00</x>
-				<y>0.00</y>
-				<z>0.00</z>
-			</position>
-			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
-		</announcement>
-
-		<announcement>
-			<name>boarding3</name>
-			<path>Aircraft/CSeries/Sounds/announce/etihad-board.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<property>sim/sound/music3</property>
-			</condition>
-			<volume>
-				<factor>8</factor>
-			</volume>
-			<position>
-				<x>0.00</x>
-				<y>0.00</y>
-				<z>0.00</z>
-			</position>
-			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
-		</announcement>
-
-		<announcement>
-			<name>boarding4</name>
-			<path>Aircraft/CSeries/Sounds/announce/qatar-board.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<property>sim/sound/music4</property>
 			</condition>
 			<volume>
 				<factor>8</factor>

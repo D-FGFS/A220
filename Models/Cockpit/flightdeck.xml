@@ -17,6 +17,15 @@
          <object-name>hudL</object-name>
          <object-name>hudR</object-name>
      </effect> 
+     <effect>
+         <inherits-from>Aircraft/CSeries/Models/Effects/interior-shadow</inherits-from>
+		<object-name>throttleL</object-name>
+		<object-name>throttleR</object-name>
+		<object-name>interior.002</object-name>
+		<object-name>interior.005</object-name>
+		<object-name>cockpit</object-name>
+            </effect>
+         
      <!--HUD-->
         <model>
             <path>hud/hud.xml</path>
