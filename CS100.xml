@@ -184,10 +184,10 @@
        <tank x="2.7" y="0" z="-0.5" jet="true"  capacity="4305"/>
 
        <weight x="14.51701" y="0.0" z="-1.55091" mass-prop="/sim/weight[0]/weight-lb"/><!--Crew mass-->
-       <weight x="5.9957" y="0" z="-2" mass-prop="/sim/weight[1]/weight-lb"/><!--Passengers front mass-->
-       <weight x="-5" y="0" z="-2" mass-prop="/sim/weight[2]/weight-lb"/><!--Passengers rear mass-->
-       <weight x="9.97759" y="0" z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass front-->
-       <weight x="-4.68367" y="0" z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass rear-->
+       <weight x="5.9957"   y="0"   z="-2"       mass-prop="/sim/weight[1]/weight-lb"/><!--Passengers front mass-->
+       <weight x="-5"       y="0"   z="-2"       mass-prop="/sim/weight[2]/weight-lb"/><!--Passengers rear mass-->
+       <weight x="9.97759"  y="0"   z="-3.05628" mass-prop="/sim/weight[3]/weight-lb"/><!--Cargo mass front-->
+       <weight x="-4.68367" y="0"   z="-3.05628" mass-prop="/sim/weight[4]/weight-lb"/><!--Cargo mass rear-->
 
        <ballast x="16"  y="0.0" z="-4" mass="36500"/>
        <!--ballast x="-10" y="0" z="0" mass="-3500"/-->

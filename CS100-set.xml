@@ -54,10 +54,6 @@
 				<name>Autopilot helpers</name>
 				<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
 			</autopilot>
-            <autopilot>
-                <name>Flight control system</name>
-                <path>Aircraft/CSeries/Systems/flight-controls.xml</path>
-             </autopilot>
         </systems>
 		
 		<instrumentation>
@@ -75,7 +71,7 @@
         <weight n="0"><!--Crew weight-->
             <weight-lb>360</weight-lb>
             <max-lb>500</max-lb>
-            <min-lb>0</min-lb>
+            <min-lb>100</min-lb>
         </weight>
 
         <weight n="1"><!--Passengers front weight-->
@@ -88,7 +84,12 @@
             <max-lb>10000</max-lb>
             <min-lb>0</min-lb>
         </weight>
-        <weight n="3"><!--Passengers rear weight-->
+        <weight n="3"><!--Cargo front weight-->
+            <weight-lb>4000</weight-lb>
+            <max-lb>8000</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="4"><!--Cargo rear weight-->
             <weight-lb>4000</weight-lb>
             <max-lb>8000</max-lb>
             <min-lb>0</min-lb>
@@ -131,7 +132,7 @@
                             </script>
                         </binding>
                     </item>
-<item>
+                    <item>
 			<name>lights</name>
 			<label>Lights</label>
 				<binding>
@@ -142,7 +143,7 @@
 					</script>
 				</binding>
 		  </item>
-<item>
+                    <item>
 		      <label>Announcements</label>
 		      <binding>
 					<command>nasal</command>
@@ -151,9 +152,8 @@
 						mal.open();
 		       </script>
 		      </binding>
-          </item> 
-
-<item>
+                    </item> 
+                    <item>
 						<label>Failures</label>
 						<binding>
 							<command>nasal</command>
@@ -208,6 +208,7 @@
             </vnav>
         </route-manager>
     </autopilot>
+    
     <consumables>
         <fuel>
             <tank n="0">
@@ -309,8 +310,6 @@
             <brake-left-cmd-norm alias="/controls/gear/brake-left" />
             <brake-right-cmd-norm alias="/controls/gear/brake-right" />
         </copilot>
--        <throttle-cmd-norm type="double">0</throttle-cmd-norm>
--        <throttle-cmd-norm type="double">0</throttle-cmd-norm>
 -        <aileron-cmd-norm type="double">0</aileron-cmd-norm>
 -        <tiller-steer-deg type="float">0</tiller-steer-deg>
 -        <nose-gear-steer-deg type="double">0</nose-gear-steer-deg>
