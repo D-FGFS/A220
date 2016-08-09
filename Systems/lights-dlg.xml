@@ -29,10 +29,18 @@
 				</binding>
 				<live>true</live>
 			</checkbox>
+			<checkbox>
+				<label>Front</label>
+				<property>controls/lighting/landing-lights[2]</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</checkbox>
 
 			<checkbox>
 				<label>Right</label>
-				<property>controls/lighting/landing-lights</property>
+				<property>controls/lighting/landing-lights[1]</property>
 				<binding>
 					<command>dialog-apply</command>
 				</binding>

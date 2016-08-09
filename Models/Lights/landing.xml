@@ -20,7 +20,7 @@
 		<object-name>Cone</object-name>
 		<condition>
 			<and>
-				<property>controls/lighting/landing-lights</property>
+				<property>systems/electrical/outputs/landing-lights[2]</property>
 				<equals>
 					<property>gear/gear[0]/position-norm</property>
 					<value>1</value>

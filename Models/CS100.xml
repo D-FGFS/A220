@@ -31,10 +31,9 @@
   <path>Aircraft/CSeries/Models/Registration/registration.xml</path>
   <offsets>
     <x-m>10.90</x-m>
-    <y-m>1.50</y-m>
+    <y-m>1.42</y-m>
     <z-m>-1.60</z-m>
-    <roll-deg>34</roll-deg>
-    <heading-deg>-1.0</heading-deg>
+    <heading-deg>-10</heading-deg>
   </offsets>
   <overlay>
     <params>
@@ -49,10 +48,9 @@
   <path>Aircraft/CSeries/Models/Registration/registration.xml</path>
   <offsets>
     <x-m>10.90</x-m>
-    <y-m>-1.50</y-m>
+    <y-m>-1.42</y-m>
     <z-m>-1.60</z-m>
-    <roll-deg>34</roll-deg>
-    <heading-deg>181.0</heading-deg>
+    <heading-deg>190</heading-deg>
   </offsets>
   <overlay>
     <params>
@@ -68,45 +66,45 @@
 		<name>Left nav light</name>
 		<path>Aircraft/CSeries/Models/Lights/rednav.xml</path>
 		<offsets>
-			<x-m>3.80</x-m>
-			<y-m>-16.23</y-m>
-			<z-m>-1.116</z-m>
+                        <x-m>3.53029</x-m>
+			<y-m>-16.0121</y-m>
+			<z-m>-1.05891</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Right nav light</name>
 		<path>Aircraft/CSeries/Models/Lights/greennav.xml</path>
 		<offsets>
-			<x-m>3.80</x-m>
-			<y-m>16.23</y-m>
-			<z-m>-1.116</z-m>
+                        <x-m>3.53029</x-m>
+			<y-m>16.0121</y-m>
+			<z-m>-1.05891</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Left strobe light</name>
 		<path>Aircraft/CSeries/Models/Lights/strobe.xml</path>
 		<offsets>
-			<x-m>3.70</x-m>
-			<y-m>-17.06</y-m>
-			<z-m>-1.009</z-m>
+                        <x-m>3.53029</x-m>
+			<y-m>-16.0121</y-m>
+			<z-m>-1.05891</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Right strobe light</name>
 		<path>Aircraft/CSeries/Models/Lights/strobe.xml</path>
 		<offsets>
-			<x-m>3.62</x-m>
-			<y-m>17.06</y-m>
-			<z-m>-5.009</z-m>
+                        <x-m>3.53029</x-m>
+			<y-m>16.0121</y-m>
+			<z-m>-1.05891</z-m>
 		</offsets>
 	</model>
 	<model>
-		<name>Beacon light</name>
+		<name>Bottom Beacon light</name>
 		<path>Aircraft/CSeries/Models/Lights/beacon.xml</path>
 		<offsets>
-			<x-m>-q.98</x-m>
+			<x-m>-3.0078</x-m>
 			<y-m>0</y-m>
-			<z-m>5.28</z-m>
+			<z-m>-4.53916</z-m>
 		</offsets>
 	</model>
 	<model>
@@ -116,6 +114,28 @@
 			<x-m>-14.25</x-m>
 			<y-m>0</y-m>
 			<z-m>-4.39</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Left Fuselage Landing light</name>
+		<path>Aircraft/CSeries/Models/Lights/landing-left.xml</path>
+		<offsets>
+			<x-m>-8</x-m>
+			<y-m>-1.45</y-m>
+			<z-m>-3.88132</z-m>
+                        <pitch-deg>-30</pitch-deg>
+                        <heading-deg>30</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Right Fuselage Landing light</name>
+		<path>Aircraft/CSeries/Models/Lights/landing-right.xml</path>
+		<offsets>
+			<x-m>-8</x-m>
+			<y-m>1.45</y-m>
+			<z-m>-3.88132</z-m>
+                        <pitch-deg>-30</pitch-deg>
+                        <heading-deg>-30</heading-deg>
 		</offsets>
 	</model>
 

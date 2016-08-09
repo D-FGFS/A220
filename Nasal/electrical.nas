@@ -141,6 +141,11 @@ setlistener("/sim/signals/fdm-initialized", func {
     print("Electrical System ... ok");
 });
 
+## Lights
+# Exterior lights; sim/model/lights/... is used by electrical system to switch outputs
+var beacon_light = aircraft.light.new("sim/model/lights/beacon", [0.05, 2.1], "controls/lighting/beacon");
+var strobe_light = aircraft.light.new("sim/model/lights/strobe", [0.05, 2], "controls/lighting/strobe");
+
 var init_switches = func{
     var AVswitch=props.globals.initNode("controls/electric/avionics-switch",1,"BOOL");
     props.globals.initNode("controls/electric/ammeter-switch",0,"BOOL");
