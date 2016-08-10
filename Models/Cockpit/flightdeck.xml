@@ -834,6 +834,23 @@
   </action>
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>ap.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/ap_master</property>
+	    <value>1</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
+</animation>
+
 <!-- AT Master -->
 <animation>
   <type>pick</type>
@@ -846,6 +863,23 @@
       <property>it-autoflight/at_mastersw</property>
     </binding>
   </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>at.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/at_master</property>
+	    <value>1</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
 </animation>
 
 <!-- Flight Director -->
@@ -869,6 +903,10 @@
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
+	<binding>
+	  <command>property-toggle</command>
+	  <property>/it-autoflight/afds_ovrdsw</property>
+	</binding>
   </action>
 </animation>
 
@@ -887,6 +925,23 @@
   </action>
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>hdg.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/aplatmode</property>
+	    <value>0</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
+</animation>
+
 <!-- NAV (LNAV) Button -->
 <animation>
   <type>pick</type>
@@ -900,6 +955,23 @@
 	  <value>1</value>
     </binding>
   </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>nav.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/aplatmode</property>
+	    <value>1</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
 </animation>
 	
 <!-- Approach (LOC and G/S) ARM Button -->
@@ -917,6 +989,40 @@
   </action>
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>appr.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/apvertmode</property>
+	    <value>2</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>appr.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/app1</property>
+	    <value>1</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
+</animation>
+
 <!-- Half Bank Button -->
 <animation>
   <type>pick</type>
@@ -930,6 +1036,23 @@
 	  <value>0</value>
     </binding>
   </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>halfbank.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/rubbishbin</property>
+	    <value>999</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
 </animation>
 
 <!-- Flight Level Change (Speed with Pitch) Button -->
@@ -947,6 +1070,23 @@
   </action>
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>flc.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/apvertmode</property>
+	    <value>4</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
+</animation>
+
 <!-- Hold Altitude Button -->
 <animation>
   <type>pick</type>
@@ -960,6 +1100,23 @@
 	  <value>0</value>
     </binding>
   </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>althld.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/apvertmode</property>
+	    <value>0</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
 </animation>
 
 <!-- VNAV Button -->
@@ -977,6 +1134,23 @@
   </action>
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>vnav.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/rubbishbin</property>
+	    <value>999</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
+</animation>
+
 <!-- Vertical Speed Button -->
 <animation>
   <type>pick</type>
@@ -990,6 +1164,55 @@
 	  <value>1</value>
     </binding>
   </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>vs.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/apvertmode</property>
+	    <value>1</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
+</animation>
+
+<!-- FPA Button -->
+<animation>
+  <type>pick</type>
+  <object-name>fpa.btn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>it-autoflight/unimplemented_items</property>
+	  <value>0</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>fpa.lt</object-name>
+  <condition>
+	<and>
+      <equals>
+        <property>it-autoflight/rubbishbin</property>
+	    <value>999</value>
+      </equals>
+      <greater-than>
+        <property>/systems/electrical/left-bus</property>
+        <value>10</value>
+      </greater-than>
+	</and>
+  </condition>
 </animation>
 
 <!-- Knobs -->

@@ -863,7 +863,7 @@
 		<flap>
 			<name>flaps left</name>
 			<mode>in-transit</mode>
-			<!--path>Aircraft/A320neo/Sounds/res/flaps.wav</path-->
+			<!--path>Aircraft/CSeries/Sounds/res/flaps.wav</path-->
 			<path>Aircraft/CSeries/Sounds/res/A320_flaps.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<!--volume>
@@ -883,7 +883,7 @@
 		<flap>
 			<name>flaps right</name>
 			<mode>in-transit</mode>
-			<!--path>Aircraft/A320neo/Sounds/res/flaps.wav</path-->
+			<!--path>Aircraft/CSeries/Sounds/res/flaps.wav</path-->
 			<path>Aircraft/CSeries/Sounds/res/A320_flaps.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<!--volume>
@@ -1123,7 +1123,7 @@
 		<stall>
 			<name>stall</name>
 			<mode>looped</mode>
-			<path>/Aircraft/A320neo/Sounds/res/stall.wav</path>
+			<path>/Aircraft/CSeries/Sounds/res/stall.wav</path>
 			<type>avionics</type>
 			<condition>
 				<property>sim/sound/stall-horn</property>
@@ -1140,7 +1140,7 @@
 		<stall-voice>
 			<name>stall-voice</name>
 			<mode>looped</mode>
-			<path>/Aircraft/A320neo/Sounds/res/stall_voice.wav</path>
+			<path>/Aircraft/CSeries/Sounds/res/stall_voice.wav</path>
 			<type>avionics</type>
 			<condition>
 				<property>warnings/stall/active</property>
@@ -1203,7 +1203,7 @@
 
     <gearwarn>
         <name>Gear warning</name>
-        <path>/Aircraft/A320neo/Sounds/res/gearwarn.wav</path>
+        <path>/Aircraft/CSeries/Sounds/res/gearwarn.wav</path>
         <mode>looped</mode>
         <type>avionics</type>
         <condition>
@@ -1228,7 +1228,7 @@
 
     <ap_disc>
         <name>AP Disconnect warning</name>
-        <path>/Aircraft/A320neo/Sounds/res/airbus-warning.wav</path>
+        <path>/Aircraft/CSeries/Sounds/res/airbus-warning.wav</path>
         <mode>once</mode>
         <type>avionics</type>
         <condition>
@@ -1243,7 +1243,7 @@
 
     <chime>
         <name>Chime</name>
-        <path>/Aircraft/A320neo/Sounds/res/chime.wav</path>
+        <path>/Aircraft/CSeries/Sounds/res/chime.wav</path>
         <mode>once</mode>
         <type>avionics</type>
         <condition>
@@ -1258,7 +1258,7 @@
 
     <crc>
         <name>CRC</name>
-        <path>/Aircraft/A320neo/Sounds/res/crc.wav</path>
+        <path>/Aircraft/CSeries/Sounds/res/crc.wav</path>
         <mode>looped</mode>
         <type>avionics</type>
         <condition>
@@ -1277,7 +1277,7 @@
     <apu-start>
         <name>apu-strt</name>
         <mode>once</mode>
-        <path>Aircraft/A320neo/Sounds/res/apu_strt.wav</path>
+        <path>Aircraft/CSeries/Sounds/res/apu_strt.wav</path>
         <condition>
 			<property>controls/APU/starter</property>
 			<less-than>
@@ -1298,7 +1298,7 @@
 	<apu-running2>
         <name>apu-run2</name>
         <mode>looped</mode>
-        <path>Aircraft/A320neo/Sounds/res/apu_run.wav</path>
+        <path>Aircraft/CSeries/Sounds/res/apu_run.wav</path>
         <condition>
 			<property>controls/APU/master-switch</property>
 			<equals>
@@ -1320,7 +1320,7 @@
 	<apu-running>
         <name>apu-run</name>
         <mode>looped</mode>
-        <path>Aircraft/A320neo/Sounds/res/apu_run.wav</path>
+        <path>Aircraft/CSeries/Sounds/res/apu_run.wav</path>
         <condition>
 			<not>
 				<property>controls/APU/starter</property>
@@ -1343,7 +1343,7 @@
 	<apu-shutdown>
         <name>apu-stop</name>
         <mode>once</mode>
-        <path>Aircraft/A320neo/Sounds/res/apu_stop.wav</path>
+        <path>Aircraft/CSeries/Sounds/res/apu_stop.wav</path>
         <condition>
 			<not>
 				<property>controls/APU/starter</property>

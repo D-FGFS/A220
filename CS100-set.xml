@@ -72,7 +72,6 @@
         </systems>
 		
 		<instrumentation>
-			<path>Aircraft/CSeries/Systems/init-instrumentation.xml</path>
 			<path>Aircraft/CSeries/Systems/instrumentation.xml</path>
 		</instrumentation>
         
@@ -208,22 +207,8 @@
             </view>
 	    <chase-distance-m>-50</chase-distance-m>
     </sim>  
-    
-    <autopilot>
-        <flight-director-serviceable type="bool">true</flight-director-serviceable>
-        <autoflight-serviceable type="bool">true</autoflight-serviceable>
-        <autothrottle-serviceable type="bool">true</autothrottle-serviceable>
-        <yaw-damper-serviceable type="bool">true</yaw-damper-serviceable>
-        <route-manager>
-            <vnav>
-                <climb-speed-kt type="int">400</climb-speed-kt>
-                <descent-speed-kt type="int">300</descent-speed-kt>
-                <climb-vpa-deg type="double">4</climb-vpa-deg>
-                <descent-vpa-deg type="double">3</descent-vpa-deg>
-                <target-altitude-ft type="double">0</target-altitude-ft>
-            </vnav>
-        </route-manager>
-    </autopilot>
+	
+<instrumentation include="Systems/init-instrumentation.xml"/>
     
     <consumables>
         <fuel>
@@ -359,10 +344,10 @@
             <file>Aircraft/CSeries/Nasal/CS100liveries.nas</file>
             <file>Aircraft/CSeries/Nasal/registration.nas</file>      
 		</cseries>
-		<it2>
+		<itaf>
             <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
             <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
-		</it2> 
+		</itaf> 
                 <tyresmoke>
                     <file>Aircraft/CSeries/Nasal/tyresmoke.nas</file>
                 </tyresmoke>

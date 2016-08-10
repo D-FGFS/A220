@@ -266,7 +266,7 @@ var Rat = {
 var rat1 = Rat.new("systems/ram-air-turbine", "controls/pneumatic/ram-air-turbine");
 
 setlistener("/sim/signals/fdm-initialized", func {
-  it2.ap_init();
+  itaf.ap_init();
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/CSeries/Systems/autopilot-dlg.xml");
   setprop("/engines/engine[0]/n1-limit", "99.5");
   setprop("/engines/engine[1]/n1-limit", "99.5");

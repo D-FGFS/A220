@@ -27,6 +27,10 @@
 		<startup>
             <splash-texture>Aircraft/CSeries/CS300.png</splash-texture>
 		</startup>
+		
+		<instrumentation>
+			<path>Aircraft/CSeries/Systems/instrumentation.xml</path>
+		</instrumentation>
         
 		<sound>
 			<path>Aircraft/CSeries/Sounds/CSeries-sounds.xml</path>
@@ -127,6 +131,9 @@
             </view>
 	    <chase-distance-m>-50</chase-distance-m>
     </sim>
+	
+<instrumentation include="Systems/init-instrumentation.xml"/>
+	
     <controls>
         <cabin>
             <seating>0</seating> <!--Mixed Class-->
@@ -158,10 +165,10 @@
             <file>Aircraft/CSeries/Nasal/CS100liveries.nas</file>
             <file>Aircraft/CSeries/Nasal/registration.nas</file>      
 		</cseries>
-		<it2>
+		<itaf>
             <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
             <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
-		</it2> 
+		</itaf> 
                 <tyresmoke>
                     <file>Aircraft/CSeries/Nasal/tyresmoke.nas</file>
                 </tyresmoke>
