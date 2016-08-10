@@ -66,36 +66,36 @@
 		<name>Left nav light</name>
 		<path>Aircraft/CSeries/Models/Lights/rednav.xml</path>
 		<offsets>
-                        <x-m>3.53029</x-m>
-			<y-m>-16.0121</y-m>
-			<z-m>-1.05891</z-m>
+                        <x-m>2.3189</x-m>
+			<y-m>-16.00252</y-m>
+			<z-m>-0.95182</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Right nav light</name>
 		<path>Aircraft/CSeries/Models/Lights/greennav.xml</path>
 		<offsets>
-                        <x-m>3.53029</x-m>
-			<y-m>16.0121</y-m>
-			<z-m>-1.05891</z-m>
+                        <x-m>2.3189</x-m>
+			<y-m>16.00252</y-m>
+			<z-m>-0.95182</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Left strobe light</name>
 		<path>Aircraft/CSeries/Models/Lights/strobe.xml</path>
 		<offsets>
-                        <x-m>3.53029</x-m>
-			<y-m>-16.0121</y-m>
-			<z-m>-1.05891</z-m>
+                        <x-m>2.3189</x-m>
+			<y-m>-16.00252</y-m>
+			<z-m>-0.95182</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Right strobe light</name>
 		<path>Aircraft/CSeries/Models/Lights/strobe.xml</path>
 		<offsets>
-                        <x-m>3.53029</x-m>
-			<y-m>16.0121</y-m>
-			<z-m>-1.05891</z-m>
+                        <x-m>2.3189</x-m>
+			<y-m>16.00252</y-m>
+			<z-m>-0.95182</z-m>
 		</offsets>
 	</model>
 	<model>
@@ -220,6 +220,10 @@
     <object-name>geardoorF2</object-name>
     <object-name>geardoorF3</object-name>
     <object-name>geardoorF4</object-name>
+    <object-name>gearLdoor1</object-name>
+    <object-name>gearLdoor2</object-name>
+    <object-name>gearRdoor1</object-name>
+    <object-name>gearRdoor2</object-name>
     <object-name>wings</object-name>
     <object-name>flapLI</object-name>
     <object-name>flapLO</object-name>
@@ -254,6 +258,7 @@
     <type>material</type>
     <object-name>nacelleL</object-name>
     <object-name>nacelleR</object-name>
+    <object-name>enginefix.</object-name>
     
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture-engine</texture-prop>
@@ -296,7 +301,7 @@
 		<type>spin</type>
 		<object-name>fanR</object-name>
 		<object-name>spinnerR</object-name>
-                <property>engines/engine/rpm</property>
+                <property>engines/engine[1]/rpm</property>
 		<factor>67</factor>
 		<axis>
 			<x>-1</x>
@@ -601,8 +606,70 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<y-m>-2.98813</y-m>
-			<z-m>-3.20894</z-m>
+			<y-m>-3.0044</y-m>
+			<z-m>-3.22668</z-m>
+                    </center>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>gearLdoor</object-name>
+		<object-name>gearLdoor2</object-name>
+                <property>gear/gear[1]/position-norm</property>
+		<factor>-90</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+                <center>
+			<y-m>-3.20812</y-m>
+			<z-m>-3.35632</z-m>
+                    </center>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>gearLdoor2</object-name>
+                <property>gear/gear[1]/position-norm</property>
+		<factor>-140</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+                <center>
+			<y-m>-1.99566</y-m>
+			<z-m>-3.67238</z-m>
+                    </center>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>gearRdoor</object-name>
+		<object-name>gearRdoor2</object-name>
+                <property>gear/gear[2]/position-norm</property>
+		<factor>90</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+                <center>
+			<y-m>3.20812</y-m>
+			<z-m>-3.35632</z-m>
+                    </center>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>gearRdoor2</object-name>
+                <property>gear/gear[2]/position-norm</property>
+		<factor>140</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+                <center>
+			<y-m>1.99566</y-m>
+			<z-m>-3.67238</z-m>
                     </center>
 	</animation>
     <animation>
@@ -621,8 +688,8 @@
 			<z>0</z>
 		</axis>
                 <center>
-			<y-m>2.98813</y-m>
-			<z-m>-3.20894</z-m>
+			<y-m>3.0044</y-m>
+			<z-m>-3.22668</z-m>
                     </center>
 	</animation>
         <!--Wheel spinning-->
@@ -980,12 +1047,12 @@
                 <property>surface-positions/left-aileron-pos-norm</property>
 		<factor>-30</factor>
 		<axis>
-			<x1-m>2.05308</x1-m>
-			<y1-m>-11.88872</y1-m>
-			<z1-m>-1.79648</z1-m>
-			<x2-m>4.06958</x2-m>
-			<y2-m>-15.63855</y2-m>
-			<z2-m>-1.23148</z2-m>
+			<x1-m>1.803</x1-m>
+			<y1-m>-12.15997</y1-m>
+			<z1-m>-1.59669</z1-m>
+			<x2-m>3.1597</x2-m>
+			<y2-m>-15.53368</y2-m>
+			<z2-m>-1.0019</z2-m>
 		</axis>
 	</animation>
         <!--Right-->
@@ -995,12 +1062,12 @@
                 <property>surface-positions/right-aileron-pos-norm</property>
 		<factor>30</factor>
 		<axis>
-			<x1-m>2.05308</x1-m>
-			<y1-m>11.88872</y1-m>
-			<z1-m>-1.79648</z1-m>
-			<x2-m>4.06958</x2-m>
-			<y2-m>15.63855</y2-m>
-			<z2-m>-1.23148</z2-m>
+			<x1-m>1.803</x1-m>
+			<y1-m>12.15997</y1-m>
+			<z1-m>-1.59669</z1-m>
+			<x2-m>3.1597</x2-m>
+			<y2-m>15.53368</y2-m>
+			<z2-m>-1.0019</z2-m>
 		</axis>
 	</animation>
         <!--Outer Flaps-->
@@ -1011,12 +1078,12 @@
                 <property>surface-positions/flap-pos-norm</property>
 		<factor>-30</factor>
 		<axis>
-			<x1-m>-0.62897</x1-m>
-			<y1-m>-6.74893</y1-m>
-			<z1-m>-2.57955</z1-m>
-			<x2-m>1.87058</x2-m>
-			<y2-m>-11.79227</y2-m>
-			<z2-m>-1.79613</z2-m>
+			<x1-m>-0.70031</x1-m>
+			<y1-m>-6.18499</y1-m>
+			<z1-m>-2.57727</z1-m>
+			<x2-m>1.65195</x2-m>
+			<y2-m>-12.03555</y2-m>
+			<z2-m>-1.62003</z2-m>
 		</axis>
 	</animation>
         <!--Right-->
@@ -1026,29 +1093,62 @@
                 <property>surface-positions/flap-pos-norm</property>
 		<factor>30</factor>
 		<axis>
-			<x1-m>-0.62897</x1-m>
-			<y1-m>6.74893</y1-m>
-			<z1-m>-2.57955</z1-m>
-			<x2-m>1.87058</x2-m>
-			<y2-m>11.79227</y2-m>
-			<z2-m>-1.79613</z2-m>
+			<x1-m>-0.70031</x1-m>
+			<y1-m>6.18499</y1-m>
+			<z1-m>-2.57727</z1-m>
+			<x2-m>1.65195</x2-m>
+			<y2-m>12.03555</y2-m>
+			<z2-m>-1.62003</z2-m>
 		</axis>
 	</animation>
-        <!--Inner Flaps-->
-        <!--Left-->
     <animation>
 		<type>rotate</type>
-		<object-name>flapacLI</object-name>
+		<object-name>flapacLO2</object-name>
+		<object-name>flapacRO2</object-name>
                 <property>surface-positions/flap-pos-norm</property>
-		<factor>20</factor>
+		<factor>25</factor>
 		<axis>
 			<x>0</x>
 			<y>1</y>
 			<z>0</z>
 		</axis>
 		<center>
-			<x-m>-1.08002</x-m>
-			<z-m>-3.01396</z-m>
+			<x-m>0.95511</x-m>
+                        <z-m>-2.12427</z-m>
+		</center>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>flapacLO1</object-name>
+		<object-name>flapacRO1</object-name>
+                <property>surface-positions/flap-pos-norm</property>
+		<factor>27</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.2271</x-m>
+                        <z-m>-2.61135</z-m>
+		</center>
+	</animation>
+        <!--Inner Flaps-->
+        <!--Left-->
+    <animation>
+		<type>rotate</type>
+		<object-name>flapacLI</object-name>
+		<object-name>flapacRI</object-name>
+                <property>surface-positions/flap-pos-norm</property>
+		<factor>25</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.97196</x-m>
+			<z-m>-3.05604</z-m>
 		</center>
 	</animation>
     <animation>
@@ -1057,12 +1157,12 @@
                 <property>surface-positions/flap-pos-norm</property>
 		<factor>-30</factor>
 		<axis>
-                        <x1-m>-0.86092</x1-m>
-			<y1-m>-2.16734</y1-m>
-                        <z1-m>-3.14791</z1-m>
-                        <x2-m>-0.73035</x2-m>
-			<y2-m>-6.46076</y2-m>
-			<z2-m>-2.61027</z2-m>
+                        <x1-m>-0.70341</x1-m>
+			<y1-m>-1.9208</y1-m>
+                        <z1-m>-3.29993</z1-m>
+                        <x2-m>-0.70031</x2-m>
+			<y2-m>-6.18499</y2-m>
+			<z2-m>-2.57727</z2-m>
 		</axis>
 	</animation>
         <!--Right-->
@@ -1072,12 +1172,12 @@
                 <property>surface-positions/flap-pos-norm</property>
 		<factor>30</factor>
 		<axis>
-                        <x1-m>-0.86092</x1-m>
-			<y1-m>2.16734</y1-m>
-                        <z1-m>-3.14791</z1-m>
-                        <x2-m>-0.73035</x2-m>
-			<y2-m>6.46076</y2-m>
-			<z2-m>-2.61027</z2-m>
+                        <x1-m>-0.70341</x1-m>
+			<y1-m>1.9208</y1-m>
+                        <z1-m>-3.29993</z1-m>
+                        <x2-m>-0.70031</x2-m>
+			<y2-m>6.18499</y2-m>
+			<z2-m>-2.57727</z2-m>
 		</axis>
 	</animation>
         <!--VSTAB-->
