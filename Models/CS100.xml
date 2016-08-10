@@ -176,6 +176,10 @@
     <object-name>geardoorF2</object-name>
     <object-name>geardoorF3</object-name>
     <object-name>geardoorF4</object-name>
+    <object-name>gearLdoor</object-name>
+    <object-name>gearLdoor2</object-name>
+    <object-name>gearRdoor</object-name>
+    <object-name>gearRdoor2</object-name>
     <!--Wings-->
     <object-name>wings</object-name>
     <object-name>flapLI</object-name>
@@ -196,6 +200,16 @@
     <object-name>doorFR</object-name>
     <object-name>doorRL</object-name>
     <object-name>doorRR</object-name>
+    <object-name>flapacs</object-name>
+    <object-name>flapacLI</object-name>
+    <object-name>flapacLO1</object-name>
+    <object-name>flapacLO2</object-name>
+    <object-name>flapacRI</object-name>
+    <object-name>flapacRO1</object-name>
+    <object-name>flapacRO2</object-name>
+  </effect>
+ <effect>
+	<inherits-from>Aircraft/CSeries/Models/Effects/reflect</inherits-from>
     <object-name>nacelleL</object-name>
     <object-name>nacelleR</object-name>
     <object-name>enginefix.</object-name>
@@ -220,9 +234,9 @@
     <object-name>geardoorF2</object-name>
     <object-name>geardoorF3</object-name>
     <object-name>geardoorF4</object-name>
-    <object-name>gearLdoor1</object-name>
+    <object-name>gearLdoor</object-name>
     <object-name>gearLdoor2</object-name>
-    <object-name>gearRdoor1</object-name>
+    <object-name>gearRdoor</object-name>
     <object-name>gearRdoor2</object-name>
     <object-name>wings</object-name>
     <object-name>flapLI</object-name>
@@ -243,6 +257,13 @@
     <object-name>doorFR</object-name>
     <object-name>doorRL</object-name>
     <object-name>doorRR</object-name>
+    <object-name>flapacs</object-name>
+    <object-name>flapacLI</object-name>
+    <object-name>flapacLO1</object-name>
+    <object-name>flapacLO2</object-name>
+    <object-name>flapacRI</object-name>
+    <object-name>flapacRO1</object-name>
+    <object-name>flapacRO2</object-name>
     
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
