@@ -11,7 +11,22 @@
 		
         <flight-model>yasim</flight-model>
         <aero>CS100</aero>
-
+    <flaps>
+      <setting> 0.0 </setting>
+      <setting> 0.2 </setting>
+      <setting> 0.4 </setting> 
+      <setting> 0.6 </setting>
+      <setting> 0.8 </setting>
+      <setting> 1 </setting> 
+    </flaps>
+    <spoiler>
+      <setting> 0.0 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.5 </setting> 
+      <setting> 0.75 </setting>
+      <setting> 1 </setting> 
+  </spoiler>
+    
         <model>
             <path>Aircraft/CSeries/Models/CS100.xml</path>
             <livery>
