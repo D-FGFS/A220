@@ -170,7 +170,7 @@
 
 	
  <effect>
-		<inherits-from>Effects/reflect</inherits-from>
+	<inherits-from>Aircraft/CSeries/Models/Effects/reflect</inherits-from>
     <object-name>body</object-name>
     <object-name>geardoorF1</object-name>
     <object-name>geardoorF2</object-name>

@@ -5,9 +5,9 @@
     <parameters>
         <normalmap-enabled type="int">0</normalmap-enabled>
         <reflection-enabled type="int">1</reflection-enabled>
-        <reflection-dynamic type="int">1</reflection-dynamic>
-        <reflect_map-enabled type="int">1</reflect_map-enabled>
-        <reflection-correction type="float">0.1</reflection-correction>
+        <reflection-dynamic type="int">0.1</reflection-dynamic>
+        <reflect-map-enabled type="int">0.000001 </reflect-map-enabled>
+        <reflection-correction type="float">0.00001</reflection-correction>
  <!--       <lightmap-enabled type="int">1</lightmap-enabled>
         <lightmap-multi type="int">1</lightmap-multi>
         <lightmap-factor type="float" n="0"><use>systems/electrical/outputs/logo-lights</use></lightmap-factor>
@@ -25,19 +25,27 @@
             <wrap-t>clamp</wrap-t>
             <internal-format>normalized</internal-format>
         </texture>-->
+        <texture n="4">
+			<image>Flugzeuge/CSeries/Models/Effects/greymap.png</image>
+			<type>2d</type>
+			<filter>linear-mipmap-linear</filter>
+			<wrap-s>clamp</wrap-s>
+			<wrap-t>clamp</wrap-t>
+			<internal-format>normalized</internal-format>
+		</texture>
         <texture n="5">
             <type>cubemap</type>
             <images>
-                <positive-x>Aircraft/Generic/Effects/fgfs-sky2/1.png</positive-x>
-                <negative-x>Aircraft/Generic/Effects/fgfs-sky2/4.png</negative-x>
-                <positive-y>Aircraft/Generic/Effects/fgfs-sky2/2.png</positive-y>
-                <negative-y>Aircraft/Generic/Effects/fgfs-sky2/3.png</negative-y>
-                <positive-z>Aircraft/Generic/Effects/fgfs-sky2/6.png</positive-z>
-                <negative-z>Aircraft/Generic/Effects/fgfs-sky2/5.png</negative-z>
+                <positive-x>Aircraft/Generic/Effects/CubeMaps/real.fair-sky/fair-sky_px.png</positive-x>
+                <negative-x>Aircraft/Generic/Effects/CubeMaps/real.fair-sky/fair-sky_nx.png</negative-x>
+                <positive-y>Aircraft/Generic/Effects/CubeMaps/real.fair-sky/fair-sky_py.png</positive-y>
+                <negative-y>Aircraft/Generic/Effects/CubeMaps/real.fair-sky/fair-sky_ny.png</negative-y>
+                <positive-z>Aircraft/Generic/Effects/CubeMaps/real.fair-sky/fair-sky_pz.png</positive-z>
+                <negative-z>Aircraft/Generic/Effects/CubeMaps/real.fair-sky/fair-sky_nz.png</negative-z>
             </images>
         </texture>
-                <reflection-rainbow type="float">0.05</reflection-rainbow>
-                <reflection-fresnel type="float">0.1</reflection-fresnel>
-        <ambient_correction>0.1</ambient_correction>
+                <reflection-rainbow type="float">0.1</reflection-rainbow>
+                <reflection-fresnel type="float">0.5</reflection-fresnel>
+        <ambient_correction>100</ambient_correction>
     </parameters>
 </PropertyList>
