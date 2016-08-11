@@ -132,8 +132,6 @@ var Engine = {
         m.on_fire.setBoolValue(0);
         m.reverser = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/reverser", 1);
         m.reverser.setBoolValue(0);
-        m.reverser_arm = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/reverser-armed", 1);
-        m.reverser_arm.setBoolValue(0);
         m.reverser_cmd = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/reverser-cmd", 1);
         m.reverser_cmd.setBoolValue(0);
         m.rpm = props.globals.getNode("engines/engine[" ~ no ~ "]/rpm", 1);
@@ -207,14 +205,8 @@ var Engine = {
             me.starting = 0;
             if (me.reverser_cmd.getBoolValue())
             {
-                if (me.reverser_arm.getBoolValue())
-                {
                     me.reverser.setBoolValue(1);
-                }
-                else
-                {
-                    me.reverser_cmd.setBoolValue(0);
-                }
+                
             }
             else
             {

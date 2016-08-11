@@ -127,7 +127,7 @@
             Dry weight: 6300 lb
             Thrust: 18900lbf-->
 
-       <jet x="4.5" y="5.5324"  z="-4.1365" mass="6300" thrust="19000.0" afterburner="0" rotate="-2.5" n1-idle="21.0" n1-max="99.5" n2-idle="66.0" n2-max="102.4" tsfc="0.55" egt="750.0" epr="2.0" exhaust-speed="1000.0" spool-time="2.0">
+       <jet x="4.5" y="5.5324"  z="-4.1365" mass="6300" thrust="18900.0" afterburner="0" rotate="-2.5" n1-idle="21.0" n1-max="99.5" n2-idle="66.0" n2-max="102.4" tsfc="0.55" egt="750.0" epr="2.0" exhaust-speed="1000.0" spool-time="2.0">
 		<control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE" />
 		<control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST" />
 		<control-output control="REVERSE_THRUST" prop="/engines/engine[0]/reverser-pos-norm" />
@@ -135,10 +135,10 @@
           <actionpt x="6" y="5.5324"  z="-4.1365"/>
        </jet>
 
-       <jet x="4.5" y="-5.5324"  z="-4.1365" mass="6300" thrust="19000.0" afterburner="0" rotate="-2.5" n1-idle="21.0" n1-max="99.5" n2-idle="66.0" n2-max="102.4" tsfc="0.55" egt="750.0" epr="2.0" exhaust-speed="1000.0" spool-time="2.0">
+       <jet x="4.5" y="-5.5324"  z="-4.1365" mass="6300" thrust="18900.0" afterburner="0" rotate="-2.5" n1-idle="21.0" n1-max="99.5" n2-idle="66.0" n2-max="102.4" tsfc="0.55" egt="750.0" epr="2.0" exhaust-speed="1000.0" spool-time="2.0">
 		<control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE" />
 		<control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST" />
-		<control-output control="REVERSE_THRUST" prop="/engines/engine[0]/reverser-pos-norm" />
+		<control-output control="REVERSE_THRUST" prop="/engines/engine[1]/reverser-pos-norm" />
 		<control-speed control="REVERSE_THRUST" transition-time="1.0" />
           <actionpt x="6" y="-5.5324"  z="-4.1365"/>
        </jet>

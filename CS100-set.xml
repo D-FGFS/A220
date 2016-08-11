@@ -240,11 +240,13 @@
                 <fire-bottle-discharge-armed type="bool">false</fire-bottle-discharge-armed>
                 <fire-bottle-discharge-cover type="bool">false</fire-bottle-discharge-cover>
                 <thrust-mode type="int">0</thrust-mode>
+                <reverser-armed type="bool">true</reverser-armed>
             </engine>
-            <engine>
+            <engine n="1">
                 <fire-bottle-discharge-armed type="bool">false</fire-bottle-discharge-armed>
                 <fire-bottle-discharge-cover type="bool">false</fire-bottle-discharge-cover>
                 <thrust-mode type="int">0</thrust-mode>
+                <reverser-armed type="bool">true</reverser-armed>
             </engine>
         </engines>
         <flight>
@@ -325,11 +327,11 @@
                     <desc>Toggle thrust reversers or arm/disarm thrust reversers</desc>
                     <binding>
 			<command>property-toggle</command>
-                        <property>/controls/engines/engine/reverser</property>
+                        <property>/controls/engines/engine/reverser-cmd</property>
                     </binding>
                     <binding>
 			<command>property-toggle</command>
-                        <property>/controls/engines/engine[1]/reverser</property>
+                        <property>/controls/engines/engine[1]/reverser-cmd</property>
                     </binding>
                     </key>
                 </keyboard>
