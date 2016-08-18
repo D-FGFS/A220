@@ -6,20 +6,20 @@
 	<layout>vbox</layout>
 
 	<text>
-		<label>Failures</label>
+		<label>CSeries Failures</label>
 	</text>
 
 	<hrule/>
 
 	<text>
-		<label>Engine fire</label>
+		<label>Engine failures</label>
 	</text>
 
 	<group>
 		<layout>hbox</layout>
 
 		<checkbox>
-			<label>Engine 1</label>
+			<label>Left engine</label>
 			<property>engines/engine[0]/on-fire</property>
 			<binding>
 				<command>dialog-apply</command>
@@ -41,12 +41,8 @@
 		<live>false</live>
 	</checkbox>
 
-
-
-
-
 <checkbox>
-			<label>Engine 2</label>
+			<label>Right engine</label>
 			<property>engines/engine[1]/on-fire</property>
 			<binding>
 				<command>dialog-apply</command>

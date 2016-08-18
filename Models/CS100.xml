@@ -108,6 +108,15 @@
 		</offsets>
 	</model>
 	<model>
+		<name>Bottom Beacon light</name>
+		<path>Aircraft/CSeries/Models/Lights/beacon.xml</path>
+		<offsets>
+			<x-m>-3.0078</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.335</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>Landing light</name>
 		<path>Aircraft/CSeries/Models/Lights/landing.xml</path>
 		<offsets>
