@@ -28,6 +28,17 @@
             <splash-texture>Aircraft/CSeries/CS300.png</splash-texture>
 		</startup>
 		
+        <systems>
+            <!-- Disable the generic electrical system -->
+            <electrical>
+                <path></path>
+            </electrical>
+            <autopilot>
+                <name>Autopilot</name>
+                <path>Aircraft/CSeries/Systems/it-autoflight.xml</path>
+            </autopilot>
+        </systems>
+		
 		<instrumentation>
 			<path>Aircraft/CSeries/Systems/instrumentation.xml</path>
 		</instrumentation>
@@ -166,8 +177,7 @@
             <file>Aircraft/CSeries/Nasal/registration.nas</file>      
 		</cseries>
 		<itaf>
-            <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
-            <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
+            <file>Aircraft/CSeries/Nasal/it-autoflight.nas</file>
 		</itaf> 
                 <tyresmoke>
                     <file>Aircraft/CSeries/Nasal/tyresmoke.nas</file>

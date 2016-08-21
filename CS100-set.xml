@@ -65,10 +65,6 @@
                 <name>Autopilot</name>
                 <path>Aircraft/CSeries/Systems/it-autoflight.xml</path>
             </autopilot>
-			<autopilot>
-				<name>Autopilot helpers</name>
-				<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
-			</autopilot>
         </systems>
 		
 		<instrumentation>
@@ -368,8 +364,7 @@
             <file>Aircraft/CSeries/Nasal/registration.nas</file>      
 		</cseries>
 		<itaf>
-            <file>Aircraft/CSeries/Nasal/autoflight.nas</file>
-            <file>Aircraft/CSeries/Nasal/autoflight-logic.nas</file>
+            <file>Aircraft/CSeries/Nasal/it-autoflight.nas</file>
 		</itaf> 
                 <tyresmoke>
                     <file>Aircraft/CSeries/Nasal/tyresmoke.nas</file>
