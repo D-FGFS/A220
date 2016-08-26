@@ -52940,7 +52940,7 @@ refs 4
 1 0.855067 0.4634
 kids 0
 OBJECT poly
-name "fd.btn.001"
+name "fd.btn2"
 loc -0.365511 0.330548 -0.139308
 texture "autopilot.png"
 crease 35.000000

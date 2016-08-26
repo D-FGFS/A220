@@ -896,6 +896,19 @@
   </action>
 </animation>
 
+<animation>
+  <type>pick</type>
+  <object-name>fd.btn2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>it-autoflight/fd_mastersw2</property>
+    </binding>
+  </action>
+</animation>
+
 <!-- AFDS OVRD OFF -->
 <animation>
   <type>pick</type>
