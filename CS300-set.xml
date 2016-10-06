@@ -5,7 +5,7 @@
 <PropertyList>
     <sim>
         <description>Bombardier CS300</description>
-        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1</author>
+        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1, Gabriel Hernandez</author>
         <status>dev</status>
         <aircraft-version>0.1</aircraft-version>
 		
@@ -73,7 +73,6 @@
             <min-lb>0</min-lb>
         </weight>
 
-      
         <menubar>
             <default>
                 <menu n="100">
@@ -120,7 +119,8 @@
         </dimensions>
             
             <view n="0">
-            <internal archive="y">true</internal>
+            <name>Pilot View</name>
+	    <internal archive="y">true</internal>
             <config>
                 <x-offset-m archive="y"> -0.5 </x-offset-m> <!-- Right -->
                 <y-offset-m archive="y">  -1.52077 </y-offset-m> <!-- Up    -->
@@ -164,8 +164,150 @@
                         <property>/controls/engines/engine[1]/reverser</property>
                     </binding>
                     </key>
+		<key n="2">
+				<name>Ctrl-b</name>
+				<desc>Cycle speedbrake setting</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>controls/flight/speedbrake-lever</property>
+					<value>0</value> <!-- DOWN -->
+					<value>1</value> <!-- ARMED -->
+					<value>2</value> <!-- 50% -->
+					<value>3</value> <!-- UP -->
+				</binding>
+			</key>
+              <key n="268">
+        			<name>F12</name>
+        			<desc>Radio Stack</desc>
+          			<binding>
+            			    <command>nasal</command>
+				    <script>dialogs.Radio.toggle()</script>
+          			</binding>
+     	 		</key>
+          
+             <key n="267">
+				<name>F11</name>
+				<desc>Open autopilot dialog</desc>
+				<binding>
+					<command>nasal</command>
+					<script>dialogs.ap_settings.toggle()</script>
+				</binding>
+			</key>
+              <key n="108">
+				<name>l</name>
+				<desc>toggle landing lights</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/lighting/landing-lights[0]</property>
+				</binding>
+                		<binding>
+					<command>property-toggle</command>
+					<property>controls/lighting/landing-lights[1]</property>
+				</binding>
+                		<binding>
+					<command>property-toggle</command>
+					<property>controls/lighting/landing-lights[2]</property>
+				</binding>
+	    		</key>
+
+              <key n="91">
+
+				<name>[</name>
+
+				<desc>Decrease flaps.</desc>
+
+				<binding>
+
+					<command>property-adjust</command>
+
+					<property>/controls/flight/flaps</property>
+
+					<step type="double">-0.125</step>
+
+				</binding>
+
+			</key>
+
+			<key n="93">
+
+				<name>]</name>
+
+				<desc>Increase flaps.</desc>
+
+				<binding>
+
+					<command>property-adjust</command>
+
+					<property>/controls/flight/flaps</property>
+
+					<step type="double">0.125</step>
+
+				</binding>
+			</key>
                 </keyboard>
             </input>
+
+	<controls>
+        <anti-ice>
+            <wiper type="int">0</wiper>
+            <wiper type="int">0</wiper>
+        </anti-ice>
+        <APU>
+            <electronic-control-unit type="bool">false</electronic-control-unit>
+            <fire-switch-armed type="bool">false</fire-switch-armed>
+            <fire-switch-cover type="bool">false</fire-switch-cover>
+            <off-on type="bool">false</off-on>
+        </APU>
+	<engines>
+            <engine>
+                <fire-bottle-discharge-armed type="bool">false</fire-bottle-discharge-armed>
+                <fire-bottle-discharge-cover type="bool">false</fire-bottle-discharge-cover>
+                <thrust-mode type="int">0</thrust-mode>
+                <reverser-armed type="bool">true</reverser-armed>
+            </engine>
+            <engine n="1">
+                <fire-bottle-discharge-armed type="bool">false</fire-bottle-discharge-armed>
+                <fire-bottle-discharge-cover type="bool">false</fire-bottle-discharge-cover>
+                <thrust-mode type="int">0</thrust-mode>
+                <reverser-armed type="bool">true</reverser-armed>
+            </engine>
+        </engines>
+        <flight>
+            <ground-lift-dump type="int">1</ground-lift-dump>
+        </flight>
+        <gear>
+            <brake-parking type="bool">true</brake-parking>
+            <enable-tiller type="bool">true</enable-tiller>
+            <tiller-steer-deg type="float">0</tiller-steer-deg>
+        </gear>
+        <lighting>
+			<beacon type="bool">false</beacon>
+			<strobe type="bool">false</strobe>
+			<nav-lights type="bool">false</nav-lights>
+			<landing-lights type="bool">false</landing-lights>
+			<logo-lights type="bool">false</logo-lights>
+			<dome-norm type="double">0</dome-norm>
+			<interior type="double">0</interior>
+			<cones type="bool">true</cones>
+		</lighting>
+
+        <pneumatic>
+            <bleed-source type="int">0</bleed-source>
+            <ram-air-turbine type="bool">false</ram-air-turbine>
+            <ram-air-turbine-cover type="bool">false</ram-air-turbine-cover>
+        </pneumatic>
+       <switches>	
+	<no-smoking-sign type="bool">true</no-smoking-sign>
+	<seatbelt-sign type="bool">false</seatbelt-sign>
+	</switches>
+	<gear>
+		<brake-parking type="bool">1</brake-parking>
+	</gear>
+        <cabin>
+            <seating>1</seating> <!--Standard, other classes are for the moment only in the .blend file due to high "vertice weight"-->
+        </cabin>
+    </controls>
+	
     <nasal>
         <cseries>
             <file>Aircraft/CSeries/Nasal/main.nas</file>
