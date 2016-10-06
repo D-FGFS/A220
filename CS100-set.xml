@@ -5,7 +5,7 @@
 <PropertyList>
     <sim include="Systems/CSeries-views.xml">
         <description>Bombardier CS100</description>
-        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1</author>
+        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1, Gabriel Hernandez</author>
         <status>dev</status>
         <aircraft-version>0.1</aircraft-version>
 		
@@ -174,8 +174,6 @@
 							</script>
 						</binding>
 					</item>
-
-
                 </menu>
             </default>
         </menubar>
@@ -258,10 +256,11 @@
             <ram-air-turbine type="bool">false</ram-air-turbine>
             <ram-air-turbine-cover type="bool">false</ram-air-turbine-cover>
         </pneumatic>
-        <switches>
-            <no-smoking-sign type="int">1</no-smoking-sign>
-            <seatbelt-sign type="int">1</seatbelt-sign>
-        </switches>
+                      <switches>
+			<no-smoking-sign type="bool">true</no-smoking-sign>
+			<seatbelt-sign type="bool">false</seatbelt-sign>
+		       </switches>
+
 	<gear>
 		<brake-parking type="bool">1</brake-parking>
 	</gear>
@@ -327,7 +326,7 @@
 				    <script>dialogs.Radio.toggle()</script>
           			</binding>
      	 		</key>
-             <key n="267">
+                <key n="267">
 				<name>F11</name>
 				<desc>Open autopilot dialog</desc>
 				<binding>
@@ -335,7 +334,7 @@
 					<script>dialogs.ap_settings.toggle()</script>
 				</binding>
 			</key>
-              <key n="108">
+                   <key n="108">
 				<name>l</name>
 				<desc>toggle landing lights</desc>
 				<binding>
@@ -379,5 +378,5 @@
 			<hood-rot>0</hood-rot>
 		</jetway-pos>
 	</aircraft>
-
+	
 </PropertyList>
