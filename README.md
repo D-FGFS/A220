@@ -8,8 +8,8 @@ This aircraft is equipped with IT-AUTOFLIGHT.
 **Want to help?**
 
 Email to join our Slack: fgfsdevteam.slack.com<br>
-joshuadavidson2000@gmail.com<br>
-legoboyvdlp@gmail.com<br>
+joshuadavidson2000-at-gmail.com<br>
+legoboyvdlp-at-gmail.com<br>
 
 *** 
 
