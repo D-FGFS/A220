@@ -197,6 +197,8 @@
     <object-name>flapRO</object-name>
     <object-name>aileronL</object-name>
     <object-name>aileronR</object-name>
+    <object-name>spoilerRI</object-name>
+    <object-name>spoilerRO</object-name>
     <object-name>Circle</object-name>
     <object-name>hstab</object-name>
     <object-name>elevatorL</object-name>
@@ -252,6 +254,8 @@
     <object-name>flapRO</object-name>
     <object-name>aileronL</object-name>
     <object-name>aileronR</object-name>
+    <object-name>spoilerRI</object-name>
+    <object-name>spoilerRO</object-name>
     <object-name>Circle</object-name>
     <object-name>hstab</object-name>
     <object-name>elevatorL</object-name>
@@ -1198,6 +1202,37 @@
 			<z2-m>-2.57727</z2-m>
 		</axis>
 	</animation>
+        <!--Spoilers-->
+        <!--Right-->
+    <animation>
+		<type>rotate</type>
+		<object-name>spoilerRO</object-name>
+                <property>/surface-positions/fdm-spoiler-outer-pos-norm</property>
+		<factor>-70</factor>
+		<axis>
+			<x1-m>-1.10776</x1-m>
+			<y1-m>6.36314</y1-m>
+			<z1-m>-2.35397</z1-m>
+			<x2-m>1.21971</x2-m>
+			<y2-m>12.19507</y2-m>
+			<z2-m>-1.46881</z2-m>
+		</axis>
+	</animation>
+    <animation>
+		<type>rotate</type>
+		<object-name>spoilerRI</object-name>
+                <property>/surface-positions/fdm-spoiler-outer-pos-norm</property>
+		<factor>-70</factor>
+		<axis>
+			<x1-m>-1.37416</x1-m>
+			<y1-m>1.94097</y1-m>
+			<z1-m>-2.88976</z1-m>
+			<x2-m>-1.38479</x2-m>
+			<y2-m>6.15767</y2-m>
+			<z2-m>-2.34396</z2-m>
+		</axis>
+	</animation>
+        
         <!--VSTAB-->
         <!--Rudder-->
     <animation>

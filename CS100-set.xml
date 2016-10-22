@@ -33,7 +33,29 @@
                 <file type="string">bombardier</file>
             </livery>
             <variant type="int">0</variant>
-            <limits><!--according to https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications-->
+            <limits>
+                <!--According to the notes next to the flaps-->
+                <max-flap-extension-speed>
+                    <flaps>0.2</flaps>
+                    <speed>230</speed>
+                </max-flap-extension-speed>
+                <max-flap-extension-speed>
+                    <flaps>0.4</flaps>
+                    <speed>220</speed>
+                </max-flap-extension-speed>
+                <max-flap-extension-speed>
+                    <flaps>0.6</flaps>
+                    <speed>210</speed>
+                </max-flap-extension-speed>
+                <max-flap-extension-speed>
+                    <flaps>0.8</flaps>
+                    <speed>190</speed>
+                </max-flap-extension-speed>
+                <max-flap-extension-speed>
+                    <flaps>1.000</flaps>
+                    <speed>170</speed>
+                </max-flap-extension-speed>
+                <!--according to https://en.wikipedia.org/wiki/Bombardier_CSeries#Specifications-->
 				<mtow-lb>134000</mtow-lb>
 				<mlw-lb>15550</mlw-lb>
             </limits>
