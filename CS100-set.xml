@@ -80,27 +80,32 @@
         </dimensions>
 
         <weight n="0"><!--Crew weight-->
+            <name>Crew</name>
             <weight-lb>360</weight-lb>
             <max-lb>500</max-lb>
             <min-lb>100</min-lb>
         </weight>
 
         <weight n="1"><!--Passengers front weight-->
+            <name>Passengers Front</name>
             <weight-lb>9000</weight-lb>
             <max-lb>10000</max-lb>
             <min-lb>0</min-lb>
         </weight>
         <weight n="2"><!--Passengers rear weight-->
+            <name>Passenger Rear</name>
             <weight-lb>9000</weight-lb>
             <max-lb>10000</max-lb>
             <min-lb>0</min-lb>
         </weight>
         <weight n="3"><!--Cargo front weight-->
             <weight-lb>2000</weight-lb>
+            <name>Cargo Front</name>
             <max-lb>4000</max-lb>
             <min-lb>0</min-lb>
         </weight>
         <weight n="4"><!--Cargo rear weight-->
+            <name>Cargo Rear</name>
             <weight-lb>2000</weight-lb>
             <max-lb>4000</max-lb>
             <min-lb>0</min-lb>
@@ -174,6 +179,13 @@
 							</script>
 						</binding>
 					</item>
+                    <item>
+                        <label>Enable/Disable aircraft reflect</label>
+                        <binding>
+                        <command>property-toggle</command>
+                        <property>/sim/rendering/aircraft-reflect</property>
+                        </binding>
+                    </item>
                 </menu>
             </default>
         </menubar>
@@ -183,9 +195,9 @@
             <config>
                 <x-offset-m archive="y"> -0.5 </x-offset-m> <!-- Right -->
                 <y-offset-m archive="y">  -1.52077 </y-offset-m> <!-- Up    -->
-                <z-offset-m archive="y"> -14.44355 </z-offset-m> <!-- Back  -->
+                <z-offset-m archive="y"> -14.2 </z-offset-m> <!-- Back  -->
                 <pitch-offset-deg> -10 </pitch-offset-deg>
-                <default-field-of-view-deg> 94 </default-field-of-view-deg>
+                <default-field-of-view-deg> 65 </default-field-of-view-deg>
             </config>
             </view>
 	    <chase-distance-m>-50</chase-distance-m>

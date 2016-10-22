@@ -1369,7 +1369,7 @@
 		
 		<!-- Announcements -->
 
-		<announcement>
+		<!--<announcement>
 			<name>welcome</name>
 			<path>Aircraft/CSeries/Sounds/announce/welcome.wav</path>
 			<mode>once</mode>
@@ -1611,7 +1611,7 @@
 			</position>
 			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
-		</announcement>
+		</announcement>-->
 
 		<!-- CLICKS -->
 		<switch>

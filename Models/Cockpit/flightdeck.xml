@@ -65,7 +65,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-			<x-m>0.03501</x-m>
+			<x-m>-0.14042</x-m>
 			<z-m>-0.25927</z-m>
 		</center>
 	</animation>
@@ -83,7 +83,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-			<x-m>0.03501</x-m>
+			<x-m>-0.14042</x-m>
 			<z-m>-0.25927</z-m>
 		</center>
 	</animation>
@@ -99,26 +99,10 @@
 			<z>0</z>
 		</axis>
 		<center>
-			<x-m>0.03501</x-m>
+			<x-m>-0.14042</x-m>
 			<z-m>-0.25927</z-m>
 		</center>
 	</animation>
-
-<!--	<animation>
-		<type>rotate</type>
-		<object-name>throttleL</object-name>
-		<property>/controls/engines/engine/throttle-rvs</property>
-		<factor>5.78</factor>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>0.03501</x-m>
-			<z-m>-0.25927</z-m>
-		</center>
-	</animation>-->
 	<animation>
 		<type>rotate</type>
 		<object-name>throttleR</object-name>
@@ -133,7 +117,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-			<x-m>0.03501</x-m>
+			<x-m>-0.14042</x-m>
 			<z-m>-0.25927</z-m>
 		</center>
 	</animation>
@@ -151,7 +135,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-			<x-m>0.03501</x-m>
+			<x-m>-0.14042</x-m>
 			<z-m>-0.25927</z-m>
 		</center>
 	</animation>
@@ -167,7 +151,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-			<x-m>0.03501</x-m>
+			<x-m>-0.14042</x-m>
 			<z-m>-0.25927</z-m>
 		</center>
 	</animation>
@@ -203,7 +187,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-                    <x-m>0.36144</x-m>
+                    <x-m>0.1951</x-m>
 			<z-m>-0.19271</z-m>
 		</center>
 	</animation>
@@ -284,7 +268,7 @@
 			<z>1</z>
 		</axis>
 		<center>
-                    <x-m>0.25198</x-m>
+                    <x-m>0.07999</x-m>
                     <y-m>0.0</y-m>
 		</center>
 	</animation>
@@ -299,7 +283,7 @@
 			<z>1</z>
 		</axis>
 		<center>
-                    <x-m>0.25198</x-m>
+                    <x-m>0.07999</x-m>
                     <y-m>0.0</y-m>
 		</center>
 	</animation>
@@ -328,7 +312,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-                    <x-m>-0.47199</x-m>
+                    <x-m>-0.64398</x-m>
 			<z-m>0.11003</z-m>
 		</center>
 	</animation>
@@ -358,7 +342,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-                    <x-m>0.18115</x-m>
+                    <x-m>0.00916</x-m>
                     <z-m>-0.06</z-m>
 		</center>
 	</animation>
@@ -386,7 +370,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-                    <x-m>0.18115</x-m>
+                    <x-m>0.00916</x-m>
                     <z-m>-0.06</z-m>
 		</center>
 	</animation>
@@ -415,7 +399,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-                    <x-m>-0.56874</x-m>
+                    <x-m>0.00916</x-m>
                     <z-m>-0.5273</z-m>
 		</center>
 	</animation>
@@ -443,7 +427,7 @@
 			<z>0</z>
 		</axis>
 		<center>
-                    <x-m>-0.56874</x-m>
+                    <x-m>0.00916</x-m>
                     <z-m>-0.5273</z-m>
 		</center>
 	</animation>
@@ -1404,7 +1388,7 @@
   <name>ISIS</name>
   <path>Aircraft/CSeries/Models/Cockpit/Instruments/ISIS/isis.xml</path>
   <offsets>
-    <x-m>-0.4806</x-m>
+    <x-m>-0.6506</x-m>
     <y-m> 0</y-m>
     <z-m> 0.2163</z-m>
 	<pitch-deg>-7</pitch-deg>
@@ -1431,7 +1415,7 @@
   <name>N1</name>
   <path>Aircraft/CSeries/Models/Cockpit/Instruments/mfdL/N1.xml</path>
   <offsets>
-    <x-m>-0.477</x-m>
+    <x-m>-0.65</x-m>
     <y-m>-0.195</y-m>
     <z-m> 0.2248</z-m>
 	<pitch-deg>-7</pitch-deg>
@@ -1442,7 +1426,7 @@
   <name>ITT</name>
   <path>Aircraft/CSeries/Models/Cockpit/Instruments/mfdL/ITT.xml</path>
   <offsets>
-    <x-m>-0.473</x-m>
+    <x-m>-0.645</x-m>
     <y-m>-0.195</y-m>
     <z-m> 0.1848</z-m>
 	<pitch-deg>-7</pitch-deg>

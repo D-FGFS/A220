@@ -130,7 +130,7 @@
      </speaker>
 
      <voice>
-         <file-prefix type="string">Aircraft/MD-88/Sounds/mk-viii/</file-prefix>
+         <file-prefix type="string">Sounds/mk-viii/</file-prefix>
                                          <!-- sound file path and prefix -->
      </voice>
 

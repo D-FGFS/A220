@@ -4,7 +4,7 @@
     <name>skin_reflect</name>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
     <parameters>
-        <reflection-enabled type="int">1</reflection-enabled>
+        <reflection-enabled><use>/sim/rendering/aircraft-reflect</use></reflection-enabled>
         <reflection-dynamic type="int">1</reflection-dynamic>
         <reflect_map-enabled type="int">0</reflect_map-enabled>
         <reflection-correction type="float">-0.01</reflection-correction>
