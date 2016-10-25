@@ -3,7 +3,7 @@
   <name>Cabin Announcements</name>
   <layout>vbox</layout>
 
-<!-- Gabriel Hernandez(YV3399) -->
+<!-- Reminder, included are: Seatbelt, Departure, CrewDeparture, take-off, cruising, descending, brace -->
 
   <text>
     <label>Cabin Announcements</label>

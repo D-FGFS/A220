@@ -5,7 +5,7 @@
 <PropertyList>
     <sim include="Systems/CSeries-views.xml">
         <description>Bombardier CS100</description>
-        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1, Gabriel Hernandez (YV3399)</author>
+        <author>ACJZA, Joshua Davidson (it0uchpods/411), Jonathan Redpath, D-ECHO, Pakistan-1, Gabriel Hernandez</author>
         <status>dev</status>
         <aircraft-version>0.1</aircraft-version>
 		
@@ -192,7 +192,7 @@
 		      </binding>
                     </item> 
                     <item>
-						<label>System Failures</label>
+						<label>Failures</label>
 						<binding>
 							<command>nasal</command>
 							<script>
@@ -208,17 +208,7 @@
                         <property>/sim/rendering/aircraft-reflect</property>
                         </binding>
                     </item>
-                 <item>
-		      <label>Fuel Dump</label>
-		      <binding>
-		       <command>nasal</command>
-		       <script>
-			  var mal = gui.Dialog.new("/sim/gui/dialogs/dump/menu/dialog", "Aircraft/CSeries/Dialogs/fueldump-dialog.xml");
-			mal.open();
-		       </script>
-		      </binding>
-		</item>               
-           </menu>
+                </menu>
             </default>
         </menubar>
             
@@ -394,54 +384,6 @@
 					<property>controls/lighting/landing-lights[2]</property>
 				</binding>
 	    		</key>
-     <key n="50">
-  <name>2</name>
-  <desc>Decrease flaps.</desc>
-  <binding>
-   <command>nasal</command>
-   <script>controls.flapsDown(-1)</script>
-  </binding>
-  <mod-up>
-   <binding>
-    <command>nasal</command>
-    <script>controls.flapsDown(0)</script>
-   </binding>
-  </mod-up>
- </key>
-
- <key n="49">
-  <name>1</name>
-  <desc>Increase flaps.</desc>
-  <binding>
-   <command>nasal</command>
-   <script>controls.flapsDown(1)</script>
-  </binding>
-  <mod-up>
-   <binding>
-    <command>nasal</command>
-    <script>controls.flapsDown(0)</script>
-   </binding>
-  </mod-up>
- </key>
- 
-<key n="263">
-	<name>F7</name>
-	<desc>Show map</desc>
-	<binding>
-	<command>dialog-show</command>
-	<dialog-name>map</dialog-name>
-	</binding>
-</key>
-
-<key n="264">
-	<name>F8</name>
-	<desc>Show router manager</desc>
-	<binding>
-	<command>dialog-show</command>
-	<dialog-name>route-manager</dialog-name>
-	</binding>
-</key>
-
                 </keyboard>
             </input>
     <nasal>
@@ -452,8 +394,7 @@
             <file>Aircraft/CSeries/Nasal/systems.nas</file>
             <file>Aircraft/CSeries/Nasal/doors.nas</file>
             <file>Aircraft/CSeries/Nasal/CS100liveries.nas</file>
-            <file>Aircraft/CSeries/Nasal/registration.nas</file>
-            <file>Aircraft/CSeries/Nasal/fuel-dump.nas</file>      
+            <file>Aircraft/CSeries/Nasal/registration.nas</file>      
 		</cseries>
 		<itaf>
             <file>Aircraft/CSeries/Nasal/it-autoflight.nas</file>

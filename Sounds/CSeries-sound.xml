@@ -6,6 +6,8 @@
 
 	<fx>
 
+
+
  <!-- =============================================================== -->
  <!-- ENGINE OUTSIDE:                                                  -->
  <!-- =============================================================== -->
@@ -676,82 +678,112 @@
  <z>0.78</z>
    </position-->
 		</roll>
-		<wow>
-			<name>wow 0</name>
-			<mode>once</mode>
-			<path>Aircraft/737-800/Sounds/wow.wav</path>
+		<Wheels>
+			<name>nose Wheel Touchdown</name>
+			<path>Aircraft/CSeries/Sounds/res/touchdown.wav</path>
 			<condition>
-				<property>gear/gear[0]/wow</property>
+				<property>/gear/gear[0]/wow</property>
 			</condition>
 			<volume>
-				<property>sim/current-view/internal</property>
-				<offset>0</offset>
+				<property>sim/sound/effects/volume</property>
 			</volume>
-		</wow>
-		 
-                 <wow>
-			<name>wow 1</name>
-			<mode>once</mode>
-			<path>Aircraft/CSeries/Sounds/Touch.wav</path>
+			<volume>
+				<property>/velocities/speed-down-fps</property>
+				<factor>0.10</factor>
+			</volume>
+			<volume>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.01</factor>
+			</volume>
+			<volume>
+				<internal>dt_stop</internal>
+				<factor>0.05</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.0025</factor>
+				<offset>1.2</offset>
+			</pitch>
+			<position>
+				<x>5</x>
+				<y>0</y>
+				<z>-3.5</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>500.0</max-dist>
+		</Wheels>
+		<Wheels>
+			<name>left main Wheel Touchdown</name>
+			<path>Aircraft/CSeries/Sounds/res/touchdown.wav</path>
 			<condition>
-				<property>gear/gear[1]/wow</property>
+				<property>/gear/gear[1]/wow</property>
 			</condition>
 			<volume>
-				<property>sim/current-view/internal</property>
-				<offset>0</offset>
+				<property>sim/sound/effects/volume</property>
 			</volume>
-		</wow>
+			<volume>
+				<property>/velocities/speed-down-fps</property>
+				<factor>0.10</factor>
+			</volume>
+			<volume>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.01</factor>
+			</volume>
+			<volume>
+				<internal>dt_stop</internal>
+				<factor>0.0025</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.0025</factor>
+				<offset>1.2</offset>
+			</pitch>
+			<position>
+				<x>17.66</x>
+				<y>-3.8</y>
+				<z>-3.5</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>500.0</max-dist>
+		</Wheels>
+		<Wheels>
+			<name>right main Wheel Touchdown</name>
+			<path>Aircraft/CSeries/Sounds/res/touchdown.wav</path>
+			<condition>
+				<property>/gear/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<volume>
+				<property>/velocities/speed-down-fps</property>
+				<factor>0.10</factor>
+			</volume>
+			<volume>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.01</factor>
+			</volume>
+			<volume>
+				<internal>dt_stop</internal>
+				<factor>0.05</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.0025</factor>
+				<offset>1.2</offset>
+			</pitch>
+			<position>
+				<x>17.66</x>
+				<y>3.8</y>
+				<z>-3.5</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>500.0</max-dist>
+		</Wheels>
 		
-                 <wow>
-			<name>wow 2</name>
-			<mode>once</mode>
-			<path>Aircraft/CSeries/Sounds/Touch.wav</path>
-			<condition>
-				<property>gear/gear[2]/wow</property>
-			</condition>
-			<volume>
-				<property>sim/current-view/internal</property>
-				<offset>0</offset>
-			</volume>
-		</wow>
-		
-		<wow>
-			<name>wow 3</name>
-			<mode>once</mode>
-			<path>Aircraft/CSeries/Sounds/Touch.wav</path>
-			<condition>
-				<property>gears/gear[0]/wow</property>
-			</condition>
-			<volume>
-				<property>sim/current-view/internal</property>
-				<offset>0</offset>
-			</volume>
-		</wow>
-		<wow>
-			<name>wow 4</name>
-			<mode>once</mode>
-			<path>Aircraft/CSeries/Sounds/Touch.wav</path>
-			<condition>
-				<property>gears/gear[1]/wow</property>
-			</condition>
-			<volume>
-				<property>sim/current-view/internal</property>
-				<offset>0</offset>
-			</volume>
-		</wow>
-		<wow>
-			<name>wow 5</name>
-			<mode>once</mode>
-			<path>Aircraft/CSeries/Sounds/Touch.wav</path>
-			<condition>
-				<property>gears/gear[2]/wow</property>
-			</condition>
-			<volume>
-				<property>sim/current-view/internal</property>
-				<offset>0</offset>
-			</volume>
-		</wow>
-
 		<rumblemain>
 			<name>main gear rumble</name>
 			<mode>looped</mode>
@@ -832,7 +864,7 @@
 			<name>flaps left</name>
 			<mode>in-transit</mode>
 			<!--path>Aircraft/CSeries/Sounds/res/flaps.wav</path-->
-			<path>Aircraft/CSeries/Sounds/res/CSeries_flaps.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/A320_flaps.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<!--volume>
  <property>sim/sound/effects/volume</property>
@@ -852,7 +884,7 @@
 			<name>flaps right</name>
 			<mode>in-transit</mode>
 			<!--path>Aircraft/CSeries/Sounds/res/flaps.wav</path-->
-			<path>Aircraft/CSeries/Sounds/res/CSeries_flaps.wav</path>
+			<path>Aircraft/CSeries/Sounds/res/A320_flaps.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<!--volume>
  <property>sim/sound/effects/volume</property>
@@ -949,6 +981,7 @@
 
 
 
+
  <!-- =============================================================== -->
  <!-- AVIONICS:                                                       -->
  <!-- =============================================================== -->
@@ -1008,8 +1041,46 @@
 			</position>
 		</retard>
 
-			
-                  <seatbelt>
+		<v1>
+			<name>V1</name>
+			<path>Aircraft/CSeries/Sounds/res/v1.wav</path>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<property>/instrumentation/fmc/vspeeds/V1</property>
+					<!-- At v1 airspeed -->
+					<greater-than-equals>
+						<property>velocities/airspeed-kt</property>
+						<property>/instrumentation/fmc/vspeeds/V1</property>
+					</greater-than-equals>
+					<!-- While on ground -->
+				Now there is 3D Sound and that you can hear other aircraft. 	<property>/gear/gear[0]/wow</property>
+					<property>/gear/gear[1]/wow</property>
+					<property>/gear/gear[2]/wow</property>
+					<!-- With throttles in [flex]Take Off  -->
+					<greater-than>
+						<property>controls/engines/engine[0]/throttle</property>
+						<value>0.7</value>
+					</greater-than>
+					<greater-than>
+						<property>controls/engines/engine[1]/throttle</property>
+						<value>0.7</value>
+					</greater-than>
+				</and>
+			</condition>
+			<type>avionics</type>
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+				<factor>0.8</factor>
+			</volume>
+			<position>
+				<x>22.5</x>
+				<y>0</y>
+				<z>0.78</z>
+			</position>
+		</v1>
+	
+<seatbelt>
 			<name>cabinalert</name>
 			<path>res/cabinalert.wav</path>
 			<mode>once</mode>
@@ -1032,7 +1103,7 @@
 		<!-- Overspeed warning -->
 		<overspeed>
 			<name>Overspeed warning</name>
-			<path>Aircraft/CSeries/Sounds/overspeed2.wav</path>
+			<path>Sounds/overspeed2.wav</path>
 			<mode>looped</mode>
 			<type>avionics</type>
 			<condition>
@@ -1066,7 +1137,26 @@
 			<max-dist>100.0</max-dist>
 		</stall>
 		
-    
+		<stall-voice>
+			<name>stall-voice</name>
+			<mode>looped</mode>
+			<path>/Aircraft/CSeries/Sounds/res/stall_voice.wav</path>
+			<type>avionics</type>
+			<condition>
+				<property>warnings/stall/active</property>
+			</condition>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+				<factor>3</factor>
+				<!--offset>1</offset-->
+				<min>1</min>
+				<max>6</max>
+			</volume>
+
+			<reference-dist>10</reference-dist>
+			<max-dist>100.0</max-dist>
+		</stall-voice>
+		
 		<autopilotoff>
 			<name>Autopilot off</name>
 			<path>Aircraft/CSeries/Sounds/res/airbus-warning.wav</path>
@@ -1277,8 +1367,9 @@
 		<volume>0.5</volume>
     </apu-shutdown>
 		
-		
-            <announcement>
+		<!-- Announcements -->
+
+		<!--<announcement>
 			<name>welcome</name>
 			<path>Aircraft/CSeries/Sounds/announce/welcome.wav</path>
 			<mode>once</mode>
@@ -1293,7 +1384,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1312,7 +1403,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1331,7 +1422,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1347,7 +1438,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1366,7 +1457,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1385,7 +1476,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1404,7 +1495,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1423,7 +1514,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1442,7 +1533,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1461,7 +1552,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1480,7 +1571,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1499,7 +1590,7 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
 		</announcement>
 
@@ -1518,11 +1609,10 @@
 				<y>0.00</y>
 				<z>0.00</z>
 			</position>
-			<reference-dist>20.0</reference-dist>
+			<reference-dist>10.0</reference-dist>
 			<max-dist>100.0</max-dist>
-		</announcement>
+		</announcement>-->
 
-            
 		<!-- CLICKS -->
 		<switch>
 			<name>switch</name>
@@ -1688,7 +1778,7 @@
 			<max-dist>200.0</max-dist>
 		</switch>
 
-                <avionics>
+<avionics>
 			<name>avionics fan and noise</name>
 			<path>Aircraft/CSeries/Sounds/avionics.wav</path>
 			<mode>looped</mode>
@@ -1712,359 +1802,9 @@
 			<max-dist>5</max-dist>
 		</avionics>
 
-   <gpws>
-        <name>appr_mins</name>
-        <mode>once</mode>
-        <type>avionics</type>		
-        <path>Aircraft/CSeries/Sounds/approaching-minimums.wav</path>
-        <condition>
-			<less-than>
-				<property>/position/altitude-agl-ft</property>
-				<value>380</value>
-			</less-than>
-			<greater-than>
-				<property>/position/altitude-agl-ft</property>
-				<value>300</value>
-			</greater-than>			
-			<less-than>
-				<property>/velocities/vertical-speed-fps</property>
-				<value>0</value>
-			</less-than>
-		</condition>
-          </gpws>
-
- <rain>
-      <name>rain</name>
-      <mode>looped</mode>
-      <path>Aircraft/CSeries/Sounds/rain.wav</path>
-      <condition>
-        <greater-than>
-          <property>/environment/rain-norm</property>
-          <value>0.2</value>
-        </greater-than>
-      </condition>
-      <volume>
-        <property>/environment/rain-norm</property>
-        <factor>1.00</factor>
-        <offset>0.00</offset>
-        <min>0.4</min>
-        <max>0.9</max>
-      </volume>
-      <pitch>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.001</factor>
-        <offset>1.0</offset>
-      </pitch>
-    </rain>
 
 
-  <eightyknots>
-        <name>eightyknots</name>
-        <mode>once</mode>
-        <type>avionics</type>
-        <path>Aircraft/CSeries/Sounds/80kt.wav</path>
-        <condition>
-			<or>
-			<property>/gear/gear[0]/wow</property>
-			<property>/gear/gear[2]/wow</property>
-			</or>	
-			<greater-than>
-				<property>/velocities/airspeed-kt</property>
-				<value>80</value>
-			</greater-than>
-			<less-than>
-				<property>/velocities/airspeed-kt</property>
-				<value>88</value>
-			</less-than>			
-			</condition>	
-    </eightyknots> 
-   
-	<veeone>
-        <name>vee-one</name>
-        <mode>once</mode>
-        <type>avionics</type>
-        <path>Aircraft/CSeries/Sounds/v1.wav</path>
-        <condition>
-			<or>
-			<property>/gear/gear[0]/wow</property>
-			<property>/gear/gear[2]/wow</property>
-			</or>	
-			<greater-than>
-				<property>/velocities/airspeed-kt</property>
-				<value>140</value>
-			</greater-than>
-			<less-than>
-				<property>/velocities/airspeed-kt</property>
-				<value>148</value>
-			</less-than>			
-     </condition>	
-    </veeone>
-     
-	<rotate>
-        <name>rotate</name>
-        <mode>once</mode>
-        <type>avionics</type>
-        <path>Aircraft/CSeries/Sounds/vr.wav</path>
-        <condition>
-			<or>
-			<property>/gear/gear[0]/wow</property>
-			<property>/gear/gear[2]/wow</property>
-			</or>
-			<greater-than>
-				<property>/velocities/airspeed-kt</property>
-				<value>150</value>
-			</greater-than>
-			<less-than>
-				<property>/velocities/airspeed-kt</property>
-				<value>160</value>
-			</less-than>			
-		</condition>	
-    </rotate>
 
-
-<!-- Cockpit GPWS -->
-
-        <altitude1>
-            <name>alt-10</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-10.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>10</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude1>
-
-        <altitude2>
-            <name>alt-20</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-20.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>20</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude2>
-
-        <altitude3>
-            <name>alt-30</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-30.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>30</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude3>
-
-        <altitude4>
-            <name>alt-40</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-           <path>Aircraft/CSeries/Sounds/gpws/Sounds/altitude-40.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>40</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude4>
-
-        <altitude5>
-            <name>alt-50</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-50.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>50</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude5>
-
-        <altitude6>
-            <name>alt-100</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-100.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>100</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude6>
-
-        <altitude7>
-            <name>alt-200</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-200.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>200</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude7>
-
-        <altitude8>
-            <name>alt-300</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-           <path>Aircraft/CSeries/Sounds/gpws/altitude-300.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>300</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude8>
-
-        <altitude9>
-            <name>alt-400</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-400.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>400</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude9>
-
-        <altitude10>
-            <name>alt-500</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-           <path>Aircraft/CSeries/Sounds/gpws/altitude-500.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>500</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude10>
-
-        <altitude11>
-            <name>alt-1000</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/CSeries/Sounds/gpws/altitude-1000.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>1000</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude11-->
 
 	</fx>
 </PropertyList>

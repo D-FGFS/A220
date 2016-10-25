@@ -110,14 +110,14 @@
 	    <repeatable type="bool">false</repeatable>
 	    <binding>
 		<command>property-toggle</command>
-		<property>controls/lighting/logo-lights</property>
+		<property>controls/lighting/logo</property>
 	    </binding>
 	</action>
     </animation>
     <animation>
 	<type>rotate</type>
 	<object-name>logolt</object-name>
-		<property>controls/lighting/logo-lights</property>
+		<property>controls/lighting/logo</property>
         <factor>30</factor>
         <center>
                 <x-m>-0.22132</x-m>
