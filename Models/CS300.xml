@@ -21,7 +21,22 @@
 		</offsets>
 	</model>
 	
+<!-- Lights -->
+	<animation>
+		<name>logo light illumination</name>
+		<type>material</type>
+		 <object-name>vstab</object-name>
+                 <object-name>rudder</object-name>
+		<emission>
+			<red>0.25</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+			<factor-prop>controls/lighting/logo-lights</factor-prop>
+		</emission>
+	</animation>
 	
+
+
   <effect>
       <inherits-from>Aircraft/CSeries/Models/Effects/reflect</inherits-from>
     <object-name>body</object-name>
